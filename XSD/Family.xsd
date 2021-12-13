@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.oficinaRGB.pt/Family" 
+           targetNamespace="http://www.oficinaRGB.pt/Family" 
+
+           xmlns:ct="http://www.oficinaRGB.pt/CommonTypes" 
+           xmlns:gd="http://www.oficinaRGB.pt/GeographicData" 
+           elementFormDefault="qualified"> 
+ 
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
+    <xs:import schemaLocation="GeographicData.xsd" namespace="http://www.oficinaRGB.pt/GeographicData"/> 
+
+    <xs:element name="family" type="familyType"/>
+
+    <xs:complexType name="familyType">
+        <xs:sequence>
+            <xs:element name="numberElements" type="nElementsType" maxOccurs="1"/>
+            <xs:element name="country" type="gd:countryType" maxOccurs="1"/>
+            <xs:element name="familyElement" type="familyElementType" maxOccurs="7"/>
+            <xs:element name="reservationDates" type="reservationDatesType"/>
+        </xs:sequence>
+        <xs:attribute name="familyID" type="familyIDType"/>
+    </xs:complexType>
+    
+
+    <xs:complexType name="reservationDatesType">
+        <xs:sequence>
+            <xs:element name="numberOfDays" type="numberOfDaysType"/>
+            <xs:element name="preferedDates" type="ct:dateType" minOccurs="1" maxOccurs="5"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!--- Types -->
+    <xs:complexType name="familyElementType">
+        <xs:sequence>
+            <xs:element name="name" type="ct:nameType"/>
+            <xs:element name="birthDate" type="ct:dateType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="familyIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="F[0-9]{1,10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="nElementsType">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="7"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numberOfDaysType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

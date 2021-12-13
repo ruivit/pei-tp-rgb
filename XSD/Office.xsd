@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.oficinaRGB.pt/Office" 
+           targetNamespace="http://www.oficinaRGB.pt/Office" 
+
+           xmlns:ct="http://www.oficinaRGB.pt/CommonTypes"
+           elementFormDefault="qualified"> 
+ 
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
+
+    <xs:element name="office" type="officeType"/>
+
+    <xs:complexType name="officeType">
+        <xs:sequence>
+            <xs:element name="date" type="ct:dateType" maxOccurs="1"/>
+            <xs:element name="time" type="xs:time" maxOccurs="1"/>
+            <xs:element name="slots" type="slotsType"/>
+        </xs:sequence>
+        <xs:attribute name="officeID" type="officeIDType" default="OF1"/>
+    </xs:complexType>
+
+    <xs:complexType name="slotsType">
+        <xs:sequence>
+            <xs:element name="availableSlots">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="250"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="totalSlots">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="250"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="officeIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="OF[0-9]{1,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

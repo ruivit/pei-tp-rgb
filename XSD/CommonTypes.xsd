@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.oficinaRGB.pt/CommonTypes" 
+           targetNamespace="http://www.oficinaRGB.pt/CommonTypes"
+           elementFormDefault="qualified"> 
+
+    <xs:simpleType name="dateType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{1,2}-\d{1,2}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="timeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-1]{1}[0-9]{1}:[0-9]{2}\s(PM|AM)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="25"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
