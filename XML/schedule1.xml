@@ -3,10 +3,35 @@
                 xmlns="http://www.oficinaRGB.pt/Schedule" 
                 xsi:schemaLocation="http://www.oficinaRGB.pt/Schedule ../XSD/Schedule.xsd"
 
+                xmlns:f="http://www.oficinaRGB.pt/Family"
+                xmlns:gd="http://www.oficinaRGB.pt/GeographicData" 
+
     scheduleID="S001" familyID="F1" officeID="OF1">
 
     <date>12-12-2021</date>
     <time>10:00 AM</time>
     <state>Active</state>
-
+    <f:family>
+        <f:numberElements>2</f:numberElements>
+        <f:country countryCode="PT">
+            <gd:countryName>Portugal</gd:countryName>
+            <gd:cityName>Lisbon</gd:cityName>
+        </f:country>
+        <f:familyElement>
+            <f:name>Joao da Familia</f:name>
+            <f:birthDate>10-12-1973</f:birthDate>
+        </f:familyElement>
+        <f:familyElement>
+            <f:name>Maria da Familia</f:name>
+            <f:birthDate>10-06-1975</f:birthDate>
+        </f:familyElement>
+        <f:reservationDates>
+            <f:numberOfDays>5</f:numberOfDays>
+            <f:preferedDates>12-12-2021</f:preferedDates>
+            <f:preferedDates>13-12-2021</f:preferedDates>
+            <f:preferedDates>14-12-2021</f:preferedDates>
+            <f:preferedDates>15-12-2021</f:preferedDates>
+            <f:preferedDates>16-12-2021</f:preferedDates>
+        </f:reservationDates>
+    </f:family>
 </schedule>

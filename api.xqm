@@ -70,28 +70,37 @@ function page:start(
   </html>
 };
 
-(:
-1passo - validar XML
-  se tiver OK continuar
-  se falhar dar mensagem de erro
-  
-2passo - enviar xml para a DB
-  db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1))
-:)
 
 
-
-declare updating
-  %rest:path("sendXML")
+declare %updating
+  %rest:path("/sendXML")
   %rest:POST("{$xml}")
   %rest:consumes('application/xml')
-function page:check-xml($xml as item()) as empty-sequence()
+  %rest:produces('application/xml')
+function page:check-xml($xml)
 {
-  if (validate:xsd($xml, "XSD/Schedule.xsd"))
-  then ()
-  else (db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1)))
+  let $xsd:= "XSD/Schedule.xsd"
+  return validate:xsd($xml, $xsd),
+  page:storeindb($xml)
+};
+
+declare %updating
+  %rest:path("/store")
+  %rest:POST("{$xml}")
+  %rest:consumes('application/xml')
+  %rest:produces('application/xml')
+function page:storeindb($xml)
+{
+  db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1))
+};
+
+declare function page:queries($xml)
+{
+  for $x in $xml
+  (: where $x//preferedDates = data123exemplo :)
+  return $x//family
 };
 
 
   
-(::)
+

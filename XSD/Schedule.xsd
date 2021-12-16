@@ -20,6 +20,7 @@
             <xs:element name="date" type="ct:dateType" minOccurs="1"/>
             <xs:element name="time" type="ct:timeType" minOccurs="1"/>
             <xs:element name="state" type="stateType" minOccurs="1"/>
+            <xs:element ref="f:family"/>
         </xs:sequence>
         <xs:attribute name="scheduleID" type="scheduleIDType"/>
         <xs:attribute name="familyID" type="f:familyIDType"/>
