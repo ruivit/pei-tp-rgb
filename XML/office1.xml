@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<office xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+<offices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
         xmlns="http://www.oficinaRGB.pt/Office" 
-        xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd"
+        xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
         
-        officeID="OF1">
-        
-    <date>12-12-2021</date>
-    <time>12:00:00</time>
-    <slots>
-        <availableSlots>120</availableSlots>
-        <totalSlots>120</totalSlots>
-    </slots>
-</office>
+    <office>
+        <date>12-12-2021</date>
+        <slots>
+            <availableSlots>50</availableSlots>
+            <totalSlots>120</totalSlots>
+        </slots>
+    </office>
+    <office>
+        <date>13-12-2021</date>
+        <slots>
+            <availableSlots>50</availableSlots>
+            <totalSlots>120</totalSlots>
+        </slots>
+    </office>
+    <office>
+        <date>14-12-2021</date>
+        <slots>
+            <availableSlots>0</availableSlots>
+            <totalSlots>120</totalSlots>
+        </slots>
+    </office>
+</offices>

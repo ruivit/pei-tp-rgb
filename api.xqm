@@ -2,9 +2,11 @@
  : This module contains some basic examples for RESTXQ annotations.
  : @author BaseX Team
  :)
+
 module namespace page = 'http://basex.org/examples/web-page';
 declare default element namespace 'http://www.oficinaRGB.pt/Family';
 declare namespace s='http://www.oficinaRGB.pt/Schedule';
+declare namespace o='http://www.oficinaRGB.pt/Office';
 
 (:~
  : Generates a welcome page.
@@ -79,26 +81,38 @@ declare %updating
   %rest:produces('application/xml')
 function page:check-xml($xml)
 {
-  let $xsd:= "XSD/Schedule.xsd"
-  return validate:xsd($xml, $xsd),
+  (:let $xsd:= "XSD/Schedule.xsd"
+  return validate:xsd($xml, $xsd),:)
   page:storeindb($xml)
 };
 
-declare %updating
-  %rest:path("/store")
-  %rest:POST("{$xml}")
-  %rest:consumes('application/xml')
-  %rest:produces('application/xml')
-function page:storeindb($xml)
+declare %updating function page:storeindb($xml)
 {
-  db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1))
+  db:add("PEITP", page:queries($xml), concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1))
 };
 
 declare function page:queries($xml)
 {
-  for $x in $xml
-  (: where $x//preferedDates = data123exemplo :)
-  return $x//family
+  let $x := db:open("PEITP")
+
+  (: pfd - prefered Family Dates
+     $od - office days 
+     $dates the AVAILABLE DATES (result of the comparation)     
+  :)
+     
+  let $pfd := $xml//date/text()
+  let $od := $x//o:date/text()
+  
+  where some $pd in $od satisfies $pd=$od
+  
+return for $dates in $pfd
+        where $dates = $od
+        return if ($x//o:office[o:date = $dates]/o:slots/o:availableSlots > 0)
+        then (
+<abc>
+  <date>{$dates}</date>
+</abc>
+)
 };
 
 
