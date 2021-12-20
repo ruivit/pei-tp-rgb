@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "100ebceb-f2e8-4d5b-998b-a3ac1339eae0",
+		"name": "PEITP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add XMLs",
+			"item": [
+				{
+					"name": "VSD Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office>\r\n        <date>12-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/sendXML",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"sendXML"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VMD Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office>\r\n        <date>12-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n    <office>\r\n        <date>13-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n    <office>\r\n        <date>14-12-2021</date>\r\n        <slots>\r\n            <availableSlots>0</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/sendXML",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"sendXML"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INVALID Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office> <!-- the date must end in 2021 -->\r\n        <date>12-12-20</date> \r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/sendXML",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"sendXML"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check Slots available",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<dates>\r\n    <date>13-12-2021</date>\r\n    <date>14-12-2021</date>\r\n</dates>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8984/availability",
+					"host": [
+						"localhost"
+					],
+					"port": "8984",
+					"path": [
+						"availability"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

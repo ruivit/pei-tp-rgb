@@ -81,14 +81,15 @@ declare %updating
   %rest:produces('application/xml')
 function page:check-xml($xml)
 {
-  (:let $xsd:= "XSD/Schedule.xsd"
-  return validate:xsd($xml, $xsd),:)
+  let $xsd:= "XSD/Office.xsd"
+  return validate:xsd($xml, $xsd),
   page:storeindb($xml)
 };
 
 declare %updating function page:storeindb($xml)
 {
-  db:add("PEITP", page:queries($xml), concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1))
+  (: db:add("PEITP", page:queries($xml), concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1)) :)
+  db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1)) 
 };
 
 declare function page:queries($xml)
@@ -105,16 +106,36 @@ declare function page:queries($xml)
   
   where some $pd in $od satisfies $pd=$od
   
-return for $dates in $pfd
+  return for $dates in $pfd
         where $dates = $od
         return if ($x//o:office[o:date = $dates]/o:slots/o:availableSlots > 0)
-        then (
-<abc>
-  <date>{$dates}</date>
-</abc>
-)
+              then (
+                  <abc>
+                    <date>{$dates}</date>
+                  </abc>
+                  )
 };
 
+(: ================ Check Availability ================ :)
+declare
+  %rest:path("/availability")
+  %rest:POST("{$date}")
+  %rest:consumes('application/xml')
+  %rest:produces('application/xml')
+function page:check-availability($date)
+{
+  let $x := db:open("PEITP")
+
+  let $pd := $date/*/*/text()
+  let $od := $x//o:date/text()
+  
+  where some $pd in $od satisfies $pd=$od
+  
+  for $result in $x//o:office[o:date = $pd]
+  let $date := $result//o:date/text()
+  let $aS := $result//o:availableSlots/text()
+  return concat($aS, " available slots for the date ", $date)
+};
 
   
 
