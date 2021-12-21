@@ -1,18 +1,11 @@
-(:~
- : This module contains some basic examples for RESTXQ annotations.
- : @author BaseX Team
- :)
-
+(: ============= Namespace Declarations ============= :)
 module namespace page = 'http://basex.org/examples/web-page';
 declare default element namespace 'http://www.oficinaRGB.pt/MakeReservation';
 declare namespace r='http://www.oficinaRGB.pt/Reservations';
 declare namespace o='http://www.oficinaRGB.pt/Office';
 declare namespace f='http://www.oficinaRGB.pt/Family';
 
-(:~
- : Generates a welcome page.
- : @return HTML page
- :)
+(: ============= Webpage ============= :)
 declare
   %rest:GET
   %rest:path('')
@@ -28,53 +21,13 @@ function page:start(
       <link rel='stylesheet' type='text/css' href='static/style.css'/>
     </head>
     <body>
-      <div class='right'><a href='/'><img src='static/basex.svg'/></a></div>
-      <h1>How to use this API</h1>
-      <div>Welcome to the RGB API. They allow you to:</div>
-      <ul>
-        <li>create web applications and services with
-          <a href='https://docs.basex.org/wiki/RESTXQ'>RESTXQ</a>,</li>
-        <li>use full-duplex communication with
-          <a href='https://docs.basex.org/wiki/WebSockets'>WebSockets</a>,</li>
-        <li>query and modify databases via <a href='https://docs.basex.org/wiki/REST'>REST</a>
-          (try <a href='rest'>here</a>), and</li>
-        <li>browse and update resources via
-          <a href='https://docs.basex.org/wiki/WebDAV'>WebDAV</a>.</li>
-      </ul>
-
-      <p>Find more information on the
-        <a href='https://docs.basex.org/wiki/Web_Application'>Web Application</a>
-        page in our documentation.</p>
-
-      <p>The following sample applications give you a glimpse of how applications
-        can be written with BaseX:</p>
-
-      <h3><a href='dba'>DBA: Database Administration</a></h3>
-
-      <p>The Database Administration interface is completely
-        written in RESTXQ.<br/>
-        The source code helps to understand how complex
-        web applications can be built with XQuery.
-      </p>
-
-      <h3><a href='chat'>WebSocket Chat</a></h3>
-
-      <p>The chat application demonstrates how bidirectional communication
-        is realized with BaseX.<br/>
-        For a better experience when testing the chat,
-        consider the following steps:
-      </p>
-        
-      <ol>
-        <li> Create different database users first (e.g. via the DBA).</li>
-        <li> Open two different browsers and log in with different users.</li>
-      </ol>
+      <h1>[RGB API]</h1>
     </body>
   </html>
 };
 
 
-
+(: ============= POST XML ============= :)
 declare %updating
   %rest:path("/makereservation")
   %rest:POST("{$xml}")
@@ -82,33 +35,52 @@ declare %updating
   %rest:produces('application/xml')
 function page:check-xml($xml)
 {
+  (: Check XML vs XSD :)
   let $xsd:= "XSD/ReservationPOST.xsd"
   return validate:xsd($xml, $xsd),
-  page:storeindb($xml)
+
+  (: Try to insert into DB :)
+  page:storeindb($xml),
+
+  (: If no error occurs, go to function :)
+  update:output(page:ok())
 };
 
+declare function page:ok() {
+  (: return a message :)
+  '[VALID] Reservation accepted [VALID]'
+};
+
+
+(: ============= Store in database ============= :)
 declare %updating function page:storeindb($xml)
 {
-  db:add("PEITP", page:queries($xml), concat("reservation", count(db:open("PEITP")//reservation) + 1))
+  db:add("PEITP", page:check-dates($xml), concat("reservation", count(db:open("PEITP")//reservation) + 1))
 };
 
-declare function page:queries($xml)
+(: ============= Check Dates ============= :)
+declare function page:check-dates($xml)
 {
-  let $db := db:open("PEITP")
+(: 
+  pfd - Prefered Family Dates
+  $od - Office Days (days available for reservation)
+  $dates - the AVAILABLE DATES (result of the comparation)
+:)
 
-  (: pfd - prefered Family Dates
-     $od - office days 
-     $dates the AVAILABLE DATES (result of the comparation)     
-  :)
-     
+  let $db := db:open("PEITP")
   let $pfd := $xml//f:preferedDates/text()
   let $od := $db//o:date/text()
   
+  (:filter the dates that the family choose and the available in the office :)
   where some $pfd in $od satisfies $pfd=$od
   
+  (: check if the dates that the family choose are available, with availability of slots :)
   let $date := $db//o:office[o:date = $pfd and o:slots/o:availableSlots > 0][1]/o:date/text()
+  
+  (: set the reservationID to +1 since this might be a reservation :)
   let $rid := count($db//r:reservation/@reservationID) + 1
   
+  (: return a valid XML that serves as an actual reservation :)
   return
   <reservation reservationID="{$rid}">
     <date>{$date}</date>
@@ -119,6 +91,8 @@ declare function page:queries($xml)
       {$xml//f:country}
     </family>
   </reservation>
+  
+  (: we could also check if this XML was valid... :)
 };
 
 
@@ -130,18 +104,52 @@ declare
   %rest:produces('application/xml')
 function page:check-availability($date)
 {
-  let $x := db:open("PEITP")
+  let $db := db:open("PEITP")
 
   let $pd := $date/*/*/text()
-  let $od := $x//o:date/text()
+  let $od := $db//o:date/text()
   
   where some $pd in $od satisfies $pd=$od
   
-  for $result in $x//o:office[o:date = $pd]
+  for $result in $db//o:office[o:date = $pd]
   let $date := $result//o:date/text()
   let $aS := $result//o:availableSlots/text()
   return concat($aS, " available slots for the date ", $date)
 };
 
-  
+
+(: ================ Cancel Reservation ================ :)
+declare %updating
+  %rest:path("/cancelreservation")
+  %rest:query-param("id", "{$id}")
+function page:cancel-reservation($id as xs:string)
+{
+  (: replace the XML in the DB with the new generated in function
+     just like we did on page:check-dates() and page:storeindb :)
+  db:replace("PEITP", concat("reservation", $id), page:canceledxml($id)),
+  update:output(page:canceledok($id))
+};
+
+declare function page:canceledxml($id)
+{
+  let $db := db:open("PEITP")
+  let $reservation := $db//r:reservation[@reservationID = $id]
+  let $rid := $db//r:reservation[@reservationID = $id]/@reservationID
+
+  return
+  <reservation reservationID="{$rid}">
+    <date>{$reservation//date/text()}</date>
+    <state>Canceled</state>
+    <family>
+      {$db//f:numberElements}
+      {$db//f:familyElement}
+      {$db//f:country}
+    </family>
+  </reservation>
+};
+declare function page:canceledok($id) {
+  (: return a message :)
+  '[CANCELED] Reservation with code ' || $id ||' [CANCELED]'
+};
+
 
