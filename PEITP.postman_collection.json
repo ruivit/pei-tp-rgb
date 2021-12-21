@@ -9,7 +9,7 @@
 			"name": "Add XMLs",
 			"item": [
 				{
-					"name": "VSD Add XML to DB",
+					"name": "Singe Date Add XML to DB",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -30,7 +30,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office>\r\n        <date>12-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>12-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -38,20 +38,20 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8984/sendXML",
+							"raw": "localhost:8984/makereservation",
 							"host": [
 								"localhost"
 							],
 							"port": "8984",
 							"path": [
-								"sendXML"
+								"makereservation"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "VMD Add XML to DB",
+					"name": "Multiple Dates Add XML to DB",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -72,7 +72,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office>\r\n        <date>12-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n    <office>\r\n        <date>13-12-2021</date>\r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n    <office>\r\n        <date>14-12-2021</date>\r\n        <slots>\r\n            <availableSlots>0</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>2</f:numberOfDays>\r\n            <f:preferedDates>13-12-2021</f:preferedDates>\r\n            <f:preferedDates>14-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -80,13 +80,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8984/sendXML",
+							"raw": "localhost:8984/makereservation",
 							"host": [
 								"localhost"
 							],
 							"port": "8984",
 							"path": [
-								"sendXML"
+								"makereservation"
 							]
 						}
 					},
@@ -114,7 +114,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<offices xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n        xmlns=\"http://www.oficinaRGB.pt/Office\" \r\n        xsi:schemaLocation=\"http://www.oficinaRGB.pt/Office ../XSD/Office.xsd\">\r\n        \r\n    <office> <!-- the date must end in 2021 -->\r\n        <date>12-12-20</date> \r\n        <slots>\r\n            <availableSlots>50</availableSlots>\r\n            <totalSlots>120</totalSlots>\r\n        </slots>\r\n    </office>\r\n</offices>\r\n",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>12-12</f:preferedDates> <!-- invalid date -->\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -122,13 +122,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8984/sendXML",
+							"raw": "localhost:8984/makereservation",
 							"host": [
 								"localhost"
 							],
 							"port": "8984",
 							"path": [
-								"sendXML"
+								"makereservation"
 							]
 						}
 					},
@@ -137,7 +137,114 @@
 			]
 		},
 		{
-			"name": "Check Slots available",
+			"name": "Check Slots",
+			"item": [
+				{
+					"name": "Check Slots Available",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/availability?date=all",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"availability"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slots Available Specific Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/availability?date=12-12-2021",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"availability"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "12-12-2021"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cancel Reservation",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -158,21 +265,27 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<dates>\r\n    <date>13-12-2021</date>\r\n    <date>14-12-2021</date>\r\n</dates>\r\n",
+					"raw": "",
 					"options": {
 						"raw": {
-							"language": "xml"
+							"language": "text"
 						}
 					}
 				},
 				"url": {
-					"raw": "localhost:8984/availability",
+					"raw": "localhost:8984/cancelreservation?id=1",
 					"host": [
 						"localhost"
 					],
 					"port": "8984",
 					"path": [
-						"availability"
+						"cancelreservation"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
 					]
 				}
 			},

@@ -91,30 +91,35 @@ declare function page:check-dates($xml)
       {$xml//f:country}
     </family>
   </reservation>
-  
-  (: we could also check if this XML was valid... :)
 };
 
 
 (: ================ Check Availability ================ :)
 declare
   %rest:path("/availability")
-  %rest:POST("{$date}")
-  %rest:consumes('application/xml')
-  %rest:produces('application/xml')
-function page:check-availability($date)
+  %rest:GET
+  %rest:query-param("date", "{$date}")
+function page:check-availability($date as xs:string)
 {
-  let $db := db:open("PEITP")
-
-  let $pd := $date/*/*/text()
+  for $db in db:open("PEITP")//o:office
+  
   let $od := $db//o:date/text()
+  let $aS := $db//o:availableSlots/text()
   
-  where some $pd in $od satisfies $pd=$od
+  return 
+  if ($date = "all")
+  then ( concat($aS, " available slots for the date ", $od) )
   
-  for $result in $db//o:office[o:date = $pd]
-  let $date := $result//o:date/text()
-  let $aS := $result//o:availableSlots/text()
-  return concat($aS, " available slots for the date ", $date)
+  else if ($date = $od) 
+  then (
+    if ($aS = 0) 
+    then ( concat("NO SLOTS AVAILABLE FOR DATE ", $date) )
+    else ( concat($aS, " available slots for the date ", $od) )
+  )
+  
+  (: GET RESQUEST Examples :)
+  (: /availability?date=all :)
+  (: /availability?date=XX-XX-XXXX :)
 };
 
 
