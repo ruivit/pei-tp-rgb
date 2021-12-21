@@ -4,9 +4,10 @@
  :)
 
 module namespace page = 'http://basex.org/examples/web-page';
-declare default element namespace 'http://www.oficinaRGB.pt/Family';
-declare namespace s='http://www.oficinaRGB.pt/Schedule';
+declare default element namespace 'http://www.oficinaRGB.pt/MakeReservation';
+declare namespace r='http://www.oficinaRGB.pt/Reservations';
 declare namespace o='http://www.oficinaRGB.pt/Office';
+declare namespace f='http://www.oficinaRGB.pt/Family';
 
 (:~
  : Generates a welcome page.
@@ -75,46 +76,51 @@ function page:start(
 
 
 declare %updating
-  %rest:path("/sendXML")
+  %rest:path("/makereservation")
   %rest:POST("{$xml}")
   %rest:consumes('application/xml')
   %rest:produces('application/xml')
 function page:check-xml($xml)
 {
-  let $xsd:= "XSD/Office.xsd"
+  let $xsd:= "XSD/ReservationPOST.xsd"
   return validate:xsd($xml, $xsd),
   page:storeindb($xml)
 };
 
 declare %updating function page:storeindb($xml)
 {
-  (: db:add("PEITP", page:queries($xml), concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1)) :)
-  db:add("PEITP", $xml, concat("schedule", count(db:open("PEITP")//s:schedule/@scheduleID) + 1)) 
+  db:add("PEITP", page:queries($xml), concat("reservation", count(db:open("PEITP")//reservation) + 1))
 };
 
 declare function page:queries($xml)
 {
-  let $x := db:open("PEITP")
+  let $db := db:open("PEITP")
 
   (: pfd - prefered Family Dates
      $od - office days 
      $dates the AVAILABLE DATES (result of the comparation)     
   :)
      
-  let $pfd := $xml//date/text()
-  let $od := $x//o:date/text()
+  let $pfd := $xml//f:preferedDates/text()
+  let $od := $db//o:date/text()
   
-  where some $pd in $od satisfies $pd=$od
+  where some $pfd in $od satisfies $pfd=$od
   
-  return for $dates in $pfd
-        where $dates = $od
-        return if ($x//o:office[o:date = $dates]/o:slots/o:availableSlots > 0)
-              then (
-                  <abc>
-                    <date>{$dates}</date>
-                  </abc>
-                  )
+  let $date := $db//o:office[o:date = $pfd and o:slots/o:availableSlots > 0][1]/o:date/text()
+  let $rid := count($db//r:reservation/@reservationID) + 1
+  
+  return
+  <reservation reservationID="{$rid}">
+    <date>{$date}</date>
+    <state>Active</state>
+    <family>
+      {$xml//f:numberElements}
+      {$xml//f:familyElement}
+      {$xml//f:country}
+    </family>
+  </reservation>
 };
+
 
 (: ================ Check Availability ================ :)
 declare

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservations   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+                xmlns="http://www.oficinaRGB.pt/Reservations" 
+                xsi:schemaLocation="http://www.oficinaRGB.pt/Reservations ../XSD/ReservationDB.xsd"
+                
+                xmlns:f="http://www.oficinaRGB.pt/Family"
+                xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+
+    <reservation reservationID="R1">
+        <date>11-11-2021</date>
+        <time>11:00 AM</time>
+        <state>Active</state>
+        <f:family>
+            <f:numberElements>2</f:numberElements>
+            <f:familyElement>
+                <f:name>Joao</f:name>
+                <f:birthDate>12-12-2000</f:birthDate>
+            </f:familyElement>
+            <f:familyElement>
+                <f:name>Maria</f:name>
+                <f:birthDate>12-12-2000</f:birthDate>
+            </f:familyElement>
+            <f:country countryCode="PT">
+                <gd:countryName>Portugal</gd:countryName>
+                <gd:cityName>Lisbon</gd:cityName>
+            </f:country>
+            <f:reservationDates>
+                <f:numberOfDays>2</f:numberOfDays>
+                <f:preferedDates>12-12-2021</f:preferedDates>
+            </f:reservationDates>
+        </f:family>
+    </reservation>
+</reservations>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.oficinaRGB.pt/MakeReservation" 
+           targetNamespace="http://www.oficinaRGB.pt/MakeReservation" 
+
+           xmlns:ct="http://www.oficinaRGB.pt/CommonTypes"
+           xmlns:f="http://www.oficinaRGB.pt/Family"
+           xmlns:o="http://www.oficinaRGB.pt/Office"
+           elementFormDefault="qualified"> 
+ 
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
+    <xs:import schemaLocation="Family.xsd" namespace="http://www.oficinaRGB.pt/Family"/> 
+    <xs:import schemaLocation="Office.xsd" namespace="http://www.oficinaRGB.pt/Office"/> 
+
+    <xs:element name="reservation" type="reservationType"/>
+
+    <xs:complexType name="reservationType">
+        <xs:sequence>
+            <xs:element ref="f:family"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="stateType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Active"/>
+            <xs:enumeration value="Canceled"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

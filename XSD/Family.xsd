@@ -15,11 +15,10 @@
     <xs:complexType name="familyType">
         <xs:sequence>
             <xs:element name="numberElements" type="nElementsType" maxOccurs="1"/>
-            <xs:element name="country" type="gd:countryType" maxOccurs="1"/>
             <xs:element name="familyElement" type="familyElementType" maxOccurs="7"/>
+            <xs:element name="country" type="gd:countryType" maxOccurs="1"/>
             <xs:element name="reservationDates" type="reservationDatesType"/>
         </xs:sequence>
-        <xs:attribute name="familyID" type="familyIDType"/>
     </xs:complexType>
     
 
@@ -38,12 +37,6 @@
             <xs:element name="birthDate" type="ct:dateType"/>
         </xs:sequence>
     </xs:complexType>
-
-    <xs:simpleType name="familyIDType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="F[0-9]{1,10}"/>
-        </xs:restriction>
-    </xs:simpleType>
     
     <xs:simpleType name="nElementsType">
         <xs:restriction base="xs:int">
