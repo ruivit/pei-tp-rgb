@@ -30,7 +30,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>12-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/Reservation ../XSD/Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:origin countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:origin>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>12-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -72,7 +72,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>2</f:numberOfDays>\r\n            <f:preferedDates>13-12-2021</f:preferedDates>\r\n            <f:preferedDates>14-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/Reservation ../XSD/Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:origin countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:origin>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>17-12-2021</f:preferedDates>\r\n            <f:preferedDates>18-12-2021</f:preferedDates>\r\n            <f:preferedDates>19-12-2021</f:preferedDates>\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -114,7 +114,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/MakeReservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:country countryCode=\"PT\">\r\n            <gd:countryName>Portugal</gd:countryName>\r\n            <gd:cityName>Lisbon</gd:cityName>\r\n        </f:country>\r\n        <f:reservationDates>\r\n            <f:numberOfDays>1</f:numberOfDays>\r\n            <f:preferedDates>12-12</f:preferedDates> <!-- invalid date -->\r\n        </f:reservationDates>\r\n    </f:family>\r\n</reservation>",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.oficinaRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.oficinaRGB.pt/Reservation ../XSD/Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.oficinaRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.oficinaRGB.pt/GeographicData\">\r\n\r\n    <f:family>\r\n        <f:numberElements>2</f:numberElements>\r\n        <f:familyElement>\r\n            <f:name>Joao</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n        <f:familyElement>\r\n            <f:name>Maria</f:name>\r\n            <f:birthDate>12222-12-2000</f:birthDate>\r\n        </f:familyElement>\r\n    </f:family>\r\n</reservation>",
 							"options": {
 								"raw": {
 									"language": "xml"
@@ -140,58 +140,7 @@
 			"name": "Check Slots",
 			"item": [
 				{
-					"name": "Check Slots Available",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "admin",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "admin",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "text"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8984/availability?date=all",
-							"host": [
-								"localhost"
-							],
-							"port": "8984",
-							"path": [
-								"availability"
-							],
-							"query": [
-								{
-									"key": "date",
-									"value": "all"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Check Slots Available Specific Date",
+					"name": "Check Slots Single Day",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -235,6 +184,65 @@
 								{
 									"key": "date",
 									"value": "12-12-2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slots Multiple Days",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/availability?date=12-12-2021&date=13-12-2021&date=14-12-2021",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"availability"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "12-12-2021"
+								},
+								{
+									"key": "date",
+									"value": "13-12-2021"
+								},
+								{
+									"key": "date",
+									"value": "14-12-2021"
 								}
 							]
 						}

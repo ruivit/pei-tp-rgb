@@ -4,7 +4,7 @@
            targetNamespace="http://www.oficinaRGB.pt/GeographicData"
            elementFormDefault="qualified"> 
 
-    <xs:complexType name="countryType">
+    <xs:complexType name="originType">
         <xs:sequence>
             <xs:element name="countryName" type="countryNameType" maxOccurs="1"/>
             <xs:element name="cityName" type="cityNameType" maxOccurs="1"/>

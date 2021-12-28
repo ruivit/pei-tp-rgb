@@ -2,7 +2,7 @@
 module namespace page = 'http://basex.org/examples/web-page';
 declare default element namespace 'http://www.oficinaRGB.pt/Reservation';
 declare namespace o='http://www.oficinaRGB.pt/Office';
-declare namespace f='http://www.oficinaRGB.pt/Family';
+declare namespace f='http://www.oficinaRGB.pt/Family'; 
 
 (: ============= Webpage ============= :)
 declare
@@ -116,7 +116,7 @@ declare function page:valid-dates($xml, $nvdate)
     <family>
       {$xml//f:numberElements}
       {$xml//f:familyElement}
-      {$xml//f:country}
+      {$xml//f:origin}
     </family>
   </reservation>)
   else (
@@ -126,7 +126,7 @@ declare function page:valid-dates($xml, $nvdate)
     <family>
       {$xml//f:numberElements}
       {$xml//f:familyElement}
-      {$xml//f:country}
+      {$xml//f:origin}
     </family>
   </reservation>)
 };

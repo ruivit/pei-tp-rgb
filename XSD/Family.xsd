@@ -16,7 +16,7 @@
         <xs:sequence maxOccurs="1">
             <xs:element name="numberElements" type="nElementsType" maxOccurs="1"/>
             <xs:element name="familyElement" type="familyElementType" maxOccurs="7"/>
-            <xs:element name="country" type="gd:countryType" maxOccurs="1"/>
+            <xs:element name="origin" type="gd:originType" maxOccurs="1"/>
             <xs:element name="reservationDates" type="reservationDatesType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
