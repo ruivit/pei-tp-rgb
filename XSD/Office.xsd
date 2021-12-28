@@ -8,39 +8,24 @@
  
     <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
 
-    <xs:element name="offices">
+    <xs:element name="office">
         <xs:complexType>
-            <xs:sequence maxOccurs="unbounded">
-                <xs:element name="office" type="officeType"/>
+            <xs:sequence>
+                <xs:element name="reservations" type="reservationsType" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-    <xs:complexType name="officeType">
+    
+    <xs:complexType name="reservationsType">
         <xs:sequence>
             <xs:element name="date" type="ct:dateType" maxOccurs="unbounded"/>
             <xs:element name="slots" type="slotsType"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="slotsType">
-        <xs:sequence>
-            <xs:element name="availableSlots">
-                <xs:simpleType>
-                    <xs:restriction base="xs:int">
-                        <xs:minInclusive value="0"/>
-                        <xs:maxInclusive value="250"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="totalSlots">
-                <xs:simpleType>
-                    <xs:restriction base="xs:int">
-                        <xs:minInclusive value="0"/>
-                        <xs:maxInclusive value="250"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:simpleType name="slotsType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-5]{1}[0-9]{0,1}"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

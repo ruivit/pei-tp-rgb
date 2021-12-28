@@ -13,24 +13,24 @@
     <xs:element name="family" type="familyType"/>
 
     <xs:complexType name="familyType">
-        <xs:sequence>
+        <xs:sequence maxOccurs="1">
             <xs:element name="numberElements" type="nElementsType" maxOccurs="1"/>
             <xs:element name="familyElement" type="familyElementType" maxOccurs="7"/>
             <xs:element name="country" type="gd:countryType" maxOccurs="1"/>
-            <xs:element name="reservationDates" type="reservationDatesType"/>
+            <xs:element name="reservationDates" type="reservationDatesType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
     
 
     <xs:complexType name="reservationDatesType">
-        <xs:sequence>
-            <xs:element name="numberOfDays" type="numberOfDaysType"/>
+        <xs:sequence maxOccurs="1">
+            <xs:element name="numberOfDays" type="numberOfDaysType" maxOccurs="1"/>
             <xs:element name="preferedDates" type="ct:dateType" minOccurs="1" maxOccurs="5"/>
         </xs:sequence>
     </xs:complexType>
 
 
-    <!--- Types -->
+    <!-- Types -->
     <xs:complexType name="familyElementType">
         <xs:sequence>
             <xs:element name="name" type="ct:nameType"/>
@@ -40,7 +40,7 @@
     
     <xs:simpleType name="nElementsType">
         <xs:restriction base="xs:int">
-            <xs:minExclusive value="0"/>
+            <xs:minExclusive value="1"/>
             <xs:maxInclusive value="7"/>
         </xs:restriction>
     </xs:simpleType>

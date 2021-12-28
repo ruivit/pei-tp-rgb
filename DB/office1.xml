@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<offices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+<office xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
         xmlns="http://www.oficinaRGB.pt/Office" 
         xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
         
-    <office>
+    <reservations>
         <date>12-12-2021</date>
-        <slots>
-            <availableSlots>50</availableSlots>
-            <totalSlots>120</totalSlots>
-        </slots>
-    </office>
-    <office>
+        <slots>50</slots>
+    </reservations>
+    <reservations>
         <date>13-12-2021</date>
-        <slots>
-            <availableSlots>50</availableSlots>
-            <totalSlots>120</totalSlots>
-        </slots>
-    </office>
-    <office>
+        <slots>40</slots>
+    </reservations>
+    <reservations>
         <date>14-12-2021</date>
-        <slots>
-            <availableSlots>0</availableSlots>
-            <totalSlots>120</totalSlots>
-        </slots>
-    </office>
-</offices>
+        <slots>0</slots>
+    </reservations>
+</office>

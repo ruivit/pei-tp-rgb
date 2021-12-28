@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservation   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+                xmlns="http://www.oficinaRGB.pt/MakeReservation" 
+                xsi:schemaLocation="http://www.oficinaRGB.pt/MakeReservation ../XSD/ReservationPOST.xsd"
+                
+                xmlns:f="http://www.oficinaRGB.pt/Family"
+                xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+
+    <f:family>
+        <f:numberElements>4</f:numberElements>
+        <f:familyElement>
+            <f:name>Joao</f:name>
+            <f:birthDate>12-12-2000</f:birthDate>
+        </f:familyElement>
+        <f:familyElement>
+            <f:name>Maria</f:name>
+            <f:birthDate>12-12-2000</f:birthDate>
+        </f:familyElement>
+        <f:familyElement>
+            <f:name>Felicia</f:name>
+            <f:birthDate>12-12-2000</f:birthDate>
+        </f:familyElement>
+        <f:familyElement>
+            <f:name>Martim</f:name>
+            <f:birthDate>12-12-2000</f:birthDate>
+        </f:familyElement>
+        <f:country countryCode="PT">
+            <gd:countryName>Portugal</gd:countryName>
+            <gd:cityName>Oeiras</gd:cityName>
+        </f:country>
+        <f:reservationDates>
+            <f:numberOfDays>3</f:numberOfDays>
+            <f:preferedDates>12-01-2021</f:preferedDates>
+            <f:preferedDates>13-01-2021</f:preferedDates>
+            <f:preferedDates>14-01-2021</f:preferedDates>
+        </f:reservationDates>
+    </f:family>
+</reservation>
