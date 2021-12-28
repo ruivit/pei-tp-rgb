@@ -38,54 +38,86 @@ function page:post-xml($xml)
   let $xsd:= "XSD/Reservation.xsd"
   return validate:xsd($xml, $xsd),
 
-  (: Try to insert into DB :)
-  page:storeindb($xml)
+  (: Make all the necessary checks
+  if all checks are passed, write to DB :)
+  page:checks($xml)
 };
 
-declare function page:ok() {
-  (: return a message :)
-  '[VALID] Reservation accepted [VALID]'
-};
-
-
-(: ============= Store in database ============= :)
-declare %updating function page:storeindb($xml)
+(: ============= Checks ============= :)
+declare %updating function page:checks($xml)
 {
-  db:add("PEITP", page:check-dates($xml), concat("reservation", count(db:open("PEITP")//reservation) + 1))
-};
-
-(: ============= Check Dates ============= :)
-declare function page:check-dates($xml)
-{
-(: 
-  pfd - Prefered Family Dates
-  $od - Office Days (days available for reservation)
-  $dates - the AVAILABLE DATES (result of the comparation)
-:)
-
   let $db := db:open("PEITP")
   let $pfd := $xml//f:preferedDates/text()
+  let $nvdate := $xml//f:preferedDates[1]
   let $od := $db//o:date/text()
   
   (:filter the dates that the family choose and the available in the office :)
   where some $pfd in $od satisfies $pfd=$od
   
   (: check if the dates that the family choose are available, with availability of slots :)
-  let $date := $db//o:office[o:date = $pfd][1]/o:date/text()
-  let $slots := $db//o:office[o:date = $pfd and o:slots/o:availableSlots > 0][1]/o:date/text()
+  let $date := $db//o:reservations[o:date = $pfd][1]/o:date/text()
+  let $slots := $db//o:reservations[o:date = $pfd and o:slots > 0][1]/o:date/text()
   
   (: set the reservationID to +1 since this might be a reservation :)
   let $rid := count($db//reservation/@reservationID) + 1
   
-  (: return a valid XML that serves as an actual reservation :)
-  (: If the date doenst exist, create it :)
-  (: If the date exists, but there arent available slots, throw error :)
-  
+  (: if the date does not exist, create it and make the reservation :)
   return if (empty($date))
-  then (web:error(500, "data nao existe"))
+  then (
+    db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
+    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1))
+       )
+      
+  (: if there are no slots available, throw an error; else, make a reservation :)
   else (if (empty($slots))
-        then (web:error(500, "nao ha slots disponiveis"))
-        else (
+       then (web:error(500, "[FALHA] Atingido o limite diário de reservas [FALHA]"))
+       else (
+    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1))),
+    replace value of node $db//o:reservations[o:date = $date]/o:slots with $db//o:reservations[o:date = $date]/o:slots - 1
+        )
+};
+
+(: return a valid xml of the new office date :)
+declare function page:new-date($nvdate)
+{
+  let $db := db:open("PEITP")//o:office
+  
+  return 
+  <office xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
+  {$db//o:reservations}
+ <reservations xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <date>{$nvdate[1]/text()}</date>
+        <slots>49</slots>
+  </reservations>
+</office>
+};
+
+(: return a valid xml with the valid date, that will be used to make a reservation :)
+declare function page:valid-dates($xml, $vdate)
+{
+  let $db := db:open("PEITP")
+  let $pfd := $xml//f:preferedDates/text()
+  let $od := $db//o:date/text()
+  
+  where some $pfd in $od satisfies $pfd=$od
+  
+  let $date := $db//o:reservations[o:date = $pfd][1]/o:date/text()
+  let $slots := $db//o:reservations[o:date = $pfd and o:slots/o:availableSlots > 0][1]/o:date/text()
+  let $rid := count($db//reservation/@reservationID) + 1
+    
+  return
+  if (empty($date))
+  then (
+  <reservation reservationID="{$rid}">
+    <date>{$vdate}</date>
+    <state>Active</state>
+    <family>
+      {$xml//f:numberElements}
+      {$xml//f:familyElement}
+      {$xml//f:country}
+    </family>
+  </reservation>)
+  else (
   <reservation reservationID="{$rid}">
     <date>{$date}</date>
     <state>Active</state>
@@ -94,42 +126,40 @@ declare function page:check-dates($xml)
       {$xml//f:familyElement}
       {$xml//f:country}
     </family>
-  </reservation>
-))
+  </reservation>)
 };
 
 
-declare function page:create-date($xml)
-{
-  let $db := db:open("PEITP")//o:office
-  return
-  <office>
-    
-  </office>
-};
 
 (: ================ Check Availability ================ :)
 declare
   %rest:path("/availability")
   %rest:GET
-  %rest:query-param("date", "{$date}")
-function page:check-availability($date as xs:string)
+  %rest:query-param("date", "{$getdate}")
+function page:check-availability($getdate as xs:string)
 {
-  for $db in db:open("PEITP")//o:office
-  
-  let $od := $db//o:date/text()
-  let $aS := $db//o:availableSlots/text()
-  
-  return 
-  if ($date = "all")
-  then ( concat($aS, " available slots for the date ", $od) )
-  
-  else if ($date = $od) 
+  if ($getdate = "all")
   then (
-    if ($aS = 0) 
-    then ( concat("NO SLOTS AVAILABLE FOR DATE ", $date) )
-    else ( concat($aS, " available slots for the date ", $od) )
-  )
+    for $db in db:open("PEITP")//o:reservations
+  
+    let $od := $db//o:date/text()
+    let $slots := $db//o:slots/text()
+    
+    return if ($slots = 0)
+    then (concat("Nao existe disponibilidade para o dia ", $od))
+    else (concat("Existe disponibilidade para ", $slots, " familias para o dia ", $od))
+      )
+  else
+      (
+    let $db := db:open("PEITP")//o:office
+  
+    let $check := $getdate = $db//o:date/text()
+    let $slots := $db//o:reservations[o:date = $getdate]/o:slots/text()
+    
+    return if ($check)
+    then (concat("Existe disponibilidade para ", $slots, " familias para o dia ", $getdate))
+    else (concat("Existe disponibilidade para 50 familias no dia ", $getdate))
+      )
   
   (: GET RESQUEST Examples :)
   (: /availability?date=all :)
@@ -143,30 +173,21 @@ declare %updating
   %rest:query-param("id", "{$id}")
 function page:cancel-reservation($id as xs:string)
 {
+  let $db := db:open("PEITP")
   (: replace the XML in the DB with the new generated in function
      just like we did on page:check-dates() and page:storeindb :)
-  db:replace("PEITP", concat("reservation", $id), page:canceledxml($id)),
+  return replace value of node $db//reservation[@reservationID = $id]/state with "Canceled",
   update:output(page:canceledok($id))
 };
 
-declare function page:canceledxml($id)
-{
-  let $db := db:open("PEITP")
-  let $reservation := $db//reservation[@reservationID = $id]
-  let $rid := $db//reservation[@reservationID = $id]/@reservationID
 
-  return
-  <reservation reservationID="{$rid}">
-    <date>{$reservation//date/text()}</date>
-    <state>Canceled</state>
-    <family>
-      {$db//f:numberElements}
-      {$db//f:familyElement}
-      {$db//f:country}
-    </family>
-  </reservation>
-};
+(: ================ Mensages ================ :)
 declare function page:canceledok($id) {
   (: return a message :)
   '[CANCELED] Reservation with code ' || $id ||' [CANCELED]'
+};
+
+declare function page:ok() {
+  (: return a message :)
+  '[VALID] Reservation accepted [VALID]'
 };
