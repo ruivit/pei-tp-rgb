@@ -1,0 +1,14 @@
+<office xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
+  <reservations>
+    <date>12-12-2021</date>
+    <slots>49</slots>
+  </reservations>
+  <reservations>
+    <date>13-12-2021</date>
+    <slots>40</slots>
+  </reservations>
+  <reservations>
+    <date>14-12-2021</date>
+    <slots>0</slots>
+  </reservations>
+</office>
