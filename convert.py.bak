@@ -2,7 +2,7 @@ import re, os, json, xmltodict
 from pymongo import MongoClient
 import pymongo
 from pymongo import MongoClient
-#teste
+
 dir = r"PEITP"
 
 def convert_xml_to_json():
