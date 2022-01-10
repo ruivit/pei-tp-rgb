@@ -68,8 +68,10 @@ declare %updating function page:checks($xml)
   (: if the date does not exist, create it and make the reservation :)
   return if (empty($date))
   then (
-    db:replace("PEITP", "office1", page:new-date($nvdate)),
-    db:add("PEITP",page:checkbetween-dates($nvdate), page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1)),
+    update:output(page:checkbetween-dates($nvdate)),
+    db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
+    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml")),
+    
     (:========FeedBack Message========:)
     update:output(page:ok($nvdate, $rid))
        )
@@ -78,9 +80,9 @@ declare %updating function page:checks($xml)
   else (if (empty($slots))
        then (web:error(500, "[ERROR] Atingido o limite diário de reservas [ERROR]"))
        else (
-          
-          db:add("PEITP",page:checkbetween-dates($nvdate), page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//					reservation) + 1))),
-          replace value of node $database//o:reservations[o:date = $date]/o:slots with $database//o:reservations[o:date = $date]/o:slots - 1,
+         update:output(page:checkbetween-dates($nvdate)),
+         db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml"))),
+         replace value of node $database//o:reservations[o:date = $date]/o:slots with $database//o:reservations[o:date = $date]/o:slots - 1,
           (:========FeedBack Message========:)
           update:output(page:ok($date, $rid))
         )
@@ -89,12 +91,12 @@ declare %updating function page:checks($xml)
 (:==Check if nvdate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
 declare function page:checkbetween-dates($nvdate)
 {
-  let $firstdate := format-date(xs:date("2022-09-15"), "[M01]-[D01]-[Y0001]")
-  let $lastdate := format-date(xs:date("2022-12-25"), "[M01]-[D01]-[Y0001]")
+  let $firstdate := xs:date("2022-09-15")
+  let $lastdate := xs:date("2022-12-26")
   
   return if($nvdate>$firstdate and $nvdate<$lastdate)
          then()
-         else("[ERROR]As data permitidas são de 16-09-2022 até 25-12-202[ERROR]") 
+         else(web:error(500, "[ERROR] As data permitidas são de 16-09-2022 até 25-12-2022 [ERROR]"))
 };
 
 (: return a valid xml with the new date to add to the office file:)
@@ -129,6 +131,7 @@ declare function page:valid-dates($xml, $nvdate)
   if (empty($date))
   then (
   <reservation reservationID="{$rid}">
+    <id>{$rid}</id>
     <date>{$nvdate}</date>
     <state>Active</state>
     <family>
@@ -139,6 +142,7 @@ declare function page:valid-dates($xml, $nvdate)
   </reservation>)
   else (
   <reservation reservationID="{$rid}">
+    <id>{$rid}</id>
     <date>{$date}</date>
     <state>Active</state>
     <family>
@@ -177,6 +181,9 @@ function page:check-availability($getdate)
     let $check := $days = $db//o:date/text()
     let $slots := $db//o:reservations[o:date = $days]/o:slots/text()
     
+    (: Check if the given date is between the allowed days :)
+    let $checkDates := page:checkbetween-dates($days)
+    
     return if ($check)
     then "Existe disponibilidade para " || $slots || " familias para o dia " || $days
     else "Existe disponibilidade para 50 familias no dia " || $days
@@ -204,8 +211,9 @@ function page:cancel-reservation($id as xs:string)
 declare
   %rest:path("/exportdatabase")
   %rest:GET
-  function page:exportdatabase(){
-  db:export("PEITP", "C:\Program Files (x86)\BaseX\webapp\PEITP", map { 'method': 'xml' })
+function page:exportdatabase() {
+  db:export("PEITP", "C:\Program Files (x86)\BaseX\webapp\EXPORTDB", map { 'method': 'xml' }),
+  page:exportdone()
 };
 
 (: ================ Messages ================ :)
@@ -222,4 +230,9 @@ declare function page:ok($date, $id) {
 declare function page:betweendates() {
   (: return a message :)
   '[ERROR] Choose dates between 16-09-2022 and 25-12-2022 [ERROR]'
+};
+
+declare function page:exportdone() {
+  (: return a message :)
+  '[EXPORTED] Database Exported with Success [EXPORTED]'
 };
