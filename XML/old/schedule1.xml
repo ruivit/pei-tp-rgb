@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+                xmlns="http://www.oficinaRGB.pt/Schedule" 
+                xsi:schemaLocation="http://www.oficinaRGB.pt/Schedule ../XSD/Schedule.xsd"
+
+                xmlns:f="http://www.oficinaRGB.pt/Family"
+                xmlns:gd="http://www.oficinaRGB.pt/GeographicData" 
+
+    scheduleID="S001" familyID="F1" officeID="OF1">
+
+    <date>12-12-2021</date>
+    <time>10:00 AM</time>
+    <state>Active</state>
+</schedule>

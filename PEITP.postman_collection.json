@@ -234,15 +234,15 @@
 							"query": [
 								{
 									"key": "date",
-									"value": "12-12-2021"
+									"value": "2022-12-12"
 								},
 								{
 									"key": "date",
-									"value": "13-12-2021"
+									"value": "2022-12-13"
 								},
 								{
 									"key": "date",
-									"value": "14-12-2021"
+									"value": "2022-12-14"
 								}
 							]
 						}
@@ -298,6 +298,50 @@
 				}
 			},
 			"response": []
+		},
+
+		{
+			"name": "Export Database",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8984/exportdatabase",
+					"host": [
+						"localhost"
+					],
+					"port": "8984",
+					"path": [
+						"exportdatabase"
+					]
+				}
+			},
+			"response": []
 		}
+		
 	]
 }

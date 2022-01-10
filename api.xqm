@@ -1,10 +1,12 @@
 (: ============= Namespace Declarations ============= :)
+
 module namespace page = 'http://basex.org/examples/web-page';
 declare default element namespace 'http://www.oficinaRGB.pt/Reservation';
 declare namespace o='http://www.oficinaRGB.pt/Office';
 declare namespace f='http://www.oficinaRGB.pt/Family'; 
 
 (: ============= Webpage ============= :)
+
 declare
   %rest:GET
   %rest:path('')
@@ -27,6 +29,7 @@ function page:start(
 
 
 (: ============= POST XML ============= :)
+
 declare %updating
   %rest:path("/makereservation")
   %rest:POST("{$xml}")
@@ -44,42 +47,57 @@ function page:post-xml($xml)
 };
 
 (: ============= Checks ============= :)
+
 declare %updating function page:checks($xml)
 {
-  let $db := db:open("PEITP")
+  let $database := db:open("PEITP")
   let $pfd := $xml//f:preferedDates/text()
   let $nvdate := $xml//f:preferedDates[1]
-  let $od := $db//o:date/text()
+  let $officedates := $database//o:date/text()
   
   (:filter the dates that the family choose and the available in the office :)
-  where some $pfd in $od satisfies $pfd=$od
+  where some $pfd in $officedates satisfies $pfd=$officedates
   
   (: check if the dates that the family choose are available, with availability of slots :)
-  let $date := $db//o:reservations[o:date = $pfd][1]/o:date/text()
-  let $slots := $db//o:reservations[o:date = $pfd and o:slots > 0][1]/o:date/text()
+  let $date := $database//o:reservations[o:date = $pfd][1]/o:date/text()
+  let $slots := $database//o:reservations[o:date = $pfd and o:slots > 0][1]/o:date/text()
   
   (: set the reservationID to +1 since this might be a reservation :)
-  let $rid := count($db//reservation/@reservationID) + 1
+  let $rid := count($database//reservation/@reservationID) + 1
   
   (: if the date does not exist, create it and make the reservation :)
   return if (empty($date))
   then (
-    db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
-    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1)),
+    db:replace("PEITP", "office1", page:new-date($nvdate)),
+    db:add("PEITP",page:checkbetween-dates($nvdate), page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1)),
+    (:========FeedBack Message========:)
     update:output(page:ok($nvdate, $rid))
        )
       
   (: if there are no slots available, throw an error; else, make a reservation :)
   else (if (empty($slots))
-       then (web:error(500, "[FALHA] Atingido o limite diário de reservas [FALHA]"))
+       then (web:error(500, "[ERROR] Atingido o limite diário de reservas [ERROR]"))
        else (
-    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1))),
-    replace value of node $db//o:reservations[o:date = $date]/o:slots with $db//o:reservations[o:date = $date]/o:slots - 1,
-    update:output(page:ok($date, $rid))
+          
+          db:add("PEITP",page:checkbetween-dates($nvdate), page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//					reservation) + 1))),
+          replace value of node $database//o:reservations[o:date = $date]/o:slots with $database//o:reservations[o:date = $date]/o:slots - 1,
+          (:========FeedBack Message========:)
+          update:output(page:ok($date, $rid))
         )
 };
 
-(: return a valid xml of the new office date :)
+(:==Check if nvdate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
+declare function page:checkbetween-dates($nvdate)
+{
+  let $firstdate := format-date(xs:date("2022-09-15"), "[M01]-[D01]-[Y0001]")
+  let $lastdate := format-date(xs:date("2022-12-25"), "[M01]-[D01]-[Y0001]")
+  
+  return if($nvdate>$firstdate and $nvdate<$lastdate)
+         then()
+         else("[ERROR]As data permitidas são de 16-09-2022 até 25-12-202[ERROR]") 
+};
+
+(: return a valid xml with the new date to add to the office file:)
 declare function page:new-date($nvdate)
 {
   let $db := db:open("PEITP")//o:office
@@ -182,7 +200,15 @@ function page:cancel-reservation($id as xs:string)
 };
 
 
-(: ================ Mensages ================ :)
+(: ================ Export DataBase ================ :)
+declare
+  %rest:path("/exportdatabase")
+  %rest:GET
+  function page:exportdatabase(){
+  db:export("PEITP", "C:\Program Files (x86)\BaseX\webapp\PEITP", map { 'method': 'xml' })
+};
+
+(: ================ Messages ================ :)
 declare function page:canceledok($id) {
   (: return a message :)
   '[CANCELED] Reservation with code ' || $id ||' [CANCELED]'
@@ -191,4 +217,9 @@ declare function page:canceledok($id) {
 declare function page:ok($date, $id) {
   (: return a message :)
   '[VALID] Reservation for the day ' || $date || ' accepted with code ' || $id || ' [VALID]'
+};
+
+declare function page:betweendates() {
+  (: return a message :)
+  '[ERROR] Choose dates between 16-09-2022 and 25-12-2022 [ERROR]'
 };

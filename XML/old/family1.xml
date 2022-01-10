@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xmlns="http://www.oficinaRGB.pt/Family" 
+        xsi:schemaLocation="http://www.oficinaRGB.pt/Family ../XSD/Family.xsd"
+        xmlns:gd="http://www.oficinaRGB.pt/GeographicData"
+        
+        familyID="F1">
+
+    <numberElements>3</numberElements>
+    <country countryCode="PT">
+        <gd:countryName>Portugal</gd:countryName>
+        <gd:cityName>Lisbon</gd:cityName>
+    </country>
+    <familyElement>
+        <name>Joao da Familia</name>
+        <birthDate>10-12-2021</birthDate>
+    </familyElement>
+    <familyElement>
+        <name>Maria da Familia</name>
+        <birthDate>04-02-1978</birthDate>
+    </familyElement>
+    <familyElement>
+        <name>Joanita da Familia</name>
+        <birthDate>12-07-1999</birthDate>
+    </familyElement>
+    <reservationDates>
+        <numberOfDays>5</numberOfDays>
+        <preferedDates>12-12-2021</preferedDates>
+        <preferedDates>13-12-2021</preferedDates>
+        <preferedDates>14-12-2021</preferedDates>
+        <preferedDates>15-12-2021</preferedDates>
+        <preferedDates>16-12-2021</preferedDates>
+    </reservationDates>
+</family>

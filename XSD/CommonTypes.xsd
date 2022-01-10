@@ -5,8 +5,8 @@
            elementFormDefault="qualified"> 
 
     <xs:simpleType name="dateType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{1,2}-\d{1,2}-\d{4}"/>
+        <xs:restriction base="xs:date">
+            <xs:pattern value="\d{4}-\d{1,2}-\d{1,2}"/>
         </xs:restriction>
     </xs:simpleType>
 
