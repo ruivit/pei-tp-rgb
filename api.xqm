@@ -68,8 +68,8 @@ declare %updating function page:checks($xml)
   (: if the date does not exist, create it and make the reservation :)
   return if (empty($date))
   then (
-    update:output(page:checkbetween-dates($nvdate)),
     db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
+    update:output(page:checkbetween-dates($nvdate)),
     db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml")),
     
     (:========FeedBack Message========:)
@@ -89,12 +89,12 @@ declare %updating function page:checks($xml)
 };
 
 (:==Check if nvdate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
-declare function page:checkbetween-dates($nvdate)
+declare function page:checkbetween-dates($dateToCheck)
 {
   let $firstdate := xs:date("2022-09-15")
   let $lastdate := xs:date("2022-12-26")
   
-  return if($nvdate>$firstdate and $nvdate<$lastdate)
+  return if($dateToCheck>$firstdate and $dateToCheck<$lastdate)
          then()
          else(web:error(500, "[ERROR] As data permitidas são de 16-09-2022 até 25-12-2022 [ERROR]"))
 };
@@ -132,7 +132,7 @@ declare function page:valid-dates($xml, $nvdate)
   then (
   <reservation reservationID="{$rid}">
     <id>{$rid}</id>
-    <date>{$nvdate}</date>
+    <date>{$nvdate/text()}</date>
     <state>Active</state>
     <family>
       <numberElements>{count($xml//f:familyElement)}</numberElements>

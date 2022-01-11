@@ -1,16 +1,20 @@
-<reservation xmlns="http://www.oficinaRGB.pt/Reservation" reservationID="2">
-  <id>2</id>
-  <date>2022-12-12</date>
-  <state>Active</state>
+<reservation xmlns="http://www.oficinaRGB.pt/Reservation" reservationID="9">
+  <id>9</id>
+  <date>2022-12-22</date>
+  <state>Canceled</state>
   <family>
-    <nubmerElements>2</nubmerElements>
-    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
-            <f:name>Joao</f:name>
-            <f:birthDate>1992-06-22</f:birthDate>
-        </f:familyElement>
+    <numberElements>3</numberElements>
     <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
             <f:name>Maria</f:name>
-            <f:birthDate>1990-05-24</f:birthDate>
+            <f:birthDate>1967-10-02</f:birthDate>
+        </f:familyElement>
+    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+            <f:name>Joao</f:name>
+            <f:birthDate>1963-04-22</f:birthDate>
+        </f:familyElement>
+    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+            <f:name>Ritinha</f:name>
+            <f:birthDate>2010-05-02</f:birthDate>
         </f:familyElement>
     <f:origin xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData" countryCode="PT">
             <gd:countryName>Portugal</gd:countryName>
