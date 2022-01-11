@@ -47,7 +47,6 @@ function page:post-xml($xml)
 };
 
 (: ============= Checks ============= :)
-
 declare %updating function page:checks($xml)
 {
   let $database := db:open("PEITP")
@@ -71,6 +70,7 @@ declare %updating function page:checks($xml)
     db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
     update:output(page:checkbetween-dates($nvdate)),
     db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml")),
+    (: nao se pode ter aqui o insert last node porque a data nao existe no office, logo insere-se no new-date :)
     
     (:========FeedBack Message========:)
     update:output(page:ok($nvdate, $rid))
@@ -83,6 +83,9 @@ declare %updating function page:checks($xml)
          update:output(page:checkbetween-dates($nvdate)),
          db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml"))),
          replace value of node $database//o:reservations[o:date = $date]/o:slots with $database//o:reservations[o:date = $date]/o:slots - 1,
+         (: ah e tal nao encontro TE FODER BASEX :)
+         insert node <id>{count(db:open("PEITP")//reservation) + 1}</id> as last into $database//o:reservations[o:date = $nvdate]/o:ids,
+         
           (:========FeedBack Message========:)
           update:output(page:ok($date, $rid))
         )
@@ -110,6 +113,7 @@ declare function page:new-date($nvdate)
  <reservations xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <date>{$nvdate[1]/text()}</date>
         <slots>49</slots>
+        {$db//o:reservations[o:date = $nvdate[1]]/o:ids}
   </reservations>
 </office>
 };

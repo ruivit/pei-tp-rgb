@@ -6,13 +6,16 @@
     <reservations>
         <date>2022-12-12</date>
         <slots>50</slots>
+        <ids></ids>
     </reservations>
     <reservations>
         <date>2022-12-13</date>
         <slots>40</slots>
+        <ids></ids>
     </reservations>
     <reservations>
         <date>2022-12-14</date>
         <slots>0</slots>
+        <ids></ids>
     </reservations>
 </office>
