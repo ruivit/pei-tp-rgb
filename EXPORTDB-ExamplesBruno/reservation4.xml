@@ -1,0 +1,22 @@
+<reservation xmlns="http://www.oficinaRGB.pt/Reservation" reservationID="4">
+  <id>4</id>
+  <date>
+    <f:preferedDates xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">2022-12-16</f:preferedDates>
+  </date>
+  <state>Active</state>
+  <family>
+    <numberElements>2</numberElements>
+    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+            <f:name>Joao</f:name>
+            <f:birthDate>1992-06-22</f:birthDate>
+        </f:familyElement>
+    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+            <f:name>Maria</f:name>
+            <f:birthDate>1990-05-24</f:birthDate>
+        </f:familyElement>
+    <f:origin xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData" countryCode="ES">
+            <gd:countryName>Spain</gd:countryName>
+            <gd:cityName>Madrid</gd:cityName>
+        </f:origin>
+  </family>
+</reservation>

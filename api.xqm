@@ -135,7 +135,7 @@ declare function page:valid-dates($xml, $nvdate)
     <date>{$nvdate}</date>
     <state>Active</state>
     <family>
-      {$xml//f:numberElements}
+      <numberElements>{count($xml//f:familyElement)}</numberElements>
       {$xml//f:familyElement}
       {$xml//f:origin}
     </family>
@@ -146,7 +146,7 @@ declare function page:valid-dates($xml, $nvdate)
     <date>{$date}</date>
     <state>Active</state>
     <family>
-      {$xml//f:numberElements}
+      <numberElements>{count($xml//f:familyElement)}</numberElements>
       {$xml//f:familyElement}
       {$xml//f:origin}
     </family>

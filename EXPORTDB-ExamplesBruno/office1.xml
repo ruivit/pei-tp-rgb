@@ -1,0 +1,22 @@
+<office xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
+  <reservations>
+    <date>2022-12-12</date>
+    <slots>48</slots>
+  </reservations>
+  <reservations>
+    <date>2022-12-13</date>
+    <slots>39</slots>
+  </reservations>
+  <reservations>
+    <date>2022-12-14</date>
+    <slots>0</slots>
+  </reservations>
+  <reservations>
+    <date>2022-12-16</date>
+    <slots>48</slots>
+  </reservations>
+  <reservations>
+    <date>2022-11-22</date>
+    <slots>47</slots>
+  </reservations>
+</office>

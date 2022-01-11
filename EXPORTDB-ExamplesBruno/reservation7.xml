@@ -1,0 +1,16 @@
+<reservation xmlns="http://www.oficinaRGB.pt/Reservation" reservationID="7">
+  <id>7</id>
+  <date>2022-11-22</date>
+  <state>Canceled</state>
+  <family>
+    <numberElements>1</numberElements>
+    <f:familyElement xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData">
+            <f:name>Pablo</f:name>
+            <f:birthDate>1992-06-12</f:birthDate>
+        </f:familyElement>
+    <f:origin xmlns:f="http://www.oficinaRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.oficinaRGB.pt/GeographicData" countryCode="ES">
+            <gd:countryName>Spain</gd:countryName>
+            <gd:cityName>Madrid</gd:cityName>
+        </f:origin>
+  </family>
+</reservation>
