@@ -1,6 +1,0 @@
-<office xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atelierRGB.pt/Atelier../XSD/Atelier.xsd">
-  <reservations>
-    <date>2022-12-14</date>
-    <slots>47</slots>
-  </reservations>
-</office>
