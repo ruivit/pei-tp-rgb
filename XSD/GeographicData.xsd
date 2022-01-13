@@ -19,8 +19,11 @@
             <xs:enumeration value="France"/>
             <xs:enumeration value="Germany"/>
             <xs:enumeration value="Italy"/>
-            <xs:enumeration value="Switzerland"/>
+            <xs:enumeration value="United States of America"/>
             <xs:enumeration value="United Kingdom"/>
+            <xs:enumeration value="Canada"/>
+            <xs:enumeration value="Mexico"/>
+            <xs:enumeration value="Brazil"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -31,8 +34,13 @@
 			<xs:enumeration value="FR"/>
 			<xs:enumeration value="GR"/>
 			<xs:enumeration value="IT"/>
-			<xs:enumeration value="SW"/>
+			<xs:enumeration value="USA"/>
 			<xs:enumeration value="UK"/>
+			<xs:enumeration value="CA"/>
+			<xs:enumeration value="MX"/>
+			<xs:enumeration value="BR"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="GB"/>
 		</xs:restriction>
 	</xs:simpleType>
 

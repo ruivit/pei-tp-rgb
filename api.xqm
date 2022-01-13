@@ -76,7 +76,7 @@ declare %updating function page:checks($xml, $count)
          then ( web:error(500, "[ERRO] O atelier do Pai Natal atingiu o máximo de para o(s) dia(s) escolhidos não têm disponibilidade [ERRO]") )
          else ( 
 update:output(page:check-between-dates($newDate)),
-db:replace("RGBDB", "atelier1.xml", page:new-date($newDate)),
+db:replace("RGBDB", "atelier.xml", page:new-date($newDate)),
 db:add("RGBDB", page:return-xml-reservation($xml, $newDate), concat("reservation", count(db:open("RGBDB")//reservation) + 1, ".xml")),
 
 (:========FeedBack Message========:)
@@ -108,16 +108,16 @@ declare function page:check-between-dates($dateToCheck)
 (: return a valid xml with the new date to add to the office file:)
 declare function page:new-date($newDate)
 {
-  let $db := db:open("RGBDB")//a:office
+  let $db := db:open("RGBDB")//a:atelier
   
   return 
-  <office xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atelierRGB.pt/Atelier../XSD/Atelier.xsd">
+  <atelier xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atelierRGB.pt/Atelier../XSD/Atelier.xsd">
   {$db//a:reservations}
  <reservations xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <date>{$newDate/text()}</date>
         <slots>49</slots>
   </reservations>
-</office>
+</atelier>
 };
 
 (: return a valid xml with the valid date, that will be used to make a reservation :)
@@ -133,8 +133,8 @@ declare function page:return-xml-reservation($xml, $validDate)
     <state>Active</state>
     <family>
       <numberElements>{count($xml//f:familyElement)}</numberElements>
-      {$xml//f:familyElement/*}
-      {$xml//f:origin/*}
+      {$xml//f:familyElement}
+      {$xml//f:origin}
     </family>
   </reservation>
 };
@@ -160,7 +160,7 @@ function page:check-availability($getdate)
   return concat("Entre o dia 2022-09-16 e 2022-12-25 os dias não existe disponibilidade para o seguinte dia: ", data($x/a:date)))
   else 
       (
-    let $db := db:open("RGBDB")//a:office
+    let $db := db:open("RGBDB")//a:atelier
     for $days in $getdate
     
     let $check := $days = $db//a:date/text()
