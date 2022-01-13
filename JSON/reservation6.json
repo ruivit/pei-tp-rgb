@@ -1,0 +1,22 @@
+{
+    "id": "6",
+    "date": "2022-12-23",
+    "state": "Active",
+    "family": {
+        "numberElements": "2",
+        "familyElement": [
+            {
+                "name": "Maria",
+                "birthDate": "1967-10-02"
+            },
+            {
+                "name": "Joao",
+                "birthDate": "1963-04-22"
+            }
+        ],
+        "origin": {
+            "countryName": "Portugal",
+            "cityName": "Lisbon"
+        }
+    }
+}

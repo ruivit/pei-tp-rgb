@@ -1,0 +1,18 @@
+{
+    "id": "3",
+    "date": "2022-12-15",
+    "state": "Active",
+    "family": {
+        "numberElements": "1",
+        "familyElement": [
+            {
+                "name": "Pablo Jr",
+                "birthDate": "1999-02-23"
+            }
+        ],
+        "origin": {
+            "countryName": "Spain",
+            "cityName": "Madrid"
+        }
+    }
+}

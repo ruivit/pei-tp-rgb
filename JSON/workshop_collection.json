@@ -1,0 +1,223 @@
+[
+    {
+        "date": "2022-12-12",
+        "slots": 50
+    },
+    {
+        "date": "2022-12-13",
+        "slots": 50
+    },
+    {
+        "date": "2022-12-14",
+        "slots": 50
+    },
+    {
+        "date": "2022-12-15",
+        "slots": 47,
+        "reservations": [
+            {
+                "id": "3",
+                "state": "Active",
+                "family": {
+                    "numberElements": "1",
+                    "familyElement": [
+                        {
+                            "name": "Pablo Jr",
+                            "birthDate": "1999-02-23"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Spain",
+                        "cityName": "Madrid"
+                    }
+                }
+            },
+            {
+                "id": "1",
+                "state": "Active",
+                "family": {
+                    "numberElements": "1",
+                    "familyElement": [
+                        {
+                            "name": "Pablo Jr",
+                            "birthDate": "1999-02-23"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Spain",
+                        "cityName": "Madrid"
+                    }
+                }
+            },
+            {
+                "id": "2",
+                "state": "Active",
+                "family": {
+                    "numberElements": "1",
+                    "familyElement": [
+                        {
+                            "name": "Pablo Jr",
+                            "birthDate": "1999-02-23"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Spain",
+                        "cityName": "Madrid"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "date": "2022-12-22",
+        "slots": 48,
+        "reservations": [
+            {
+                "id": "9",
+                "state": "Canceled",
+                "family": {
+                    "numberElements": "3",
+                    "familyElement": [
+                        {
+                            "name": "Maria",
+                            "birthDate": "1967-10-02"
+                        },
+                        {
+                            "name": "Joao",
+                            "birthDate": "1963-04-22"
+                        },
+                        {
+                            "name": "Ritinha",
+                            "birthDate": "2010-05-02"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Portugal",
+                        "cityName": "Lisbon"
+                    }
+                }
+            },
+            {
+                "id": "4",
+                "state": "Active",
+                "family": {
+                    "numberElements": "2",
+                    "familyElement": [
+                        {
+                            "name": "Pablo Jr",
+                            "birthDate": "1999-02-23"
+                        },
+                        {
+                            "name": "Pablo Sr",
+                            "birthDate": "1972-03-21"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Spain",
+                        "cityName": "Madrid"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "date": "2022-12-23",
+        "slots": 48,
+        "reservations": [
+            {
+                "id": "6",
+                "state": "Active",
+                "family": {
+                    "numberElements": "2",
+                    "familyElement": [
+                        {
+                            "name": "Maria",
+                            "birthDate": "1967-10-02"
+                        },
+                        {
+                            "name": "Joao",
+                            "birthDate": "1963-04-22"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Portugal",
+                        "cityName": "Lisbon"
+                    }
+                }
+            },
+            {
+                "id": "5",
+                "state": "Canceled",
+                "family": {
+                    "numberElements": "2",
+                    "familyElement": [
+                        {
+                            "name": "Pablo Jr",
+                            "birthDate": "1999-02-23"
+                        },
+                        {
+                            "name": "Pablo Sr",
+                            "birthDate": "1972-03-21"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Spain",
+                        "cityName": "Madrid"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "date": "2022-12-24",
+        "slots": 48,
+        "reservations": [
+            {
+                "id": "8",
+                "state": "Active",
+                "family": {
+                    "numberElements": "3",
+                    "familyElement": [
+                        {
+                            "name": "Maria",
+                            "birthDate": "1967-10-02"
+                        },
+                        {
+                            "name": "Joao",
+                            "birthDate": "1963-04-22"
+                        },
+                        {
+                            "name": "Ritinha",
+                            "birthDate": "2010-05-02"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Portugal",
+                        "cityName": "Lisbon"
+                    }
+                }
+            },
+            {
+                "id": "7",
+                "state": "Active",
+                "family": {
+                    "numberElements": "2",
+                    "familyElement": [
+                        {
+                            "name": "Maria",
+                            "birthDate": "1967-10-02"
+                        },
+                        {
+                            "name": "Joao",
+                            "birthDate": "1963-04-22"
+                        }
+                    ],
+                    "origin": {
+                        "countryName": "Portugal",
+                        "cityName": "Lisbon"
+                    }
+                }
+            }
+        ]
+    }
+]
