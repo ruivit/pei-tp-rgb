@@ -1,0 +1,28 @@
+<reservation xmlns="http://www.atelierRGB.pt/Reservation" reservationID="181">
+  <id>181</id>
+  <date>2022-12-22</date>
+  <state>Active</state>
+  <family>
+    <numberElements>4</numberElements>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Pedro</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Ramon</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Luis</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Jose</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:origin xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData" countryCode="MX">
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Sao Paulo</gd:cityName>
+    </f:origin>
+  </family>
+</reservation>

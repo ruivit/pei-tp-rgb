@@ -1,0 +1,16 @@
+<reservation xmlns="http://www.atelierRGB.pt/Reservation" reservationID="2">
+  <id>2</id>
+  <date>2022-10-22</date>
+  <state>Canceled</state>
+  <family>
+    <numberElements>1</numberElements>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Carlos</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:origin xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData" countryCode="IT">
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Sao Paulo</gd:cityName>
+    </f:origin>
+  </family>
+</reservation>

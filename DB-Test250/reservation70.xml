@@ -1,0 +1,36 @@
+<reservation xmlns="http://www.atelierRGB.pt/Reservation" reservationID="70">
+  <id>70</id>
+  <date>2022-10-11</date>
+  <state>Active</state>
+  <family>
+    <numberElements>6</numberElements>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Jorge</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Carlos</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Raul</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Pedro</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Ramon</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Jose</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:origin xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData" countryCode="DE">
+      <gd:countryName>Mexico</gd:countryName>
+      <gd:cityName>Sao Paulo</gd:cityName>
+    </f:origin>
+  </family>
+</reservation>

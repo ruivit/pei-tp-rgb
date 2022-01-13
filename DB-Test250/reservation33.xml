@@ -1,0 +1,20 @@
+<reservation xmlns="http://www.atelierRGB.pt/Reservation" reservationID="33">
+  <id>33</id>
+  <date>2022-12-22</date>
+  <state>Active</state>
+  <family>
+    <numberElements>2</numberElements>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Jorge</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+      <f:name>Luis</f:name>
+      <f:birthDate>1992-06-22</f:birthDate>
+    </f:familyElement>
+    <f:origin xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData" countryCode="GB">
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Rome</gd:cityName>
+    </f:origin>
+  </family>
+</reservation>
