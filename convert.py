@@ -87,17 +87,12 @@ def entulhar_reservations_in_atelier_collection():
                         if reservation_json['state'] == 'Active':
                             dia['active_reservations'] += 1
                         elif reservation_json['state'] == 'Canceled':
-                            dia['active_reservations'] -= 1
                             dia['canceled_reservations'] += 1
 
                         if slots_sanity_check:
                             # if reservation state is 'Active', subtract 1 from slots
                             if reservation_json['state'] == 'Active':
                                 dia['slots'] -= 1
-
-                            # if reservation state is 'Canceled', add 1 to the slots
-                            elif reservation_json['state'] == 'Canceled':
-                                dia['slots'] += 1
                         break
 
     # save the atelier_collection.json
