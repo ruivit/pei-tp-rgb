@@ -9,6 +9,7 @@ xml_dir = "DB"
 json_dir = "JSON"
 json_files = glob(json_dir + "/*.json")
 atelier_collection = []
+slots_sanity_check = False
 
 load_dotenv()
 import_to_mongodb = os.getenv('IMPORT_TO_MONGODB')
@@ -40,9 +41,11 @@ def convert_xml_to_json():
                     xml = xml['atelier']['reservations']
                     global atelier_collection
                     atelier_collection = xml
-                    # set all atelier_json slots to be the default 50
-                    for dia in atelier_collection:
-                        dia['slots'] = 50
+                    
+                    if slots_sanity_check:
+                        # set all atelier_json slots to be the default 50
+                        for dia in atelier_collection:
+                            dia['slots'] = 50
 
                 elif filename.startswith('reservation'):
                     xml = xml['reservation']
@@ -65,7 +68,6 @@ def entulhar_reservations_in_atelier_collection():
                 # set the atelier_collection slots to be the reservation slots
                 for dia in atelier_collection:
                     if dia['date'] == reservation_json['date']:
-
                         # create an array of reservations
                         if 'reservations' not in dia:
                             dia['reservations'] = []
@@ -76,13 +78,27 @@ def entulhar_reservations_in_atelier_collection():
                         # remove date from each reservation
                         reservation_json.pop('date')
 
-                        # if reservation state is 'active', subtract 1 from slots
-                        if reservation_json['state'] == 'active':
-                            dia['slots'] -= 1
-                        
-                        # if reservation state is 'cancelled', add 1 to the slots
-                        elif reservation_json['state'] == 'cancelled':
-                            dia['slots'] += 1
+                        # add 'active_reservations' to the atelier_collection
+                        if 'active_reservations' not in dia:
+                            dia['active_reservations'] = 0
+                        if 'canceled_reservations' not in dia:
+                            dia['canceled_reservations'] = 0
+
+                        if reservation_json['state'] == 'Active':
+                            dia['active_reservations'] += 1
+                        elif reservation_json['state'] == 'Canceled':
+                            dia['active_reservations'] -= 1
+                            dia['canceled_reservations'] += 1
+
+                        if slots_sanity_check:
+                            # if reservation state is 'Active', subtract 1 from slots
+                            if reservation_json['state'] == 'Active':
+                                dia['slots'] -= 1
+
+                            # if reservation state is 'Canceled', add 1 to the slots
+                            elif reservation_json['state'] == 'Canceled':
+                                dia['slots'] += 1
+                        break
 
     # save the atelier_collection.json
     with open(os.path.join(json_dir, 'atelier_collection.json'), 'w') as f:
