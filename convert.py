@@ -1,6 +1,6 @@
 import os, re, json, bson, pymongo
 from bson import json_util
-from pymongo import MongoClient, InsertOne
+from pymongo import MongoClient
 from dotenv import load_dotenv
 from glob import glob
 import xmltodict
