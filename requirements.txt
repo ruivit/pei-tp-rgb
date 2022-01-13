@@ -1,0 +1,6 @@
+bson
+python-dotenv
+pymongo
+pymongo[srv]
+dnspython
+xmltodict
