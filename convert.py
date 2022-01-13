@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from glob import glob
 import xmltodict
 
-xml_dir = "EXPORTDB-GoodExamples"
-json_dir = "json"
+xml_dir = "DB"
+json_dir = "JSON"
 json_files = glob(json_dir + "/*.json")
 workshop_collection = []
 
