@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns="http://www.oficinaRGB.pt/Reservation" 
-           targetNamespace="http://www.oficinaRGB.pt/Reservation" 
+           xmlns="http://www.atelierRGB.pt/Reservation" 
+           targetNamespace="http://www.atelierRGB.pt/Reservation" 
 
-           xmlns:ct="http://www.oficinaRGB.pt/CommonTypes"
-           xmlns:f="http://www.oficinaRGB.pt/Family"
+           xmlns:ct="http://www.atelierRGB.pt/CommonTypes"
+           xmlns:f="http://www.atelierRGB.pt/Family"
            elementFormDefault="qualified"> 
  
-    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
-    <xs:import schemaLocation="Family.xsd" namespace="http://www.oficinaRGB.pt/Family"/> 
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.atelierRGB.pt/CommonTypes"/> 
+    <xs:import schemaLocation="Family.xsd" namespace="http://www.atelierRGB.pt/Family"/> 
 
     <xs:element name="reservation" type="reservationType"/>
 

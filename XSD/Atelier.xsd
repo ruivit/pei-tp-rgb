@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns="http://www.oficinaRGB.pt/Office" 
-           targetNamespace="http://www.oficinaRGB.pt/Office" 
+           xmlns="http://www.atelierRGB.pt/Atelier" 
+           targetNamespace="http://www.atelierRGB.pt/Atelier" 
 
-           xmlns:ct="http://www.oficinaRGB.pt/CommonTypes"
+           xmlns:ct="http://www.atelierRGB.pt/CommonTypes"
            elementFormDefault="qualified"> 
  
-    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.oficinaRGB.pt/CommonTypes"/> 
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.atelierRGB.pt/CommonTypes"/> 
 
-    <xs:element name="office">
+    <xs:element name="atelier">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="reservation" type="reservationsType" maxOccurs="unbounded"/>
+                <xs:element name="reservations" type="reservationsType" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

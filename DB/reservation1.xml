@@ -1,0 +1,14 @@
+<reservation xmlns="http://www.atelierRGB.pt/Reservation" reservationID="1">
+  <id>1</id>
+  <date>2022-12-14</date>
+  <state>Active</state>
+  <family>
+    <numberElements>2</numberElements>
+    <f:name xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">Joao</f:name>
+    <f:birthDate xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">1987-10-03</f:birthDate>
+    <f:name xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">Maria</f:name>
+    <f:birthDate xmlns:f="http://www.atelierRGB.pt/Family" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gd="http://www.atelierRGB.pt/GeographicData">1986-11-04</f:birthDate>
+    <gd:countryName xmlns:gd="http://www.atelierRGB.pt/GeographicData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:f="http://www.atelierRGB.pt/Family">Portugal</gd:countryName>
+    <gd:cityName xmlns:gd="http://www.atelierRGB.pt/GeographicData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:f="http://www.atelierRGB.pt/Family">Lisbon</gd:cityName>
+  </family>
+</reservation>

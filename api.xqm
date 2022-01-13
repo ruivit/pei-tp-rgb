@@ -1,9 +1,9 @@
 (: ============= Namespace Declarations ============= :)
 
 module namespace page = 'http://basex.org/examples/web-page';
-declare default element namespace 'http://www.oficinaRGB.pt/Reservation';
-declare namespace o='http://www.oficinaRGB.pt/Office';
-declare namespace f='http://www.oficinaRGB.pt/Family'; 
+declare default element namespace 'http://www.atelierRGB.pt/Reservation';
+declare namespace a='http://www.atelierRGB.pt/Atelier';
+declare namespace f='http://www.atelierRGB.pt/Family'; 
 
 (: ============= Webpage ============= :)
 
@@ -43,53 +43,59 @@ function page:post-xml($xml)
 
   (: Make all the necessary checks
   if all checks are passed, write to DB :)
-  page:checks($xml)
+  page:checks($xml, 1)
 };
 
 (: ============= Checks ============= :)
 
-declare %updating function page:checks($xml)
+declare %updating function page:checks($xml, $count)
 {
-  let $database := db:open("PEITP")
-  let $pfd := $xml//f:preferedDates/text()
-  let $nvdate := $xml//f:preferedDates[1]
-  let $officedates := $database//o:date/text()
+  let $database := db:open("RGBDB")
+  let $pfd := $xml//f:preferedDates
+  let $officedates := $database//a:reservations
   
-  (:filter the dates that the family choose and the available in the office :)
-  where some $pfd in $officedates satisfies $pfd=$officedates
+  (: Check IF the dates that the family choose are in the Workshop Days 
+  IF NOT - a new data will be created :)
+  let $existingDates := $officedates[a:date = $pfd]
   
-  (: check if the dates that the family choose are available, with availability of slots :)
-  let $date := $database//o:reservations[o:date = $pfd][1]/o:date/text()
-  let $slots := $database//o:reservations[o:date = $pfd and o:slots > 0][1]/o:date/text()
+  (: Check the dates that the family choose that ARE NOT the in the Workshop 
+  IF this variable AND the existingDates are EMPTY then this means that ALL dates are full :)
+  let $notExistingDatesAtelier := $pfd[not(.=($officedates//a:date))]
+  let $newDate := $notExistingDatesAtelier[1]
+  
+  (: From the existingDates in the Workshop, filter the ones that have available slots :)
+  let $validSlots := $existingDates[a:slots > 0]
+  let $validDate := $validSlots[1]/a:date
   
   (: set the reservationID to +1 since this might be a reservation :)
   let $rid := count($database//reservation/@reservationID) + 1
   
-  (: if the date does not exist, create it and make the reservation :)
-  return if (empty($date))
-  then (
-    db:replace("PEITP", "office1.xml", page:new-date($nvdate)),
-    update:output(page:checkbetween-dates($nvdate)),
-    db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml")),
-    
-    (:========FeedBack Message========:)
-    update:output(page:ok($nvdate, $rid))
+  return
+  if ( empty($validDate) )
+  then ( if (empty($newDate))
+         then ( web:error(500, "[ERRO] O atelier do Pai Natal atingiu o máximo de para o(s) dia(s) escolhidos não têm disponibilidade [ERRO]") )
+         else ( 
+update:output(page:check-between-dates($newDate)),
+db:replace("RGBDB", "atelier1.xml", page:new-date($newDate)),
+db:add("RGBDB", page:return-xml-reservation($xml, $newDate), concat("reservation", count(db:open("RGBDB")//reservation) + 1, ".xml")),
+
+(:========FeedBack Message========:)
+update:output(page:ok($newDate, $rid))
+              )
        )
-      
-  (: if there are no slots available, throw an error; else, make a reservation :)
-  else (if (empty($slots))
-       then (web:error(500, "[ERROR] Atingido o limite diário de reservas [ERROR]"))
-       else (
-         update:output(page:checkbetween-dates($nvdate)),
-         db:add("PEITP", page:valid-dates($xml, $nvdate), concat("reservation", count(db:open("PEITP")//reservation) + 1, ".xml"))),
-         replace value of node $database//o:reservations[o:date = $date]/o:slots with $database//o:reservations[o:date = $date]/o:slots - 1,
-          (:========FeedBack Message========:)
-          update:output(page:ok($date, $rid))
-        )
+   else ( 
+update:output(page:check-between-dates($validDate)),
+replace value of node $database//a:reservations[a:date = $validDate]/a:slots with $database//a:reservations[a:date = $validDate]/a:slots - 1,
+db:add("RGBDB", page:return-xml-reservation($xml, $validDate), concat("reservation", count(db:open("RGBDB")//reservation) + 1, ".xml")),
+
+(:========FeedBack Message========:)
+update:output(page:ok($validDate, $rid))
+      )
 };
 
-(:==Check if nvdate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
-declare function page:checkbetween-dates($dateToCheck)
+
+(:==Check if newValidDate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
+declare function page:check-between-dates($dateToCheck)
 {
   let $firstdate := xs:date("2022-09-15")
   let $lastdate := xs:date("2022-12-26")
@@ -100,57 +106,37 @@ declare function page:checkbetween-dates($dateToCheck)
 };
 
 (: return a valid xml with the new date to add to the office file:)
-declare function page:new-date($nvdate)
+declare function page:new-date($newDate)
 {
-  let $db := db:open("PEITP")//o:office
+  let $db := db:open("RGBDB")//a:office
   
   return 
-  <office xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oficinaRGB.pt/Office ../XSD/Office.xsd">
-  {$db//o:reservations}
- <reservations xmlns="http://www.oficinaRGB.pt/Office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <date>{$nvdate[1]/text()}</date>
+  <office xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atelierRGB.pt/Atelier../XSD/Atelier.xsd">
+  {$db//a:reservations}
+ <reservations xmlns="http://www.atelierRGB.pt/Atelier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <date>{$newDate/text()}</date>
         <slots>49</slots>
   </reservations>
 </office>
 };
 
 (: return a valid xml with the valid date, that will be used to make a reservation :)
-declare function page:valid-dates($xml, $nvdate)
+declare function page:return-xml-reservation($xml, $validDate)
 {
-  let $db := db:open("PEITP")
-  let $pfd := $xml//f:preferedDates/text()
-  let $od := $db//o:date/text()
-  
-  where some $pfd in $od satisfies $pfd=$od
-  
-  let $date := $db//o:reservations[o:date = $pfd][1]/o:date/text()
-  let $slots := $db//o:reservations[o:date = $pfd and o:slots/o:availableSlots > 0][1]/o:date/text()
+  let $db := db:open("RGBDB")
   let $rid := count($db//reservation/@reservationID) + 1
     
   return
-  if (empty($date))
-  then (
   <reservation reservationID="{$rid}">
     <id>{$rid}</id>
-    <date>{$nvdate/text()}</date>
+    <date>{$validDate/text()}</date>
     <state>Active</state>
     <family>
       <numberElements>{count($xml//f:familyElement)}</numberElements>
-      {$xml//f:familyElement}
-      {$xml//f:origin}
+      {$xml//f:familyElement/*}
+      {$xml//f:origin/*}
     </family>
-  </reservation>)
-  else (
-  <reservation reservationID="{$rid}">
-    <id>{$rid}</id>
-    <date>{$date}</date>
-    <state>Active</state>
-    <family>
-      <numberElements>{count($xml//f:familyElement)}</numberElements>
-      {$xml//f:familyElement}
-      {$xml//f:origin}
-    </family>
-  </reservation>)
+  </reservation>
 };
 
 
@@ -164,25 +150,24 @@ function page:check-availability($getdate)
 {
   if ($getdate = "all")
   then (
-    for $db in db:open("PEITP")//o:reservations
+  let $database := db:open("RGBDB")
+  let $officedates := $database//a:reservations
   
-    let $od := $db//o:date/text()
-    let $slots := $db//o:slots/text()
-    
-    return if ($slots = 0)
-    then (concat("Nao existe disponibilidade para o dia ", $od))
-    else (concat("Existe disponibilidade para ", $slots, " familias para o dia ", $od))
-      )
-  else
+  let $zeroSlots := $officedates[a:slots = 0]
+  
+  
+  for $x in $zeroSlots
+  return concat("Entre o dia 2022-09-16 e 2022-12-25 os dias não existe disponibilidade para o seguinte dia: ", data($x/a:date)))
+  else 
       (
-    let $db := db:open("PEITP")//o:office
+    let $db := db:open("RGBDB")//a:office
     for $days in $getdate
     
-    let $check := $days = $db//o:date/text()
-    let $slots := $db//o:reservations[o:date = $days]/o:slots/text()
+    let $check := $days = $db//a:date/text()
+    let $slots := $db//a:reservations[a:date = $days]/a:slots/text()
     
     (: Check if the given date is between the allowed days :)
-    let $checkDates := page:checkbetween-dates($days)
+    let $checkDates := page:check-between-dates($days)
     
     return if ($check)
     then "Existe disponibilidade para " || $slots || " familias para o dia " || $days
@@ -201,9 +186,19 @@ declare %updating
   %rest:query-param("id", "{$id}")
 function page:cancel-reservation($id as xs:string)
 {
-  let $db := db:open("PEITP")
-  return replace value of node $db//reservation[@reservationID = $id]/state with "Canceled",
+  let $database := db:open("RGBDB")
+ 
+  return if ($database//reservation[id = $id]/state = "Canceled")
+  then ( 
+        web:error(500, "[ERRO] A reserva já se encontra cancelada [ERRO]"))
+  else (
+  replace value of node $database//reservation[id = $id]/state with "Canceled",
+  
+  let $database := db:open("RGBDB")
+  let $updateSlot := $database//reservation[id = $id]/date
+  return replace value of node $database//a:reservations[a:date = $updateSlot]/a:slots with $database//a:reservations[a:date = $updateSlot]/a:slots + 1,
   update:output(page:canceledok($id))
+   )
 };
 
 
@@ -212,7 +207,7 @@ declare
   %rest:path("/exportdatabase")
   %rest:GET
 function page:exportdatabase() {
-  db:export("PEITP", "C:\Program Files (x86)\BaseX\webapp\EXPORTDB", map { 'method': 'xml' }),
+  db:export("RGBDB", "..\webapp\DB", map { 'method': 'xml' }),
   page:exportdone()
 };
 
