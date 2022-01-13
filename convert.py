@@ -8,7 +8,7 @@ import xmltodict
 xml_dir = "DB"
 json_dir = "JSON"
 json_files = glob(json_dir + "/*.json")
-workshop_collection = []
+atelier_collection = []
 
 load_dotenv()
 import_to_mongodb = os.getenv('IMPORT_TO_MONGODB')
@@ -36,12 +36,12 @@ def convert_xml_to_json():
             with open(os.path.join(json_dir, filename.replace('.xml', '.json')), 'w') as f:
                 xml = xmltodict.parse(content)
 
-                if filename.startswith('workshop'):
-                    xml = xml['workshop']['reservations']
-                    global workshop_collection
-                    workshop_collection = xml
-                    # set all workshop_json slots to be the default 50
-                    for dia in workshop_collection:
+                if filename.startswith('atelier'):
+                    xml = xml['atelier']['reservations']
+                    global atelier_collection
+                    atelier_collection = xml
+                    # set all atelier_json slots to be the default 50
+                    for dia in atelier_collection:
                         dia['slots'] = 50
 
                 elif filename.startswith('reservation'):
@@ -53,7 +53,7 @@ def convert_xml_to_json():
                 f.write(json.dumps(xml, indent=4, default=bson.json_util.default))
     print("Conversion complete!")
 
-def entulhar_reservations_in_workshop_collection():
+def entulhar_reservations_in_atelier_collection():
     print("Parsing reservations...")
 
     # get the reservations json
@@ -62,44 +62,48 @@ def entulhar_reservations_in_workshop_collection():
             with open(os.path.join(json_dir, filename), 'r') as f:
                 reservation_json = json.load(f)
 
-                # set the workshop_collection slots to be the reservation slots
-                for dia in workshop_collection:
+                # set the atelier_collection slots to be the reservation slots
+                for dia in atelier_collection:
                     if dia['date'] == reservation_json['date']:
 
                         # create an array of reservations
                         if 'reservations' not in dia:
                             dia['reservations'] = []
                         
-                        # add reservation in the workshop_collection as array
+                        # add reservation in the atelier_collection as array
                         dia['reservations'].append(reservation_json)
 
                         # remove date from each reservation
                         reservation_json.pop('date')
 
-                        # remove 1 from slots for each reservation
-                        dia['slots'] -= 1
-                        break
+                        # if reservation state is 'active', subtract 1 from slots
+                        if reservation_json['state'] == 'active':
+                            dia['slots'] -= 1
+                        
+                        # if reservation state is 'cancelled', add 1 to the slots
+                        elif reservation_json['state'] == 'cancelled':
+                            dia['slots'] += 1
 
-    # save the workshop_collection.json
-    with open(os.path.join(json_dir, 'workshop_collection.json'), 'w') as f:
-        f.write(json.dumps(workshop_collection, indent=4, default=bson.json_util.default))
+    # save the atelier_collection.json
+    with open(os.path.join(json_dir, 'atelier_collection.json'), 'w') as f:
+        f.write(json.dumps(atelier_collection, indent=4, default=bson.json_util.default))
     print("Parsing complete!")
 
 def get_mongodb():
     client = MongoClient(mongodb_host, username=mongodb_user, password=mongodb_password)
     return client[mongodb_dbname]
     
-def import_workshop_json_to_mongodb():
-    print("Importing workshop_collection.json to MongoDB...")
-    with open(os.path.join(json_dir, 'workshop_collection.json'), 'r') as f:
-        workshop_collection_json = json.load(f)
+def import_atelier_json_to_mongodb():
+    print("Importing atelier_collection.json to MongoDB...")
+    with open(os.path.join(json_dir, 'atelier_collection.json'), 'r') as f:
+        atelier_collection_json = json.load(f)
 
-    collection_dst = 'workshop'
+    collection_dst = 'atelier'
     mymongodb = get_mongodb()[collection_dst]
 
     print("Overriding collection...")
     mymongodb.drop()
-    mymongodb.insert_many(workshop_collection_json)
+    mymongodb.insert_many(atelier_collection_json)
     print("Import complete!")
 
     print("Indexing...")
@@ -111,6 +115,6 @@ def import_workshop_json_to_mongodb():
 # main
 if __name__ == "__main__":
     convert_xml_to_json()
-    entulhar_reservations_in_workshop_collection()
+    entulhar_reservations_in_atelier_collection()
     if import_to_mongodb:
-        import_workshop_json_to_mongodb()
+        import_atelier_json_to_mongodb()
