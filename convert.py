@@ -28,6 +28,7 @@ def clean_xml(content):
     return content
 
 def convert_xml_to_json():
+    print("Converting XML to JSON...")
     for filename in os.listdir(xml_dir):
         with open(os.path.join(xml_dir, filename), 'r') as f:
             content = clean_xml(f.read())
@@ -50,8 +51,11 @@ def convert_xml_to_json():
                         xml['family']['familyElement'] = [xml['family']['familyElement']]
 
                 f.write(json.dumps(xml, indent=4, default=bson.json_util.default))
+    print("Conversion complete!")
 
 def entulhar_reservations_in_workshop_collection():
+    print("Parsing reservations...")
+
     # get the reservations json
     for filename in os.listdir(json_dir):
         if filename.startswith('reservation'):
@@ -79,18 +83,30 @@ def entulhar_reservations_in_workshop_collection():
     # save the workshop_collection.json
     with open(os.path.join(json_dir, 'workshop_collection.json'), 'w') as f:
         f.write(json.dumps(workshop_collection, indent=4, default=bson.json_util.default))
+    print("Parsing complete!")
 
-def get_mongodb(collection_dst):
-    # connection mongodb server
+def get_mongodb():
     client = MongoClient(mongodb_host, username=mongodb_user, password=mongodb_password)
-    # insert to db / create if does not exist
-    return client[mongodb_dbname][collection_dst]
+    return client[mongodb_dbname]
     
 def import_workshop_json_to_mongodb():
-    collection_dst = 'workshop'
-    mymongodb = get_mongodb(collection_dst)
+    print("Importing workshop_collection.json to MongoDB...")
     with open(os.path.join(json_dir, 'workshop_collection.json'), 'r') as f:
-        mymongodb.insert_many(json.load(f))
+        workshop_collection_json = json.load(f)
+
+    collection_dst = 'workshop'
+    mymongodb = get_mongodb()[collection_dst]
+
+    print("Overriding collection...")
+    mymongodb.drop()
+    mymongodb.insert_many(workshop_collection_json)
+    print("Import complete!")
+
+    print("Indexing...")
+    index_info=mymongodb.index_information()
+    if 'date_1' not in index_info:
+        mymongodb.create_index([('date', pymongo.ASCENDING)], unique=True)
+    print("Indexing complete!")
 
 # main
 if __name__ == "__main__":
