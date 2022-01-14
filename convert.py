@@ -64,7 +64,7 @@ def convert_xml_to_json():
                 f.write(json.dumps(xml, indent=4, default=bson.json_util.default))
     print("Conversion complete!")
 
-def create_more_mongodb_data(dia, reservation_json):
+def create_more_mongodb_data(dia):
     if 'active_reservations' not in dia:
         dia['active_reservations'] = 0
     if 'canceled_reservations' not in dia:
@@ -73,9 +73,6 @@ def create_more_mongodb_data(dia, reservation_json):
         dia['people_in_active_reservations'] = 0
     if 'people_in_canceled_reservations' not in dia:
         dia['people_in_canceled_reservations'] = 0
-
-
-    return reservation_json
 
 def entulhate_more_mongodb_data(dia, reservation_json):
     if reservation_json['state'] == 'Active':
@@ -138,7 +135,7 @@ def entulhar_reservations_in_atelier_collection():
                 for dia in atelier_collection:
 
                     # create the 'more_mongodb_data' fields
-                    create_more_mongodb_data(dia, reservation_json)
+                    create_more_mongodb_data(dia)
                     
                     if dia['date'] == reservation_json['date']:
                         # create an array of reservations
