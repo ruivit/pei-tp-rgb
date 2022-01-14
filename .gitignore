@@ -1,4 +1,4 @@
 
 .env
-JSON/*.json
-DB/*.xml
+JSON/
+DB/
