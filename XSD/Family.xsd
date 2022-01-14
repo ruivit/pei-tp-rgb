@@ -14,7 +14,7 @@
 
     <xs:complexType name="familyType">
         <xs:sequence maxOccurs="1">
-            <xs:element name="familyElement" type="familyElementType" maxOccurs="7"/>
+            <xs:element name="familyElement" type="familyElementType" minOccurs="1" maxOccurs="7"/>
             <xs:element name="origin" type="gd:originType" maxOccurs="1"/>
             <xs:element name="reservationDates" type="reservationDatesType" maxOccurs="1"/>
         </xs:sequence>
@@ -32,8 +32,8 @@
     <!-- Types -->
     <xs:complexType name="familyElementType">
         <xs:sequence>
-            <xs:element name="name" type="ct:nameType"/>
-            <xs:element name="birthDate" type="ct:dateType"/>
+            <xs:element name="name" type="ct:nameType" maxOccurs="1"/>
+            <xs:element name="birthDate" type="ct:dateType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
     
