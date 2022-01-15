@@ -23,6 +23,30 @@ function page:start(
     </head>
     <body>
       <h1>[RGB API]</h1>
+      <h2>This is a RESTful API for the [RuiGilbertoBruno API]</h2>
+      <span style="padding-left:50px">
+        <p></p>
+      </span>
+      <h3>Make a Reservation</h3>
+      <h5>POST /makereservation</h5>
+      <span style="padding-left:25px">
+        <p></p>
+      </span>
+      <h3>Check Availability</h3>
+      <h5>GET /checkavailability</h5>
+      <h5>GET /checkavailability?date="date"</h5>
+      <h5>GET /checkavailability?date="date"&amp;?date="date"...</h5>
+      <h5>GET /checkavailability?date="all"</h5>
+      <span style="padding-left:25px">
+        <p></p>
+      </span>
+      <h3>Cancel Reservation</h3>
+      <h5>POST /cancelreservation?id="reservationID"</h5>
+      <span style="padding-left:25px">
+        <p></p>
+      </span>
+      <h3>Export BaseX Database</h3>
+      <h5>GET /exportdatabase</h5>
     </body>
   </html>
 };
@@ -43,27 +67,27 @@ function page:post-xml($xml)
 
   (: Make all the necessary checks
   if all checks are passed, write to DB :)
-  page:checks($xml, 1)
+  page:checks($xml)
 };
 
 (: ============= Checks ============= :)
 
-declare %updating function page:checks($xml, $count)
+declare %updating function page:checks($xml)
 {
   let $database := db:open("RGBDB")
-  let $pfd := $xml//f:preferedDates
-  let $officedates := $database//a:reservations
+  let $pfdates := $xml//f:preferedDates
+  let $atelierdates := $database//a:reservations
   
-  (: Check IF the dates that the family choose are in the Workshop Days 
+  (: Check IF the dates that the family choose are in the Atelier Days 
   IF NOT - a new data will be created :)
-  let $existingDates := $officedates[a:date = $pfd]
+  let $existingDates := $atelierdates[a:date = $pfdates]
   
-  (: Check the dates that the family choose that ARE NOT the in the Workshop 
+  (: Check the dates that the family choose that ARE NOT the in the Atelier 
   IF this variable AND the existingDates are EMPTY then this means that ALL dates are full :)
-  let $notExistingDatesAtelier := $pfd[not(.=($officedates//a:date))]
+  let $notExistingDatesAtelier := $pfdates[not(.=($atelierdates//a:date))]
   let $newDate := $notExistingDatesAtelier[1]
   
-  (: From the existingDates in the Workshop, filter the ones that have available slots :)
+  (: From the existingDates in the Atelier, filter the ones that have available slots :)
   let $validSlots := $existingDates[a:slots > 0]
   let $validDate := $validSlots[1]/a:date
   
@@ -105,7 +129,7 @@ declare function page:check-between-dates($dateToCheck)
          else(web:error(500, "[ERROR] As data permitidas são de 16-09-2022 até 25-12-2022 [ERROR]"))
 };
 
-(: return a valid xml with the new date to add to the office file:)
+(: return a valid xml with the new date to add to the atelier file:)
 declare function page:new-date($newDate)
 {
   let $db := db:open("RGBDB")//a:atelier
@@ -151,13 +175,17 @@ function page:check-availability($getdate)
   if ($getdate = "all")
   then (
   let $database := db:open("RGBDB")
-  let $officedates := $database//a:reservations
+  let $atelierdates := $database//a:reservations
   
-  let $zeroSlots := $officedates[a:slots = 0]
-  
-  
-  for $x in $zeroSlots
-  return concat("Entre o dia 2022-09-16 e 2022-12-25 os dias não existe disponibilidade para o seguinte dia: ", data($x/a:date)))
+  let $available := $atelierdates[a:slots > 0]
+
+  for $x in $available
+  order by data($x/a:date)
+  return
+  "Existe disponibilidade para " || $x/a:slots || " familias para o dia " || data($x/a:date)
+  ,page:print-no-slots()
+  )
+
   else 
       (
     let $db := db:open("RGBDB")//a:atelier
@@ -179,6 +207,23 @@ function page:check-availability($getdate)
   (: /availability?date=01-01-2021?date=02-02-2021... :)
 };
 
+declare function page:print-no-slots()
+{
+  let $database := db:open("RGBDB")
+  let $atelierdates := $database//a:reservations
+  
+  let $notAvailable := $atelierdates[a:slots = 0]
+
+  for $x in $notAvailable
+  order by data($x/a:date)
+  return
+  "Nao existe disponibilidade para o dia " || data($x/a:date) ||
+  "
+Caso o seu dia não se encontre presente, presuma que o dia têm total disponibilidade
+desde que este se enquandre dentro das datas 16-09-2022 até 25-12-2022."
+};
+
+
 
 (: ================ Cancel Reservation ================ :)
 declare %updating
@@ -186,6 +231,7 @@ declare %updating
   %rest:query-param("id", "{$id}")
 function page:cancel-reservation($id as xs:string)
 {
+  try {
   let $database := db:open("RGBDB")
  
   return if ($database//reservation[id = $id]/state = "Canceled")
@@ -199,6 +245,10 @@ function page:cancel-reservation($id as xs:string)
   return replace value of node $database//a:reservations[a:date = $updateSlot]/a:slots with $database//a:reservations[a:date = $updateSlot]/a:slots + 1,
   update:output(page:canceledok($id))
    )
+ } catch * {
+   web:error(500, "[ERRO] O ID indicado não têm nenhuma reserva associada [ERRO]")
+ }
+   
 };
 
 
@@ -220,11 +270,6 @@ declare function page:canceledok($id) {
 declare function page:ok($date, $id) {
   (: return a message :)
   '[VALID] Reservation for the day ' || $date || ' accepted with code ' || $id || ' [VALID]'
-};
-
-declare function page:betweendates() {
-  (: return a message :)
-  '[ERROR] Choose dates between 16-09-2022 and 25-12-2022 [ERROR]'
 };
 
 declare function page:exportdone() {
