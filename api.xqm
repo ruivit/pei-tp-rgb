@@ -27,26 +27,73 @@ function page:start(
       <span style="padding-left:50px">
         <p></p>
       </span>
-      <h3>Make a Reservation</h3>
-      <h5>POST /makereservation</h5>
-      <span style="padding-left:25px">
+      <strong>Make a Reservation</strong>
+      <br></br>
+      <dd>
+        <ul>
+          <li>
+            <code>POST /makereservation</code>
+          </li>
+        </ul>
+      </dd>
+      <span style="padding-left:15px">
         <p></p>
       </span>
-      <h3>Check Availability</h3>
-      <h5>GET /checkavailability</h5>
-      <h5>GET /checkavailability?date="date"</h5>
-      <h5>GET /checkavailability?date="date"&amp;?date="date"...</h5>
-      <h5>GET /checkavailability?date="all"</h5>
-      <span style="padding-left:25px">
+      <strong>Check Availability</strong>
+      <dd>
+        <ul>
+          <li>
+            <code>GET /checkavailability?date="date"</code>
+            <br></br>
+            <cite>Availability for a certain day</cite>
+            <span style="padding-left:25px">
+              <p></p>
+            </span>
+          </li>
+          <li>
+            <code>GET /checkavailability?date="date"&amp;?date="date"...</code>
+            <br></br>
+            <cite>Availability for multiple days</cite>
+            <span style="padding-left:25px">
+              <p></p>
+            </span>
+          </li>
+          <li>
+            <code>GET /checkavailability?date="all"</code>
+            <br></br>
+            <cite>Availability for everyday in Atelier</cite>
+            <span style="padding-left:25px">
+              <p></p>
+            </span>
+          </li>
+        </ul>
+      </dd>
+      <br></br>
+      <span style="padding-left:15px">
         <p></p>
       </span>
-      <h3>Cancel Reservation</h3>
-      <h5>POST /cancelreservation?id="reservationID"</h5>
-      <span style="padding-left:25px">
+      <strong>Cancel a Reservation</strong>
+      <br></br>
+      <dd>
+        <ul>
+          <li>
+            <code>POST /cancelreservation?id="reservationID"</code>
+          </li>
+        </ul>
+      </dd>
+      <br></br>
+      <span style="padding-left:15px">
         <p></p>
       </span>
-      <h3>Export BaseX Database</h3>
-      <h5>GET /exportdatabase</h5>
+      <strong>Export BaseX Database</strong>
+      <br></br>
+      <dd>
+        <ul>
+          <li>
+            <code>GET /exportdatabase</code>
+          </li>
+        </ul>
+      </dd>
     </body>
   </html>
 };
@@ -260,6 +307,17 @@ function page:exportdatabase() {
   db:export("RGBDB", "..\webapp\DB", map { 'method': 'xml' }),
   page:exportdone()
 };
+
+(: ================ Auxiliary Function for generateData.py ================ 
+It deletes the now old database and creates a new one that will get the random XMLs :)
+declare %updating
+  %rest:path("/DCDB")
+  %rest:GET
+function page:deleteAndCreateDB() {
+  db:delete("RGBDB", "/"),
+  db:create("RGBDB", "..\webapp\INITALDB")
+};
+
 
 (: ================ Messages ================ :)
 declare function page:canceledok($id) {

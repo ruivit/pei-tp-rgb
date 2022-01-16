@@ -1,21 +1,17 @@
-from ctypes.wintypes import PINT
-from math import nan
 from yattag import Doc, indent
-import random, os, re
+import random, re
 import requests, time
-import sys
-
-doc, tag, text = Doc().tagtext()
+import sys, os
 
 # create dates between 1990 and 2010 (younger people)
 birthDatesNew = []
 for i in range(0, 100):
-    birthDatesNew.append(str(random.randint(1990, 2010)) + "-" + str(random.randint(10, 28)) + "-" + str(random.randint(10, 28)))
+    birthDatesNew.append(str(random.randint(1990, 2010)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
 
 # create dates between 1960 and 1990 (older people)
 birthDatesOld = []
 for i in range(0, 100):
-    birthDatesOld.append(str(random.randint(1960, 1990)) + "-" + str(random.randint(10, 28)) + "-" + str(random.randint(10, 28)))
+    birthDatesOld.append(str(random.randint(1960, 1990)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
 
 # create random dates between 2022-10-10 and 2022-12-25 for the reservations
 dates = []
@@ -24,13 +20,21 @@ for i in range(0, 100):
 
 # create random needed data
 names = ["John", "Raul", "Pablo", "Juan", "Pedro", "Carlos", "Jorge", "Luis", "Jose", "Ramon"]
+
+# create a two dimensional array with the random generated data of countryNames and Cities
 countryNames = ["Spain", "France", "Germany", "Italy", "Portugal", "United Kingdom", "United States of America", "Canada", "Mexico", "Brazil"]
 cityNames = ["Madrid", "Paris", "Berlin", "Rome", "Lisbon", "London", "New York", "Ottawa", "Mexico City", "Sao Paulo"]
-countryCodes = ["ES", "FR", "DE", "IT", "PT", "GB", "USA", "CA", "MX", "BR"]
+
+countryData = []
+if (len(countryNames) == len(cityNames)):
+    for i in range(0, len(countryNames)):
+        countryData.append([])
+        countryData[i].append(countryNames[i])
+        countryData[i].append(cityNames[i])
 
 
 # create XMLs with the random generated data (named "reservationX.xml")
-def createData():
+def createXMLfiles():
     with open(os.path.join(os.path.dirname(__file__), 'export', 'reservation' + str(i) + '.xml'), 'w') as f:
         f.write(makeXML(i))
 
@@ -47,13 +51,18 @@ def makeXML(i):
                     with tag('f:familyElement'):
                         with tag('f:name'):
                             text(random.choice(names))
-                        with tag('f:birthDate'):
-                            text(random.choice(birthDatesOld))
-                with tag('f:origin', countryCode=random.choice(countryCodes)):
+                        if (i == int(sys.argv[1])/2):
+                            with tag('f:birthDate'):
+                                text(random.choice(birthDatesOld))
+                        else:
+                            with tag('f:birthDate'):
+                                text(random.choice(birthDatesNew))
+                with tag('f:origin'):
+                    rInt = random.randint(1, len(countryData)-1)
                     with tag('gd:countryName'):
-                        text(random.choice(countryNames))
+                        text(countryData[rInt][0])
                     with tag('gd:cityName'):
-                        text(random.choice(cityNames))
+                        text(countryData[rInt][1])
                 # create a random number of reservationDates
                 with tag('f:reservationDates'):
                     with tag('f:numberOfDays'):
@@ -66,7 +75,38 @@ def makeXML(i):
         xml = indent(doc.getvalue())
         return xml
 
+
+
+def deleteResources():
+    # delete and create a fresh BaseX DB
+    url = "http://localhost:8984/DCDB"
+    
+    time.sleep(0.05)
+    response = requests.request("GET", url)
+
+    # go into the DB folder and remove the files
+    try:
+        for file in os.listdir(r'.\DB'):
+            os.remove(os.path.join(r'.\DB', file))
+    except FileNotFoundError:
+        print("Creating directory DB...")
+        os.makedirs(os.path.join(os.path.dirname(__file__), 'DB'))
+        for file in os.listdir(r'.\DB'):
+            os.remove(os.path.join(r'.\DB', file))
+
+    # go into the export folder and remove the files
+    try:
+        for file in os.listdir(r'.\export'):
+            os.remove(os.path.join(r'.\export', file))
+    except FileNotFoundError:
+        print("Creating directory export...")
+        os.makedirs(os.path.join(os.path.dirname(__file__), 'export'))
+        for file in os.listdir(r'.\export'):
+            os.remove(os.path.join(r'.\export', file))
+
+
 def POSTreservations():
+    liveProbe = 0
     regex = '<reservation>'
     regex2 = """<?xml version="1.0" encoding="UTF-8"?>
     <reservation   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
@@ -93,26 +133,31 @@ def POSTreservations():
                 }
 
                 time.sleep(0.05)
-                response = requests.request("POST", url, headers=headers, data=content)
+                try:
+                    response = requests.request("POST", url, headers=headers, data=content)
+                except requests.exceptions.ConnectionError:
+                    print("Connection error")
+                    liveProbe += 1
+                    if (liveProbe == 3):
+                        print("\n[!] BaseX seems not to be running [!]\n")
+                        sys.exit()
 
-                print(response.text)
 
-# cancel some random reservations indicated by the cli argument
 def randomCancel():
+# cancel some random reservations indicated by the cli argument
     url = "http://localhost:8984/cancelreservation?id=" + str(random.randint(1, 100))
     
     time.sleep(0.05)
     response = requests.request("GET", url)
-    
-    print(response.text)
 
-# export the database of BaseX
+
 def exportData():
+# export the database of BaseX
     url = "http://localhost:8984/exportdatabase"
     
+    time.sleep(0.05)
     response = requests.request("GET", url)
     
-    print(response.text)
 
 # ------- INIT ------- #
 try:
@@ -124,15 +169,43 @@ $ python generateData.py <number> <cancel>
     and <cancel> is the number of reservations to cancel""")
     exit()
 
+# delete older resources
+deleteResources()
+print("Deleting old resources...")
+
 # Create XMLs with random data in it
+print("Creating XMLs...")
 for i in range(1, int(sys.argv[1])):
-    createData()
+    createXMLfiles()
 
 # POST it to BaseX
+print("POSTing XMLs to BaseX...")
 POSTreservations()
 
-# Cancel some random reservations
-for cancel in range(1, int(sys.argv[2])):
-    randomCancel()
 
-#exportData()
+# Cancel some random reservations
+print("Cancelling reservations...")
+try:
+    for cancel in range(1, int(sys.argv[2])):
+        randomCancel()
+except IndexError:
+    print("No parameter was given to cancel reservations")
+    print("Want to cancel 25% of the reservations? (y/N)")
+    if (input() == "y"):
+        print("Cancelling 25% of the reservations...")
+        for cancel in range(1, int(sys.argv[1])//4):
+            randomCancel()
+
+# ask the user if he wants to export the database
+print("Do you want to export the database? (y/n)")
+input = input()
+if (input == "y"):
+    print("Exporting database...")
+    exportData()
+else:
+    print("Database not exported!")
+    print("Exiting...")
+
+if sys.argv[3] == "rui":
+    print("Sending data to Mongo...")
+    exec(open("convert.py").read())
