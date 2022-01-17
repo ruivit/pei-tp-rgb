@@ -9,7 +9,6 @@
             <xs:element name="countryName" type="countryNameType" maxOccurs="1"/>
             <xs:element name="cityName" type="cityNameType" maxOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="countryCode" type="countryCodeType"/>
     </xs:complexType>
 
     <xs:simpleType name="countryNameType">
@@ -26,23 +25,6 @@
             <xs:enumeration value="Brazil"/>
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:simpleType name="countryCodeType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="PT"/>
-			<xs:enumeration value="ES"/>
-			<xs:enumeration value="FR"/>
-			<xs:enumeration value="GR"/>
-			<xs:enumeration value="IT"/>
-			<xs:enumeration value="USA"/>
-			<xs:enumeration value="UK"/>
-			<xs:enumeration value="CA"/>
-			<xs:enumeration value="MX"/>
-			<xs:enumeration value="BR"/>
-			<xs:enumeration value="DE"/>
-			<xs:enumeration value="GB"/>
-		</xs:restriction>
-	</xs:simpleType>
 
     <xs:simpleType name="cityNameType">
         <xs:restriction base="xs:string">
