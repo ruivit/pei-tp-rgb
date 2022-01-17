@@ -7,4 +7,15 @@
         <date>2022-09-16</date>
         <slots>50</slots>
     </reservations>
+    <reservations>
+        <date>2022-11-11</date>
+        <slots>0</slots>
+    </reservations>
+
+    <location>
+        <country>Portugal</country>
+        <city>Felgueiras</city>
+        <address>Rua do Curral</address>
+        <contact>911911911</contact>
+    </location>
 </atelier>

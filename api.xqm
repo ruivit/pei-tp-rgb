@@ -168,7 +168,7 @@ update:output(page:ok($validDate, $rid))
 (:==Check if newValidDate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
 declare function page:check-between-dates($dateToCheck)
 {
-  let $firstdate := xs:date("2022-09-15")
+  let $firstdate := xs:date("2022-09-16")
   let $lastdate := xs:date("2022-12-26")
   
   return if($dateToCheck>$firstdate and $dateToCheck<$lastdate)
@@ -188,6 +188,7 @@ declare function page:new-date($newDate)
         <date>{$newDate/text()}</date>
         <slots>49</slots>
   </reservations>
+  {$db//a:location}
 </atelier>
 };
 
@@ -206,6 +207,7 @@ declare function page:return-xml-reservation($xml, $validDate)
       <numberElements>{count($xml//f:familyElement)}</numberElements>
       {$xml//f:familyElement}
       {$xml//f:origin}
+    {$xml//f:emergencyContact}
     </family>
   </reservation>
 };

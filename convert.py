@@ -1,10 +1,12 @@
 import os, re, json, bson, pymongo
+from telnetlib import TLS
 from datetime import datetime
 from bson import json_util
 from pymongo import MongoClient
 from dotenv import load_dotenv
 from glob import glob
 import xmltodict
+import sys
 
 #input
 xml_dir = "DB"
@@ -92,7 +94,9 @@ def entulhate_more_mongodb_data(dia, reservation_json):
     # for each each familyElement
     for familyElement in reservation_json['family']['familyElement']:
         if 'age' not in familyElement:
+            # make the birth_day to date
             birth_day = familyElement['birthDate']
+
             reservation_date = dia['date']
 
             # remove '-' from the dates
@@ -188,44 +192,18 @@ def import_atelier_json_to_mongodb():
         mymongodb.create_index([('date', pymongo.ASCENDING)], unique=True)
     print("Indexing complete!")
 
-# join all reservations into an array of reservations and save it in the reservations.json
-def join_reservations_json():
-    print("Joining reservations...")
-    reservations_json = []
-    for filename in os.listdir(json_dir):
-        # get only the json files
-        if not filename.endswith ('.json'):
-            continue
-        if filename.startswith('reservation'):
-            with open(os.path.join(json_dir, filename), 'r') as f:
-                reservation_json = json.load(f)
-                reservations_json.append(reservation_json)
-    with open(os.path.join(json_dir, 'all_reservations.json'), 'w') as f:
-        f.write(json.dumps(reservations_json, indent=4, default=bson.json_util.default))
-    print("Joining complete!")
-    return reservations_json
-
-def import_reservations_json_to_mongodb():
-    print("Importing reservations.json to MongoDB...")
-    reservations_json = join_reservations_json()
-    collection_dst = 'reservations'
-    mymongodb = get_mongodb()[collection_dst]
-
-    print("Overriding collection...")
-    mymongodb.drop()
-    mymongodb.insert_many(reservations_json)
-    print("Import complete!")
-
-    print("Indexing...")
-    index_info=mymongodb.index_information()
-    if 'id_1' not in index_info:
-        mymongodb.create_index([('id', pymongo.ASCENDING)], unique=True)
-    print("Indexing complete!")
-
 # main
 if __name__ == "__main__":
-    convert_xml_to_json()
-    entulhar_reservations_in_atelier_collection()
-    if import_to_mongodb:
-        import_atelier_json_to_mongodb()
-        # import_reservations_json_to_mongodb()
+    try:
+        if sys.argv[1] == 'importonly':
+            import_atelier_json_to_mongodb()
+        else:
+            convert_xml_to_json()
+            entulhar_reservations_in_atelier_collection()
+            if import_to_mongodb:
+                import_atelier_json_to_mongodb()
+    except IndexError:
+        convert_xml_to_json()
+        entulhar_reservations_in_atelier_collection()
+        if import_to_mongodb:
+            import_atelier_json_to_mongodb()

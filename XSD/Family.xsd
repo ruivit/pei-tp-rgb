@@ -15,6 +15,7 @@
     <xs:complexType name="familyType">
         <xs:sequence maxOccurs="1">
             <xs:element name="familyElement" type="familyElementType" minOccurs="1" maxOccurs="7"/>
+            <xs:element name="emergencyContact" type="ct:phoneNumberType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="origin" type="gd:originType" maxOccurs="1"/>
             <xs:element name="reservationDates" type="reservationDatesType" maxOccurs="1"/>
         </xs:sequence>
@@ -33,6 +34,7 @@
     <xs:complexType name="familyElementType">
         <xs:sequence>
             <xs:element name="name" type="ct:nameType" maxOccurs="1"/>
+            <xs:element name="sex" type="ct:sexType" default="Not specified"/>
             <xs:element name="birthDate" type="ct:dateType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
@@ -45,7 +47,7 @@
     </xs:simpleType>
 
     <xs:simpleType name="numberOfDaysType">
-        <xs:restriction base="xs:int">
+        <xs:restriction base="xs:nonNegativeInteger">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="5"/>
         </xs:restriction>

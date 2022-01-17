@@ -13,13 +13,19 @@ birthDatesOld = []
 for i in range(0, 100):
     birthDatesOld.append(str(random.randint(1960, 1990)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
 
+infants = []
+for i in range(0, 100):
+    infants.append(str(random.randint(2012, 2021)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
+
 # create random dates between 2022-10-10 and 2022-12-25 for the reservations
 dates = []
 for i in range(0, 100):
     dates.append(str(random.randint(2022, 2022)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 25)))
 
 # create random needed data
-names = ["John", "Raul", "Pablo", "Juan", "Pedro", "Carlos", "Jorge", "Luis", "Jose", "Ramon"]
+manNames = ["John", "Raul", "Pablo", "Juan", "Pedro", "Carlos", "Jorge", "Luis", "Jose", "Ramon"]
+womanNames = ["Maria", "Marta", "Laura", "Sara", "Ana", "Carmen", "Carla", "Pilar", "Sofia", "Martina"]
+phoneNumbers = ["911922933", "123123123", "944955966", "900900900", "351234567", "256123456", "912341234"]
 
 # create a two dimensional array with the random generated data of countryNames and Cities
 countryNames = ["Spain", "France", "Germany", "Italy", "Portugal", "United Kingdom", "United States of America", "Canada", "Mexico", "Brazil"]
@@ -49,14 +55,28 @@ def makeXML(i):
                 # create a random number of familyElement
                 for j in range(0, random.randint(1, 7)):
                     with tag('f:familyElement'):
-                        with tag('f:name'):
-                            text(random.choice(names))
                         if (i == int(sys.argv[1])/2):
+                            with tag('f:name'):
+                                text(manNames[random.randint(0, len(manNames)-1)])
+                            with tag("f:sex"):
+                                text("Masculine")
+                        else:
+                            with tag('f:name'):
+                                text(womanNames[random.randint(0, len(womanNames)-1)])
+                            with tag("f:sex"):
+                                text("Feminine")
+                        if (i == int(sys.argv[1])/4):
                             with tag('f:birthDate'):
                                 text(random.choice(birthDatesOld))
+                            if (i == int(sys.argv[1])/2):
+                                with tag('f:birthDate'):
+                                    text(random.choice(birthDatesNew))
                         else:
                             with tag('f:birthDate'):
-                                text(random.choice(birthDatesNew))
+                                text(random.choice(infants))
+                if (random.randint(1, 4) == 2):
+                    with tag('f:emergencyContact'):
+                        text(phoneNumbers[random.randint(0, len(phoneNumbers)-1)])
                 with tag('f:origin'):
                     rInt = random.randint(1, len(countryData)-1)
                     with tag('gd:countryName'):
@@ -197,15 +217,28 @@ except IndexError:
             randomCancel()
 
 # ask the user if he wants to export the database
-print("Do you want to export the database? (y/n)")
-input = input()
-if (input == "y"):
-    print("Exporting database...")
-    exportData()
-else:
-    print("Database not exported!")
-    print("Exiting...")
+try:
+    if sys.argv[3]:
+        exportData()
+    else:
+        print("Do you want to export the database? (y/N)")
+        if (input() == "y"):
+            print("Exporting database...")
+            exportData()
+            
+except IndexError:
+    print("Do you want to export the database? (y/N)")
+    input = input()
+    if (input == "y"):
+        print("Exporting database...")
+        exportData()
+    else:
+        print("Database not exported!")
+        print("Exiting...")
 
-if sys.argv[3] == "rui":
-    print("Sending data to Mongo...")
-    exec(open("convert.py").read())
+try:
+    if sys.argv[3] == "rui":
+        print("Sending data to Mongo...")
+        exec(open("convert.py").read())
+except IndexError:
+    print("No parameter was given to send data to Mongo")
