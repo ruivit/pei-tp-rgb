@@ -205,8 +205,9 @@ def join_reservations_json():
     print("Joining complete!")
     return reservations_json
 
-def import_reservations_json_to_mongodb(reservations_json):
+def import_reservations_json_to_mongodb():
     print("Importing reservations.json to MongoDB...")
+    reservations_json = join_reservations_json()
     collection_dst = 'reservations'
     mymongodb = get_mongodb()[collection_dst]
 
@@ -227,5 +228,4 @@ if __name__ == "__main__":
     entulhar_reservations_in_atelier_collection()
     if import_to_mongodb:
         import_atelier_json_to_mongodb()
-        reservations_json = join_reservations_json()
-        import_reservations_json_to_mongodb(reservations_json)
+        # import_reservations_json_to_mongodb()
