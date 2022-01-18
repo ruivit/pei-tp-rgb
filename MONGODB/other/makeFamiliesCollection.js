@@ -1,3 +1,4 @@
+db.atelier.aggregate(
 [{$unwind: {
     path: '$reservations'
    }}, {$group: {
@@ -9,3 +10,4 @@
     familyElement: 1,
     numberElements: 1
    }}, {$out: 'families'}]
+).pretty()
