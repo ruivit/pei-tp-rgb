@@ -13,8 +13,8 @@
     <xs:element name="atelier">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="reservations" type="reservationsType" maxOccurs="5000"/>
-                <xs:element name="location" type="locationType" maxOccurs="1"/>
+                <xs:element name="reservations" type="reservationsType" 
+                minOccurs="1" maxOccurs="5000"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -32,17 +32,4 @@
             <xs:maxInclusive value="50"/>
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:complexType name="locationType">
-        <xs:sequence>
-            <xs:element name="country" type="gd:countryNameType"
-            default="Portugal" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="city" type="gd:cityNameType"
-            default="Felgueiras" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="address" type="gd:addressType"
-            default="Rua do Curral" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="contact" type="ct:phoneNumberType"
-            default="911911911" minOccurs="1" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
 </xs:schema>

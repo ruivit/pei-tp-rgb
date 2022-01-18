@@ -55,16 +55,16 @@ def makeXML(i):
                 # create a random number of familyElement
                 for j in range(0, random.randint(1, 7)):
                     with tag('f:familyElement'):
-                        if (i == int(sys.argv[1])/2):
+                        if (random.randint(1, 2) == 1):
                             with tag('f:name'):
                                 text(manNames[random.randint(0, len(manNames)-1)])
-                            with tag("f:sex"):
-                                text("Masculine")
+                            #with tag("f:sex"):
+                            #    text("Masculine")
                         else:
                             with tag('f:name'):
                                 text(womanNames[random.randint(0, len(womanNames)-1)])
-                            with tag("f:sex"):
-                                text("Feminine")
+                            #with tag("f:sex"):
+                            #    text("Feminine")
                         if (i == int(sys.argv[1])/4):
                             with tag('f:birthDate'):
                                 text(random.choice(birthDatesOld))
@@ -74,9 +74,8 @@ def makeXML(i):
                         else:
                             with tag('f:birthDate'):
                                 text(random.choice(infants))
-                if (random.randint(1, 4) == 2):
-                    with tag('f:emergencyContact'):
-                        text(phoneNumbers[random.randint(0, len(phoneNumbers)-1)])
+                with tag('f:emergencyContact'):
+                    text(phoneNumbers[random.randint(0, len(phoneNumbers)-1)])
                 with tag('f:origin'):
                     rInt = random.randint(1, len(countryData)-1)
                     with tag('gd:countryName'):
@@ -85,9 +84,10 @@ def makeXML(i):
                         text(countryData[rInt][1])
                 # create a random number of reservationDates
                 with tag('f:reservationDates'):
+                    numberOfDays = random.randint(1, 5)
                     with tag('f:numberOfDays'):
-                        text(str(random.randint(1, 5)))
-                    for j in range(0, random.randint(1, 5)):
+                        text(str(numberOfDays))
+                    for j in range(0, numberOfDays):
                         with tag('f:preferedDates'):
                             text(random.choice(dates))
     
@@ -238,7 +238,7 @@ except IndexError:
 
 try:
     if sys.argv[3] == "rui":
-        print("Sending data to Mongo...")
+        print("Running script convert.py...")
         exec(open("convert.py").read())
 except IndexError:
     print("No parameter was given to send data to Mongo")

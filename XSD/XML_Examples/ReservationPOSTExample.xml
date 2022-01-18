@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservation   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+                xmlns="http://www.atelierRGB.pt/Reservation" 
+                xsi:schemaLocation="http://www.atelierRGB.pt/Reservation ../Reservation.xsd"
+                
+                xmlns:f="http://www.atelierRGB.pt/Family"
+                xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+                
+  <f:family>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2012-10-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2015-11-16</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2021-11-10</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Berlin</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-11-13</f:preferedDates>
+      <f:preferedDates>2022-11-14</f:preferedDates>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

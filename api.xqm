@@ -188,7 +188,6 @@ declare function page:new-date($newDate)
         <date>{$newDate/text()}</date>
         <slots>49</slots>
   </reservations>
-  {$db//a:location}
 </atelier>
 };
 

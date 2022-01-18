@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xmlns="http://www.atelierRGB.pt/Family" 
+        xsi:schemaLocation="http://www.atelierRGB.pt/Family ../Family.xsd"
+        
+        xmlns:gd="http://www.atelierRGB.pt/GeographicData">
+
+    <familyElement>
+        <name>Sofia</name>
+        <birthDate>2021-10-17</birthDate>
+    </familyElement>
+    <familyElement>
+        <name>Jorge</name>
+        <birthDate>2013-10-12</birthDate>
+    </familyElement>
+    <familyElement>
+        <name>Sofia</name>
+        <birthDate>2013-12-28</birthDate>
+    </familyElement>
+    <emergencyContact>256123456</emergencyContact>
+    <origin>
+        <gd:countryName>France</gd:countryName>
+        <gd:cityName>Paris</gd:cityName>
+    </origin>
+    <reservationDates>
+        <numberOfDays>3</numberOfDays>
+        <preferedDates>2022-12-18</preferedDates>
+        <preferedDates>2022-12-18</preferedDates>
+        <preferedDates>2022-11-10</preferedDates>
+    </reservationDates>
+</family>
