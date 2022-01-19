@@ -121,33 +121,25 @@ function page:post-xml($xml)
 declare %updating function page:checks($xml)
 {
   let $database := db:open("RGBDB")
-  let $pfdates := $xml//f:preferedDates
-  let $atelierdates := $database//a:reservations
-  let $firstdate := xs:date("2022-09-16")
-  let $lastdate := xs:date("2022-12-26")
+  let $pfDates := $xml//f:preferedDates
+  let $atelierDates := $database//a:reservations
   
-(: Verifica se as datas preferidas da familia existem no Atelier,
- se não existirem, fica com o valor NULL :)
-  let $existingDates := $atelierdates[a:date = $pfdates]
-  
-  (: Verifica se as datas da família ainda não existem no Atelier.Esta filtragem foi implementada para se poder fazer criação automática de uma data, caso esta ainda não tenha sido criada :)
-  let $notExistingDatesAtelier := $pfdates[not(.=($atelierdates//a:date))]
-  let $newDate := page:check-between-dates($notExistingDatesAtelier)
-  
+  (: Verifica se as datas preferidas da familia existem no Atelier,
+  se não existirem, fica com o valor NULL :)
+  let $existingDates := $atelierDates[a:date = $pfDates]
   (: Filtra as datas preferidas da família coincidentes com as do Atelier que têm slots disponíveis:)
   let $validSlots := $existingDates[a:slots > 0]
   (:Seleciona a primeira data com slots disponíveis:)
   let $validDate := $validSlots[1]/a:date
   
+  (: Verifica se as datas da família ainda não existem no Atelier.Esta filtragem foi implementada para se poder fazer criação automática de uma data, caso esta ainda não tenha sido criada :)
+  let $notExistingDates := $pfDates[not(.=($atelierDates//a:date))]
+  let $checkBetweenDates := page:check-between-dates($notExistingDates)
+  let $newDate := $checkBetweenDates[1]
+    
  (: Incrementa o elemento reservationID para +1 pois se tudo for validado, será criada uma nova reserva :)
   let $rid := count($database//reservation/@reservationID) + 1
-  
-   for $b in $newDate
-  where some $a in $b satisfies $a>$firstdate and $a<$lastdate
-  
-  
-  
-  
+    
   return
   (:A variável $validDate pode estar com o valor NULL se não existirem dias preferidos coincidentes com os existentes no Atelier OU se os dias forem coincidentes, mas não houver slots disponíveis:)
   if ( empty($validDate) )
@@ -156,7 +148,6 @@ declare %updating function page:checks($xml)
          then ( web:error(500, "[ERRO] O atelier do Pai Natal atingiu o máximo de capacidade para o(s) dia(s) escolhidos. [ERRO]") )
          else ( 
  (: Se a variável $newdate não for NULL, é porque traz uma data que vai ser verificada se se encontra dentro dos 100 dias antes do Natal, caso passe esta validação será acrescentada uma nova data ao Atelier e será criada uma reserva :)
-update:output(page:check-between-dates($newDate)),
 db:replace("RGBDB", "atelier.xml", page:new-date($newDate)),
 db:add("RGBDB", page:return-xml-reservation($xml, $newDate), concat("reservation", count(db:open("RGBDB")//reservation) + 1, ".xml")),
 
@@ -167,7 +158,6 @@ update:output(page:ok($newDate, $rid))
          
    else ( 
 (: A variável $validDate traz uma data que vai ser verificada se se encontra dentro dos 100 dias antes do Natal, caso passe esta validação será acrescentada uma nova data ao Atelier e será criada uma reservai :)
-update:output(page:check-between-dates($validDate)),
 replace value of node $database//a:reservations[a:date = $validDate]/a:slots with $database//a:reservations[a:date = $validDate]/a:slots - 1,
 db:add("RGBDB", page:return-xml-reservation($xml, $validDate), concat("reservation", count(db:open("RGBDB")//reservation) + 1, ".xml")),
 
@@ -180,23 +170,15 @@ update:output(page:ok($validDate, $rid))
 (:==Check if newValidDate is between the allowed dates "16-09-2022 and 25-12-2022"==:)
 declare function page:check-between-dates($dateToCheck)
 {
+   
+  for $validDays in $dateToCheck
   
-  let $firstdate := xs:date("2022-09-16")
+  let $firstdate := xs:date("2022-09-17")
   let $lastdate := xs:date("2022-12-26")
   
-  return if($dateToCheck[1]>$firstdate and $dateToCheck[1]<$lastdate)
-         then($dateToCheck[1])
-         else(
-         if($dateToCheck[2]>$firstdate and $dateToCheck[2]<$lastdate)
-         then($dateToCheck[2]) else (
-         if($dateToCheck[3]>$firstdate and $dateToCheck[3]<$lastdate)
-         then($dateToCheck[3]) else (
-         if($dateToCheck[4]>$firstdate and $dateToCheck[4]<$lastdate)
-         then($dateToCheck[4]) else (
-          if($dateToCheck[5]>$firstdate and $dateToCheck[5]<$lastdate)
-         then($dateToCheck[5])
-         else("[ERROR] As data permitidas são de 16-09-2022 até 25-12-2022 [ERROR]")
-        ))))
+  where some $days in $validDays satisfies $days>$firstdate and $days<$lastdate 
+
+  return $validDays
 };
 
 (: return a valid xml with the new date to add to the atelier file:)
