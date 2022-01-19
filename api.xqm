@@ -241,18 +241,21 @@ function page:check-availability($getdate)
 
   else 
       (
-    let $db := db:open("RGBDB")//a:atelier
+    let $atelierDates := db:open("RGBDB")//a:atelier
     for $days in $getdate
     
-    let $check := $days = $db//a:date/text()
-    let $slots := $db//a:reservations[a:date = $days]/a:slots/text()
+    let $checkBetweenDates := page:check-between-dates($days)
+    let $notExistingDates := $days[not(.=($checkBetweenDates))]
     
-    (: Check if the given date is between the allowed days :)
-    let $checkDates := page:check-between-dates($days)
+    let $slots := $atelierDates//a:reservations[a:date = $days]/a:slots/text()
     
-    return if ($check)
-    then "Existe disponibilidade para " || $slots || " familias para o dia " || $days
-    else "Existe disponibilidade para 50 familias no dia " || $days
+    return if(empty($notExistingDates))
+    then (
+      if(empty($slots))
+      then ("A data " || $days || " tem disponibilidade para 50 famílias.")
+      else ("A data " || $days || " tem disponibilidade para " || $slots || " famílias."))
+    else (
+    "A data " || $notExistingDates || " nao se encontra dentro dos 100 dias")
       )
   
   (: GET REQUESTs Examples :)
@@ -263,9 +266,9 @@ function page:check-availability($getdate)
 declare function page:print-no-slots()
 {
   let $database := db:open("RGBDB")
-  let $atelierdates := $database//a:reservations
+  let $atelierDates := $database//a:reservations
   
-  let $notAvailable := $atelierdates[a:slots = 0]
+  let $notAvailable := $atelierDates[a:slots = 0]
 
   for $x in $notAvailable
   order by data($x/a:date)
