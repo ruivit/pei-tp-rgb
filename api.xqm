@@ -112,7 +112,7 @@ function page:post-xml($xml)
   let $xsd:= "XSD/Reservation.xsd"
   return validate:xsd($xml, $xsd),
 
-  (:=== Se pasar em todas as validaçõesm, então escreve na DB ===:)
+  (:=== Se passar em todas as validações, então escreve na DB ===:)
   page:checks($xml)
 };
 
@@ -142,7 +142,7 @@ declare %updating function page:checks($xml)
   let $newDate := $checkBetweenDates[1]
     
  (: Incrementa o elemento reservationID para +1 pois se tudo for validado, será criada uma nova reserva :)
-  let $rid := count($database//reservation/@reservationID) + 1
+  let $rid := $database//reservation[(last)]/id + 1
     
   return
   (:A variável $validDate pode estar com o valor NULL se não existirem dias preferidos coincidentes com os existentes no Atelier OU se os dias forem coincidentes, mas não houver slots disponíveis:)
@@ -186,7 +186,8 @@ declare function page:check-between-dates($dateToCheck)
   return $validDays
 };
 
-(: Retorna um xml with the new date to add to the atelier file:)
+(: Retorna um xml com uma nova data a ser adicionada ao Atelier já com as slots a 49,
+ uma vez que vai ser criada uma reserva para este dia:)
 declare function page:new-date($newDate)
 {
   let $db := db:open("RGBDB")//a:atelier
@@ -201,16 +202,17 @@ declare function page:new-date($newDate)
 </atelier>
 };
 
-(: return a valid xml with the valid date, that will be used to make a reservation :)
-declare function page:return-xml-reservation($xml, $validDate)
+(: Retorna um XML com a estrutura de uma reserva para a data que está na variável $reservationDate,
+procura a última reserva lê o campo id e incrementa um valor para atribuir como id à nova reserva   :)
+declare function page:return-xml-reservation($xml, $reservationDate)
 {
   let $db := db:open("RGBDB")
-  let $rid := count($db//reservation/@reservationID) + 1
+  let $rid := $db//reservation[(last)]/id + 1
     
   return
-  <reservation reservationID="{$rid}">
+  <reservation>
     <id>{$rid}</id>
-    <date>{$validDate/text()}</date>
+    <date>{$reservationDate/text()}</date>
     <state>Active</state>
     <family>
       <numberElements>{count($xml//f:familyElement)}</numberElements>
@@ -223,31 +225,37 @@ declare function page:return-xml-reservation($xml, $validDate)
 
 
 
-(: ================ Check Availability ================ :)
+(: ================ Verificar disponibilidade ================ :)
+
 declare
   %rest:path("/availability")
   %rest:GET
-  %rest:query-param("date", "{$getdate}")
-function page:check-availability($getdate)
+  %rest:query-param("date", "{$getParam}")
+    
+(:Recebe os parâmetros enviados no GET request e em função dos mesmos executa diferentes operações:)  
+function page:check-availability($getParam)
 {
-  if ($getdate = "all")
+  (:Caso o parâmetro seja "all" verifica todos os dias existentes no Atelier e retorna o número de slots disponiveis :)
+  if ($getParam = "all")
   then (
   let $database := db:open("RGBDB")
   let $atelierdates := $database//a:reservations
   
-  let $available := $atelierdates[a:slots > 0]
-
-  for $x in $available
+  
+  for $x in $atelierdates
   order by data($x/a:date)
-  return
-  "Existe disponibilidade para " || $x/a:slots || " familias para o dia " || data($x/a:date)
-  ,page:print-no-slots()
+  return if ($x/a:slots = 0)
+  then ("Não existe disponibilidade para o dia " || data($x/a:date))
+  else (
+  "Existe disponibilidade para " || $x/a:slots || " familias para o dia " || data($x/a:date)),
+  (:Retorna mensagens segundo determinadas condições:)
+  page:print-all-days()
   )
 
   else 
       (
     let $atelierDates := db:open("RGBDB")//a:atelier
-    for $days in $getdate
+    for $days in $getParam
     
     let $checkBetweenDates := page:check-between-dates($days)
     let $notExistingDates := $days[not(.=($checkBetweenDates))]
@@ -268,25 +276,22 @@ function page:check-availability($getdate)
   (: /availability?date=01-01-2021?date=02-02-2021... :)
 };
 
-declare function page:print-no-slots()
+(: Como se tomou a decisão, de criar as datas no Atelier de forma automática, quando se faz uma verificação de disponibilidade para os 100 dias, teve de se considerar a possibilidade de ainda não haver reservas para todos o dias. Criou-se esta função para garantir que a informação prestada incluí as datas já existentes e todas as outras no intervalo de 2022-09-15 a 2022-09-23 :)
+declare function page:print-all-days()
 {
   let $database := db:open("RGBDB")
-  let $atelierDates := $database//a:reservations
+  let $count := count($database//a:date)
   
-  let $notAvailable := $atelierDates[a:slots = 0]
-
-  for $x in $notAvailable
-  order by data($x/a:date)
-  return
-  "Nao existe disponibilidade para o dia " || data($x/a:date) ||
-  "
-Caso o seu dia não se encontre presente, presuma que o dia têm total disponibilidade
-desde que este se enquandre dentro das datas 16-09-2022 até 25-12-2022."
+  return if ($count < 100)
+  then ("Todos os restantes dias entre 2022-09-15 e 2022-12-23 têm disponibilidade para 50 famílias.")
+  else ()
 };
 
 
+(: ================ Cancelar reservas ================ :)
 
-(: ================ Cancel Reservation ================ :)
+
+
 declare %updating
   %rest:path("/cancelreservation")
   %rest:query-param("id", "{$id}")
