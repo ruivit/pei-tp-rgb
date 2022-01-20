@@ -1,6 +1,6 @@
 from yattag import Doc, indent
 import random, re
-import requests, time
+import requests
 import sys, os
 
 # create dates between 1990 and 2010 (younger people)
@@ -15,7 +15,7 @@ for i in range(0, 100):
 
 infants = []
 for i in range(0, 100):
-    infants.append(str(random.randint(2012, 2021)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
+    infants.append(str(random.randint(2012, 2020)) + "-" + str(random.randint(10, 12)) + "-" + str(random.randint(10, 28)))
 
 # create random dates between 2022-10-10 and 2022-12-25 for the reservations
 dates = []
@@ -101,7 +101,6 @@ def deleteResources():
     # delete and create a fresh BaseX DB
     url = "http://localhost:8984/DCDB"
     
-    time.sleep(0.05)
     response = requests.request("GET", url)
 
     # go into the DB folder and remove the files
@@ -152,7 +151,6 @@ def POSTreservations():
                 'Content-Type': 'application/xml'
                 }
 
-                time.sleep(0.05)
                 try:
                     response = requests.request("POST", url, headers=headers, data=content)
                 except requests.exceptions.ConnectionError:
@@ -167,7 +165,6 @@ def randomCancel():
 # cancel some random reservations indicated by the cli argument
     url = "http://localhost:8984/cancelreservation?id=" + str(random.randint(1, 100))
     
-    time.sleep(0.05)
     response = requests.request("GET", url)
 
 
@@ -175,7 +172,6 @@ def exportData():
 # export the database of BaseX
     url = "http://localhost:8984/exportdatabase"
     
-    time.sleep(0.05)
     response = requests.request("GET", url)
     
 
