@@ -1,30 +1,45 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>1971-01-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>1994-03-19</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2007-07-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Maria</f:name>
-      <f:birthDate>2013-10-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2015-11-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2019-11-11</f:birthDate>
+      <f:birthDate>2002-04-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pablo</f:name>
-      <f:birthDate>2017-11-26</f:birthDate>
+      <f:birthDate>1967-10-13</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>1996-07-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1975-11-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-10-16</f:preferedDates>
-      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:preferedDates>2022-10-05</f:preferedDates>
+      <f:preferedDates>2022-09-13</f:preferedDates>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+      <f:preferedDates>2022-12-23</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

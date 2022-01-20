@@ -1,0 +1,18 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1995-10-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Porto</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-08</f:preferedDates>
+      <f:preferedDates>2022-10-19</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

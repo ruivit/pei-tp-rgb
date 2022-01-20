@@ -1,43 +1,41 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2014-10-27</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2018-12-15</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2017-12-16</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2015-10-28</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>2015-12-17</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2014-10-27</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
       <f:name>Carlos</f:name>
-      <f:birthDate>2020-10-15</f:birthDate>
+      <f:birthDate>1981-05-06</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2006-10-25</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1999-02-24</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>1989-10-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2005-12-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2011-05-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2006-07-19</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
       <gd:countryName>Italy</gd:countryName>
       <gd:cityName>Rome</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-12-17</f:preferedDates>
-      <f:preferedDates>2022-12-17</f:preferedDates>
-      <f:preferedDates>2022-11-14</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-03</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

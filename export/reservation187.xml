@@ -1,21 +1,17 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2020-11-11</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>1994-03-19</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Berlin</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Milan</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-11-17</f:preferedDates>
-      <f:preferedDates>2022-11-12</f:preferedDates>
-      <f:preferedDates>2022-10-15</f:preferedDates>
-      <f:preferedDates>2022-12-16</f:preferedDates>
-      <f:preferedDates>2022-11-23</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-09-20</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

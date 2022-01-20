@@ -1,0 +1,26 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2013-05-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2004-07-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2003-07-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Toronto</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-18</f:preferedDates>
+      <f:preferedDates>2022-09-18</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

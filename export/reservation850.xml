@@ -1,43 +1,30 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2019-10-14</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2016-11-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Jorge</f:name>
-      <f:birthDate>2019-11-23</f:birthDate>
+      <f:birthDate>2007-02-05</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2018-11-23</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2015-11-26</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>2010-12-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Maria</f:name>
-      <f:birthDate>2020-12-14</f:birthDate>
+      <f:birthDate>2008-04-10</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2017-11-23</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2016-11-23</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
       <gd:countryName>France</gd:countryName>
-      <gd:cityName>Paris</gd:cityName>
+      <gd:cityName>Marseille</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-11-15</f:preferedDates>
-      <f:preferedDates>2022-11-10</f:preferedDates>
-      <f:preferedDates>2022-11-13</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-22</f:preferedDates>
+      <f:preferedDates>2022-12-22</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

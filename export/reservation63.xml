@@ -1,44 +1,25 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2014-10-12</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2020-02-02</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2013-10-26</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2015-11-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2019-10-14</f:birthDate>
+      <f:name>Jorge</f:name>
+      <f:birthDate>1990-10-16</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2021-11-18</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2016-11-23</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2015-10-25</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2021-11-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Rome</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Chicago</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-11-10</f:preferedDates>
-      <f:preferedDates>2022-11-10</f:preferedDates>
-      <f:preferedDates>2022-10-15</f:preferedDates>
-      <f:preferedDates>2022-12-10</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-12-18</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

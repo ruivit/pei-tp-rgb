@@ -1,40 +1,18 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2021-10-20</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2020-11-21</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
       <f:name>John</f:name>
-      <f:birthDate>2018-10-18</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2018-12-15</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2018-10-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2015-10-28</f:birthDate>
+      <f:birthDate>1993-05-16</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Ottawa</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-12-16</f:preferedDates>
-      <f:preferedDates>2022-11-21</f:preferedDates>
-      <f:preferedDates>2022-11-21</f:preferedDates>
-      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-07</f:preferedDates>
+      <f:preferedDates>2022-10-15</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

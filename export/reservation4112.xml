@@ -1,0 +1,45 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2002-07-16</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2013-06-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>1991-02-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2005-08-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2019-03-03</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>2005-05-18</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1979-07-24</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>New York</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:preferedDates>2022-09-22</f:preferedDates>
+      <f:preferedDates>2022-10-06</f:preferedDates>
+      <f:preferedDates>2022-09-22</f:preferedDates>
+      <f:preferedDates>2022-09-10</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

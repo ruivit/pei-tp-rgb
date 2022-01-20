@@ -1,0 +1,19 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2000-01-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Berlin</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-11-09</f:preferedDates>
+      <f:preferedDates>2022-10-16</f:preferedDates>
+      <f:preferedDates>2022-09-14</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>
