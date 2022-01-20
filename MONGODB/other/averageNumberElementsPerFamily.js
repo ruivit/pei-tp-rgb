@@ -1,20 +1,22 @@
 db.families.aggregate(
-[{$group: {
+[{$unwind: {
+    path: '$reservations'
+    }}, {$group: {
     _id: null,
     TotalNumberElements: {
-     $sum: '$numberElements'
+        $sum: '$reservations.family.numberElements'
     },
     AVGNE: {
-     $avg: '$numberElements'
+        $avg: '$reservations.family.numberElements'
     }
-   }}, {$project: {
+    }}, {$project: {
     _id: 0,
     TotalNumberElements: 1,
     AverageNumberElementsPerFamily: {
-     $round: [
-      '$AVGNE',
-      1
-     ]
+        $round: [
+        '$AVGNE',
+        1
+        ]
     }
-   }}]
+    }}]
 ).pretty()
