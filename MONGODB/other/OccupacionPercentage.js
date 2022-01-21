@@ -1,3 +1,4 @@
+db.atelier.aggregate(
 [{$sort: {
     active_reservations: -1
    }}, {$project: {
@@ -22,3 +23,4 @@
      ]
     }
    }}]
+   ).pretty()

@@ -18,5 +18,5 @@ db.families.aggregate(
         1
         ]
     }
-    }}]
+}}]
 ).pretty()
