@@ -1,0 +1,43 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2004-11-26</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2009-07-15</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2003-06-15</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>1997-08-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1989-02-08</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>1995-11-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>1991-11-28</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Manchester</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-02</f:preferedDates>
+      <f:preferedDates>2022-11-20</f:preferedDates>
+      <f:preferedDates>2022-11-18</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

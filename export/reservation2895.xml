@@ -1,0 +1,35 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>1985-12-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2003-01-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2019-07-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2007-02-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2003-04-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-02</f:preferedDates>
+      <f:preferedDates>2022-09-14</f:preferedDates>
+      <f:preferedDates>2022-09-06</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

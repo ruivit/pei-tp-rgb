@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1971-01-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>1965-05-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2005-09-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Los Angeles</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-03</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

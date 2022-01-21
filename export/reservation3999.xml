@@ -1,0 +1,35 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2014-09-19</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>2009-04-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2001-02-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>1992-12-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>2002-06-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Liverpool</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-12-16</f:preferedDates>
+      <f:preferedDates>2022-12-07</f:preferedDates>
+      <f:preferedDates>2022-12-10</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

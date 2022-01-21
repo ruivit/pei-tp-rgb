@@ -1,0 +1,31 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2011-05-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>2002-10-15</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>1971-01-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2010-12-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-10-07</f:preferedDates>
+      <f:preferedDates>2022-09-10</f:preferedDates>
+      <f:preferedDates>2022-09-17</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

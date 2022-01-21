@@ -21,13 +21,4 @@
             <xs:pattern value="[0-9]{9,12}"/>
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:simpleType name="sexType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Masculine"/>
-            <xs:enumeration value="Feminine"/>
-            <xs:enumeration value="Prefer not to say"/>
-            <xs:enumeration value="Not specified"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>

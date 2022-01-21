@@ -1,40 +1,41 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>2015-10-14</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2019-10-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Carmen</f:name>
-      <f:birthDate>2021-11-21</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2017-10-24</f:birthDate>
+      <f:birthDate>2003-04-07</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Maria</f:name>
-      <f:birthDate>2021-11-15</f:birthDate>
+      <f:birthDate>2008-09-19</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2016-11-28</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>2000-06-02</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2021-12-11</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2006-04-13</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2018-10-08</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Berlin</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-11-24</f:preferedDates>
-      <f:preferedDates>2022-11-10</f:preferedDates>
-      <f:preferedDates>2022-10-10</f:preferedDates>
-      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-15</f:preferedDates>
+      <f:preferedDates>2022-12-18</f:preferedDates>
+      <f:preferedDates>2022-09-10</f:preferedDates>
+      <f:preferedDates>2022-11-16</f:preferedDates>
+      <f:preferedDates>2022-09-20</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

@@ -1,0 +1,36 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>2017-11-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2019-05-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2000-06-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2019-11-10</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>1993-03-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-11-08</f:preferedDates>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

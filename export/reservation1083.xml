@@ -1,0 +1,28 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2004-07-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2016-04-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2000-08-08</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Berlin</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-09</f:preferedDates>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+      <f:preferedDates>2022-11-15</f:preferedDates>
+      <f:preferedDates>2022-10-18</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

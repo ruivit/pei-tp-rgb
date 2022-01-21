@@ -1,0 +1,17 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2000-08-24</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Milan</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-09-08</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

@@ -1,0 +1,23 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2008-04-10</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2019-03-03</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>New York</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-10-23</f:preferedDates>
+      <f:preferedDates>2022-12-20</f:preferedDates>
+      <f:preferedDates>2022-10-08</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

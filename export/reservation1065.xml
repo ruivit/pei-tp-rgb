@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2020-04-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2019-07-05</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Lisbon</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-11-15</f:preferedDates>
+      <f:preferedDates>2022-12-22</f:preferedDates>
+      <f:preferedDates>2022-09-01</f:preferedDates>
+      <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:preferedDates>2022-09-01</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

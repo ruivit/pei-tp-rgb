@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2008-05-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1992-02-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2002-04-28</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-17</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

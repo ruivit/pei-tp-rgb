@@ -1,0 +1,17 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>1970-09-14</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

@@ -1,0 +1,17 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2016-09-28</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-10-07</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

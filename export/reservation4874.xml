@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2010-04-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1995-06-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2013-06-28</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

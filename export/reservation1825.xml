@@ -1,0 +1,19 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2006-02-02</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-12-07</f:preferedDates>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+      <f:preferedDates>2022-09-14</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

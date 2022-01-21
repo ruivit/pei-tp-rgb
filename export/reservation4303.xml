@@ -1,0 +1,33 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>1968-03-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>1972-04-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>1995-09-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2004-09-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2013-02-02</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>New York</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-09-14</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

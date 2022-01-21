@@ -1,0 +1,17 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2020-08-20</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-09-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

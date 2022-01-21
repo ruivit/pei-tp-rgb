@@ -1,0 +1,31 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1995-11-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>2005-02-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2003-07-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1970-03-23</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Chicago</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:preferedDates>2022-10-02</f:preferedDates>
+      <f:preferedDates>2022-10-04</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

@@ -34,7 +34,6 @@
     <xs:complexType name="familyElementType">
         <xs:sequence>
             <xs:element name="name" type="ct:nameType" maxOccurs="1"/>
-            <!-- <xs:element name="sex" type="ct:sexType" default="Not specified"/> -->
             <xs:element name="birthDate" type="ct:dateType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>

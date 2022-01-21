@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2003-01-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2007-02-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2001-02-04</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Manchester</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

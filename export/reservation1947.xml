@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2002-12-18</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>1990-05-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2009-04-12</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-05</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

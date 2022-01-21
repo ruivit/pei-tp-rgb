@@ -1,0 +1,37 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>1993-02-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1960-05-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2006-04-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2013-06-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2007-02-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1964-10-01</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Porto</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-17</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

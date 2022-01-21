@@ -1,0 +1,35 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2013-02-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2018-05-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>1965-01-14</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1975-04-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2017-04-13</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Chicago</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-10</f:preferedDates>
+      <f:preferedDates>2022-10-17</f:preferedDates>
+      <f:preferedDates>2022-10-05</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

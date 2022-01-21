@@ -1,0 +1,25 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2016-05-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2007-02-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Venice</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-16</f:preferedDates>
+      <f:preferedDates>2022-10-18</f:preferedDates>
+      <f:preferedDates>2022-10-23</f:preferedDates>
+      <f:preferedDates>2022-10-12</f:preferedDates>
+      <f:preferedDates>2022-10-11</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

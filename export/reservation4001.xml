@@ -1,0 +1,28 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>1962-07-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>1999-03-24</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2003-03-23</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-21</f:preferedDates>
+      <f:preferedDates>2022-10-02</f:preferedDates>
+      <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:preferedDates>2022-12-19</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

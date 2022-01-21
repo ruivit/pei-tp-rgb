@@ -1,0 +1,21 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>2018-05-25</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2006-10-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Munich</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-12-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

@@ -1,32 +1,38 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2015-10-22</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2013-06-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>1981-06-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2010-02-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Laura</f:name>
-      <f:birthDate>2016-10-20</f:birthDate>
+      <f:birthDate>1990-02-02</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2018-12-22</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>1998-01-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2021-10-11</f:birthDate>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2019-07-21</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>New York</gd:cityName>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Berlin</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-11-21</f:preferedDates>
-      <f:preferedDates>2022-10-19</f:preferedDates>
-      <f:preferedDates>2022-11-19</f:preferedDates>
-      <f:preferedDates>2022-12-10</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-20</f:preferedDates>
+      <f:preferedDates>2022-09-02</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

@@ -1,0 +1,41 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2003-10-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2004-04-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2003-04-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>1990-12-09</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2017-10-15</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2020-09-24</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-12-23</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:preferedDates>2022-11-22</f:preferedDates>
+      <f:preferedDates>2022-11-12</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

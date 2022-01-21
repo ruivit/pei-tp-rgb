@@ -1,33 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2021-11-23</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2002-11-21</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2014-11-20</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2007-11-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2018-05-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Marta</f:name>
-      <f:birthDate>2013-10-24</f:birthDate>
+      <f:birthDate>1971-07-09</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2014-12-25</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2015-03-26</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>1986-05-19</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2011-04-01</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Sao Paulo</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>New York</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-12-20</f:preferedDates>
-      <f:preferedDates>2022-11-21</f:preferedDates>
-      <f:preferedDates>2022-10-12</f:preferedDates>
-      <f:preferedDates>2022-10-19</f:preferedDates>
-      <f:preferedDates>2022-11-21</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-13</f:preferedDates>
+      <f:preferedDates>2022-09-11</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

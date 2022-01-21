@@ -1,43 +1,30 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2018-12-11</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2003-04-07</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2015-10-14</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2004-05-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Jorge</f:name>
-      <f:birthDate>2019-10-14</f:birthDate>
+      <f:birthDate>2014-01-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2014-12-26</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2010-04-23</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2021-10-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2014-12-16</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2017-10-25</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Mexico</gd:countryName>
-      <gd:cityName>Mexico City</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Porto</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-10-23</f:preferedDates>
-      <f:preferedDates>2022-10-16</f:preferedDates>
-      <f:preferedDates>2022-10-20</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+      <f:preferedDates>2022-12-01</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

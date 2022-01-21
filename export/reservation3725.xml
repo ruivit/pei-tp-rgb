@@ -1,0 +1,26 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2013-05-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1999-02-24</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2001-02-04</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Milan</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-07</f:preferedDates>
+      <f:preferedDates>2022-12-07</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

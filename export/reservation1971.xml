@@ -1,0 +1,33 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2011-05-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>1995-02-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>1998-11-01</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2010-02-23</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Brasilia</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:preferedDates>2022-12-12</f:preferedDates>
+      <f:preferedDates>2022-10-08</f:preferedDates>
+      <f:preferedDates>2022-11-17</f:preferedDates>
+      <f:preferedDates>2022-09-22</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

@@ -1,34 +1,36 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2014-12-25</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2004-09-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2017-10-25</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2013-06-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2019-10-17</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2014-11-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2015-11-16</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>1982-09-22</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2016-10-20</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2017-11-14</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Ottawa</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Liverpool</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-12-24</f:preferedDates>
-      <f:preferedDates>2022-12-12</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:preferedDates>2022-11-06</f:preferedDates>
+      <f:preferedDates>2022-11-18</f:preferedDates>
+      <f:preferedDates>2022-09-14</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

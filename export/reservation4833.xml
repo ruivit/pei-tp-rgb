@@ -1,0 +1,34 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>1965-05-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2015-03-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2009-08-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2013-05-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2017-04-13</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Munich</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-19</f:preferedDates>
+      <f:preferedDates>2022-10-05</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

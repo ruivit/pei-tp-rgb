@@ -1,0 +1,21 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>2013-06-13</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Manchester</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:preferedDates>2022-11-20</f:preferedDates>
+      <f:preferedDates>2022-10-05</f:preferedDates>
+      <f:preferedDates>2022-12-09</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

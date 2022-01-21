@@ -1,0 +1,36 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2002-10-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2000-04-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2013-06-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2015-03-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2013-06-11</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Venice</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-11-04</f:preferedDates>
+      <f:preferedDates>2022-11-19</f:preferedDates>
+      <f:preferedDates>2022-11-18</f:preferedDates>
+      <f:preferedDates>2022-10-08</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

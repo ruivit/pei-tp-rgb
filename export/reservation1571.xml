@@ -1,0 +1,17 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2015-08-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Frankfurt</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-04</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

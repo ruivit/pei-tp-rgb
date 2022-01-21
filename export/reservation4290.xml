@@ -1,0 +1,27 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>1992-02-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>1993-02-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1972-04-12</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-07</f:preferedDates>
+      <f:preferedDates>2022-10-10</f:preferedDates>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

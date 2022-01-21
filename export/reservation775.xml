@@ -1,40 +1,34 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2015-11-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2012-10-15</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2021-10-17</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>2012-12-16</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2014-12-28</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
       <f:name>Martina</f:name>
-      <f:birthDate>2014-11-22</f:birthDate>
+      <f:birthDate>2005-02-20</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2008-05-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2006-07-19</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>2010-08-26</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1997-08-21</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Sao Paulo</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-16</f:preferedDates>
-      <f:preferedDates>2022-11-19</f:preferedDates>
-      <f:preferedDates>2022-11-12</f:preferedDates>
-      <f:preferedDates>2022-10-16</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-12-21</f:preferedDates>
+      <f:preferedDates>2022-11-03</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

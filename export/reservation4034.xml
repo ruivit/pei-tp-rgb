@@ -1,0 +1,29 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2019-05-04</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>1999-02-24</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>1966-06-28</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Liverpool</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-11-03</f:preferedDates>
+      <f:preferedDates>2022-09-02</f:preferedDates>
+      <f:preferedDates>2022-09-22</f:preferedDates>
+      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:preferedDates>2022-10-09</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

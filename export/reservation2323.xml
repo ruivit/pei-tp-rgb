@@ -1,0 +1,19 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2003-02-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Milan</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:preferedDates>2022-10-23</f:preferedDates>
+      <f:preferedDates>2022-12-10</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

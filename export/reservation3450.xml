@@ -1,0 +1,20 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2016-05-11</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Los Angeles</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-19</f:preferedDates>
+      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-10-22</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

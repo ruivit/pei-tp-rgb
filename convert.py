@@ -31,7 +31,7 @@ def clean_xml(content):
     content = re.sub('xmlns(|:xsi|:f)="http.+(?=">)"', '', content)
     # remove the prefixes
     content = re.sub('(f:)|(gd:)', '', content)
-    # remove the whitespaces
+    # remove the whitespaces, just because I can
     content = re.sub('(?=\s>)\s', '', content)
     return content
 
@@ -174,7 +174,7 @@ def get_mongodb():
     return client[mongodb_dbname]
     
 def import_atelier_json_to_mongodb():
-    print("Importing atelier_collection.json to MongoDB...")
+    print("Importing atelier_collection.json to MongoDB (Host: {}, DB: {})...".format(mongodb_host, mongodb_dbname))
     with open(os.path.join(json_dir, 'atelier_collection.json'), 'r') as f:
         atelier_collection_json = json.load(f)
 
@@ -194,16 +194,7 @@ def import_atelier_json_to_mongodb():
 
 # main
 if __name__ == "__main__":
-    try:
-        if sys.argv[1] == 'importonly':
-            import_atelier_json_to_mongodb()
-        else:
-            convert_xml_to_json()
-            entulhar_reservations_in_atelier_collection()
-            if import_to_mongodb:
-                import_atelier_json_to_mongodb()
-    except IndexError:
-        convert_xml_to_json()
-        entulhar_reservations_in_atelier_collection()
-        if import_to_mongodb:
-            import_atelier_json_to_mongodb()
+    convert_xml_to_json()
+    entulhar_reservations_in_atelier_collection()
+    if import_to_mongodb:
+        import_atelier_json_to_mongodb()

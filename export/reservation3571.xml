@@ -1,0 +1,28 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2004-10-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>1975-02-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2006-10-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-12-20</f:preferedDates>
+      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:preferedDates>2022-09-20</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>

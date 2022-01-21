@@ -1,0 +1,28 @@
+<reservation>
+  <f:family>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2002-06-07</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>2005-10-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2013-03-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:origin>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
+    </f:origin>
+    <f:reservationDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-12-02</f:preferedDates>
+    </f:reservationDates>
+  </f:family>
+</reservation>
