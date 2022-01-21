@@ -126,15 +126,18 @@ declare %updating function page:checks($xml)
   let $atelierDates := $database//a:reservations
   
   (: Verifica se as datas preferidas da familia existem no Atelier,
-  se não existirem, fica com o valor NULL :)
+  se não existirem, fica vazia :)
   let $existingDates := $atelierDates[a:date = $pfDates]
-  (: Filtra as datas preferidas da família coincidentes com as do Atelier que têm slots disponíveis:)
+  (: Filtra as datas preferidas da família coincidentes 
+  com as do Atelier que têm slots disponíveis:)
   let $validSlots := $existingDates[a:slots > 0]
   (:Seleciona a primeira data com slots disponíveis, caso a 
   $existingDates esteja NULL a $validDate também fica NULL :)
   let $validDate := $validSlots[1]/a:date
   
-  (: Verifica se as datas da família ainda não existem no Atelier.Esta filtragem foi implementada para se poder fazer criação automática de uma data, caso esta ainda não exista no Atelier :)
+  (: Verifica se as datas da família ainda não existem no Atelier.
+  Esta filtragem foi implementada para se poder fazer criação 
+  automática de uma data, caso esta ainda não exista no Atelier :)
   let $notExistingDates := $pfDates[not(.=($atelierDates//a:date))]
   (:Verifica se a(s) data(s) da $notExistingDates se encontram 
   dentro do intervalo temporal dos 100 dias antes do Natal :)
@@ -142,15 +145,16 @@ declare %updating function page:checks($xml)
   (:Caso existam data(s) válida(s) seliciona a primeira:)
   let $newDate := $checkBetweenDates[1]
     
- (: Incrementa o elemento reservationID para +1 pois se tudo for validado, será criada uma nova reserva :)
+ (: Incrementa o elemento reservationID para +1 pois se tudo for validado, 
+ será criada uma nova reserva :)
   let $rid := count($database//reservation) + 1
     
   return
-  (:A variável $validDate pode estar com o valor NULL se não existirem dias preferidos coincidentes com os existentes no Atelier OU se os dias forem coincidentes, mas não houver slots disponíveis:)
+  (:A variável $validDate pode estar vazia se não existirem dias preferidos coincidentes com os existentes no Atelier OU se os dias forem coincidentes, mas não houver slots disponíveis:)
   if ( empty($validDate) )
-    (: Se a variável $newdate não for NULL, é porque traz uma data validada:)
+    (: Se a variável $newdate não estiver vazia, é porque traz uma data validada:)
   then ( if (empty($newDate))
-         then ( web:error(500, "[ERRO] O atelier do Pai Natal atingiu o máximo de capacidade para o(s) dia(s) escolhidos ou as datas escolhidas não estão entre 2022-09-15 e 2022-12-23. [ERRO]") )
+         then ( web:error(500, "[ERRO] A Oficina do Pai Natal atingiu o máximo de capacidade para o(s) dia(s) escolhidos ou as datas escolhidas não estão entre 2022-09-15 e 2022-12-23. [ERRO]") )
          else ( 
   (: A variável $newdate tráz uma data que será passada à função new-date(arg1):)
 page:new-date($newDate),
@@ -173,7 +177,7 @@ update:output(page:ok($validDate, $rid))
 };
 
 
-(:Verifica se a(s) data(s) da variável $notExistingDates se encontram 
+(:Verifica se a(s) data(s) passadas no argumento se encontram 
   dentro dos 100 dias, ou seja entre 2022-09-15 e 2022-12-23 e retorna as datas válidas ou NULL se estiverem fora do intervalo :)
 declare function page:check-between-dates($dateToCheck)
 {
@@ -191,7 +195,7 @@ declare function page:check-between-dates($dateToCheck)
 (: Abre o Atelier e insere um novo elemento "reservations" com a data que está na variável $newDate e com as slots a 49, uma vez que vai ser criada a primeira reserva para este dia:)
 declare %updating function page:new-date($newDate)
 {
-  let $atelierDoc := db:open("RGBDB")//a:atelier
+  let $atelierXml := db:open("RGBDB")//a:atelier
   
   return 
   insert node 
@@ -199,7 +203,7 @@ declare %updating function page:new-date($newDate)
         <date>{$newDate/text()}</date>
         <slots>49</slots>
   </reservations>
-  into $atelierDoc
+  into $atelierXml
 };
 
 (: Retorna um XML com a estrutura de uma reserva para a data que está na variável $reservationDate,
