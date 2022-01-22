@@ -13,7 +13,7 @@
     <xs:element name="reservation" type="reservationType"/>
 
     <xs:complexType name="reservationType">
-        <xs:sequence maxOccurs="1">
+        <xs:sequence minOccurs="1" maxOccurs="1">
             <xs:element ref="f:family"/>
         </xs:sequence>
     </xs:complexType>
