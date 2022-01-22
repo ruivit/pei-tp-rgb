@@ -9,6 +9,10 @@
     </reservations>
     <reservations>
         <date>2022-11-11</date>
+        <slots>25</slots>
+    </reservations>
+    <reservations>
+        <date>2022-12-12</date>
         <slots>0</slots>
     </reservations>
     

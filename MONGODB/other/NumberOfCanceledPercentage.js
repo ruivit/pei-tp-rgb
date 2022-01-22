@@ -1,3 +1,4 @@
+db.atelier.aggregate(
 [{$unwind: {
     path: '$reservations'
    }}, {$match: {
@@ -34,3 +35,4 @@
      ]
     }
    }}]
+).pretty()

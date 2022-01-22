@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "3550443b-dc8b-47dc-ba4c-49476846217e",
+		"name": "PEITP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add XMLs",
+			"item": [
+				{
+					"name": "Singe Date Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.atelierRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.atelierRGB.pt/Reservation ../Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.atelierRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.atelierRGB.pt/GeographicData\">\r\n                \r\n  <f:family>\r\n    <f:familyElement>\r\n      <f:name>Laura</f:name>\r\n      <f:birthDate>2021-11-18</f:birthDate>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Jose</f:name>\r\n      <f:birthDate>2018-11-21</f:birthDate>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Carlos</f:name>\r\n      <f:birthDate>2018-12-15</f:birthDate>\r\n    </f:familyElement>\r\n    <f:emergencyContact>351234567</f:emergencyContact>\r\n    <f:origin>\r\n      <gd:countryName>Brazil</gd:countryName>\r\n      <gd:cityName>Sao Paulo</gd:cityName>\r\n    </f:origin>\r\n    <f:reservationDates>\r\n      <f:numberOfDays>2</f:numberOfDays>\r\n      <f:preferedDates>2022-10-15</f:preferedDates>\r\n    </f:reservationDates>\r\n  </f:family>\r\n</reservation>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/makereservation",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"makereservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Multiple Dates Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.atelierRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.atelierRGB.pt/Reservation ../Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.atelierRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.atelierRGB.pt/GeographicData\">\r\n                \r\n  <f:family>\r\n    <f:familyElement>\r\n      <f:name>Laura</f:name>\r\n      <f:birthDate>2021-11-18</f:birthDate>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Jose</f:name>\r\n      <f:birthDate>2018-11-21</f:birthDate>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Carlos</f:name>\r\n      <f:birthDate>2018-12-15</f:birthDate>\r\n    </f:familyElement>\r\n    <f:emergencyContact>351234567</f:emergencyContact>\r\n    <f:origin>\r\n      <gd:countryName>Brazil</gd:countryName>\r\n      <gd:cityName>Sao Paulo</gd:cityName>\r\n    </f:origin>\r\n    <f:reservationDates>\r\n      <f:numberOfDays>2</f:numberOfDays>\r\n      <f:preferedDates>2022-01-01</f:preferedDates> <!-- Invalid -->\r\n      <f:preferedDates>2022-12-12</f:preferedDates> <!-- Valid -->\r\n    </f:reservationDates>\r\n  </f:family>\r\n</reservation>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/makereservation",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"makereservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INVALID Add XML to DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation>   \r\n  <family>\r\n    <familyElement>\r\n      <name>Laura</name>\r\n      <birthDate>2021-11-18</birthDate>\r\n    </familyElement>\r\n    <familyElement>\r\n      <name>Jose</name>\r\n      <birthDate>2018-11-21</birthDate>\r\n    </familyElement>\r\n    <familyElement>\r\n      <name>Carlos</name>\r\n      <birthDate>2018-12-15</birthDate>\r\n    </familyElement>\r\n    <emergencyContact>351234567</emergencyContact>\r\n    <origin>\r\n      <countryName>Brazil</countryName>\r\n      <cityName>Sao Paulo</cityName>\r\n    </origin>\r\n    <reservationDates>\r\n      <numberOfDays>2</numberOfDays>\r\n      <preferedDates>22-12-12</preferedDates>\r\n    </reservationDates>\r\n  </family>\r\n</reservation>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/makereservation",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"makereservation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check Slots",
+			"item": [
+				{
+					"name": "Check Slots Every Day",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/availability?date=all",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"availability"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slots Single/Multiple Days",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/availability?date=2022-12-23&date=2022-12-24",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"availability"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-12-23"
+								},
+								{
+									"key": "date",
+									"value": "2022-12-24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DB Operations",
+			"item": [
+				{
+					"name": "Export Database",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservation   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  \r\n                xmlns=\"http://www.atelierRGB.pt/Reservation\" \r\n                xsi:schemaLocation=\"http://www.atelierRGB.pt/Reservation ../Reservation.xsd\"\r\n                \r\n                xmlns:f=\"http://www.atelierRGB.pt/Family\"\r\n                xmlns:gd=\"http://www.atelierRGB.pt/GeographicData\">\r\n  <f:family>\r\n    <f:familyElement>\r\n      <f:name>Carlos</f:name>\r\n      <f:birthDate>1992-06-22</f:birthDate>\r\n      <f:sex>Masculine</f:sex>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>John</f:name>\r\n      <f:birthDate>1992-06-22</f:birthDate>\r\n      <f:sex>Masculine</f:sex>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Pablo</f:name>\r\n      <f:birthDate>1992-06-22</f:birthDate>\r\n      <f:sex>Masculine</f:sex>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Carlos</f:name>\r\n      <f:birthDate>1992-06-22</f:birthDate>\r\n      <f:sex>Masculine</f:sex>\r\n    </f:familyElement>\r\n    <f:familyElement>\r\n      <f:name>Luis</f:name>\r\n      <f:birthDate>1992-06-22</f:birthDate>\r\n      <f:sex>Masculine</f:sex>\r\n    </f:familyElement>\r\n    <f:emergencyContact>912345678</f:emergencyContact>\r\n    <f:origin>\r\n      <gd:countryName>Portugal</gd:countryName>\r\n      <gd:cityName>Lisbon</gd:cityName>\r\n    </f:origin>\r\n    <f:reservationDates>\r\n      <f:numberOfDays>5</f:numberOfDays>\r\n      <f:preferedDates>2022-11-22</f:preferedDates>\r\n    </f:reservationDates>\r\n  </f:family>\r\n</reservation>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8984/exportdatabase",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"exportdatabase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop&Create DB",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8984/DCDB",
+							"host": [
+								"localhost"
+							],
+							"port": "8984",
+							"path": [
+								"DCDB"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cancel Reservation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8984/cancelreservation?id=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8984",
+					"path": [
+						"cancelreservation"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
