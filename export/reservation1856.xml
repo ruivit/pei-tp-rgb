@@ -1,37 +1,37 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1988-07-06</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2001-09-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2014-07-10</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>2019-05-27</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2009-10-10</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>1994-11-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2017-10-15</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>2018-03-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2002-04-28</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1967-07-24</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>1997-08-21</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Rio de Janeiro</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Funchal</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-09</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-10-19</f:preferedDates>
+      <f:preferedDates>2022-10-02</f:preferedDates>
+      <f:preferedDates>2022-12-22</f:preferedDates>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+      <f:preferedDates>2022-10-15</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

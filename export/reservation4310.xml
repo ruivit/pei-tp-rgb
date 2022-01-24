@@ -1,31 +1,37 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2004-10-17</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2017-07-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2009-07-15</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2002-06-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2019-03-11</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2019-11-27</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>John</f:name>
-      <f:birthDate>2002-02-21</f:birthDate>
+      <f:birthDate>1985-11-27</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2013-04-10</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2020-08-17</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Vancouver</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Chicago</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-11-13</f:preferedDates>
-      <f:preferedDates>2022-10-06</f:preferedDates>
-      <f:preferedDates>2022-12-20</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-10-14</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

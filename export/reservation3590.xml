@@ -1,37 +1,33 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2000-01-22</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>1997-12-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1992-12-23</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1960-02-16</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1992-02-05</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2003-06-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2001-07-17</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2015-10-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2018-03-22</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2020-08-24</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>1974-09-18</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Portugal</gd:countryName>
-      <gd:cityName>Lisbon</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Liverpool</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:preferedDates>2022-09-11</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

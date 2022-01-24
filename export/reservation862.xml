@@ -1,32 +1,41 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2000-08-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>2002-02-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2015-03-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1980-01-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1993-01-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Carmen</f:name>
-      <f:birthDate>2002-10-15</f:birthDate>
+      <f:birthDate>2011-03-24</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>1991-12-15</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2001-05-17</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2010-12-25</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2019-03-03</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Toronto</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-17</f:preferedDates>
-      <f:preferedDates>2022-11-03</f:preferedDates>
-      <f:preferedDates>2022-12-12</f:preferedDates>
-      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-11-17</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

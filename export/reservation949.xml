@@ -1,41 +1,30 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1993-09-23</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>1996-07-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2010-12-25</f:birthDate>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2016-09-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2009-10-18</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>2016-12-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2006-04-21</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2010-11-12</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2003-12-10</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1994-03-19</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Chicago</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-12-21</f:preferedDates>
-      <f:preferedDates>2022-12-10</f:preferedDates>
-      <f:preferedDates>2022-09-14</f:preferedDates>
-      <f:preferedDates>2022-09-22</f:preferedDates>
-      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-13</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

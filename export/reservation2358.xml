@@ -1,37 +1,41 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2017-04-13</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2019-03-11</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2020-09-24</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
       <f:name>Luis</f:name>
-      <f:birthDate>2008-08-03</f:birthDate>
+      <f:birthDate>2015-03-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2006-10-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>1995-03-13</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>1962-08-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2001-06-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2009-12-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Marta</f:name>
-      <f:birthDate>2006-04-13</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>1992-12-23</f:birthDate>
+      <f:birthDate>2016-12-18</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Sao Paulo</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Rome</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:preferedDates>2022-10-06</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

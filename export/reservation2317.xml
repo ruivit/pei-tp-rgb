@@ -1,40 +1,37 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1972-04-12</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2005-05-18</f:birthDate>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2011-01-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pablo</f:name>
-      <f:birthDate>1965-05-05</f:birthDate>
+      <f:birthDate>2006-10-05</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2002-05-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2020-05-21</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Ana</f:name>
-      <f:birthDate>1967-10-13</f:birthDate>
+      <f:birthDate>2006-08-13</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2001-02-04</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2003-01-11</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Rome</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Lisbon</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-01</f:preferedDates>
-      <f:preferedDates>2022-09-16</f:preferedDates>
-      <f:preferedDates>2022-09-18</f:preferedDates>
-      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:preferedDates>2022-11-08</f:preferedDates>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+      <f:preferedDates>2022-11-23</f:preferedDates>
+      <f:preferedDates>2022-12-09</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

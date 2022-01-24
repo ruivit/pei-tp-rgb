@@ -1,25 +1,17 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2017-11-14</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>1995-03-13</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2005-08-20</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2017-04-13</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Brasilia</gd:cityName>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Munich</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:preferedDates>2022-11-01</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

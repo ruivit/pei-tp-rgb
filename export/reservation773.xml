@@ -1,44 +1,23 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2006-05-28</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Raul</f:name>
-      <f:birthDate>2005-09-22</f:birthDate>
+      <f:birthDate>1994-10-21</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1993-08-11</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2000-01-22</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>1970-02-24</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2000-06-02</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1972-12-07</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1996-07-07</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Los Angeles</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Lisbon</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-05</f:preferedDates>
-      <f:preferedDates>2022-09-05</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-12-02</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:preferedDates>2022-09-01</f:preferedDates>
+      <f:preferedDates>2022-12-16</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

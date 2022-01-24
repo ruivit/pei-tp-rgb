@@ -1,30 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2005-07-03</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>1972-04-12</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2010-09-19</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>1980-03-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Laura</f:name>
-      <f:birthDate>1982-07-08</f:birthDate>
+      <f:birthDate>2017-03-03</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2003-06-25</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>1967-12-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2015-07-10</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>2009-06-18</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2008-04-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Venice</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>New York</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-11-12</f:preferedDates>
-      <f:preferedDates>2022-09-02</f:preferedDates>
+      <f:preferedDates>2022-12-04</f:preferedDates>
+      <f:preferedDates>2022-10-13</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

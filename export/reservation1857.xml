@@ -1,45 +1,27 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>1993-08-11</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2020-05-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>1999-03-24</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2005-02-20</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2003-01-21</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>1990-08-27</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Carla</f:name>
-      <f:birthDate>2015-03-07</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1991-02-23</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2017-11-14</f:birthDate>
+      <f:birthDate>2016-06-04</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
       <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Montreal</gd:cityName>
+      <gd:cityName>Vancouver</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-11-16</f:preferedDates>
-      <f:preferedDates>2022-11-18</f:preferedDates>
-      <f:preferedDates>2022-09-07</f:preferedDates>
-      <f:preferedDates>2022-12-05</f:preferedDates>
-      <f:preferedDates>2022-10-20</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:preferedDates>2022-11-09</f:preferedDates>
+      <f:preferedDates>2022-10-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

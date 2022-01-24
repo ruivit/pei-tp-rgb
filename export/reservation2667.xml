@@ -1,35 +1,40 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2014-05-26</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>1964-08-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1972-12-07</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2013-09-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>2019-04-18</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>2001-06-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1960-05-20</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2001-04-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2006-03-02</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2001-04-10</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>2015-04-15</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>Liverpool</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Paris</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-12-18</f:preferedDates>
-      <f:preferedDates>2022-10-11</f:preferedDates>
-      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-23</f:preferedDates>
+      <f:preferedDates>2022-11-11</f:preferedDates>
+      <f:preferedDates>2022-12-07</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

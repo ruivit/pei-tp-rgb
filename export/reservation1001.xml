@@ -1,26 +1,44 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2004-11-26</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2006-07-08</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>1995-07-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Carmen</f:name>
-      <f:birthDate>2007-11-27</f:birthDate>
+      <f:birthDate>2019-05-19</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2019-03-03</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2001-04-25</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2001-04-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2006-12-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2020-01-08</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>Manchester</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-11-06</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-20</f:preferedDates>
+      <f:preferedDates>2022-12-02</f:preferedDates>
+      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:preferedDates>2022-12-21</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

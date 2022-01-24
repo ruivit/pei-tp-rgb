@@ -1,44 +1,29 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>1973-03-16</f:birthDate>
+      <f:name>Juan</f:name>
+      <f:birthDate>2016-08-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2019-05-04</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2010-01-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2019-07-09</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2011-07-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2010-12-25</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2005-09-22</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1990-10-16</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>2005-02-20</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2001-05-17</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Portugal</gd:countryName>
-      <gd:cityName>Funchal</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>Manchester</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-10-11</f:preferedDates>
-      <f:preferedDates>2022-12-12</f:preferedDates>
-      <f:preferedDates>2022-10-22</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-12-10</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

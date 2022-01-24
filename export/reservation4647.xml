@@ -1,38 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2001-03-03</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>2001-06-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2015-08-22</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>1966-07-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1972-04-21</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>1986-09-05</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1989-02-08</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>1992-12-23</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2006-10-05</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>John</f:name>
-      <f:birthDate>1999-07-14</f:birthDate>
+      <f:birthDate>2002-02-22</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2015-07-03</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Juan</f:name>
+      <f:birthDate>2003-10-22</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>New York</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Toronto</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-10-17</f:preferedDates>
-      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-11-11</f:preferedDates>
+      <f:preferedDates>2022-10-18</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

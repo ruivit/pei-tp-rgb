@@ -1,26 +1,44 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2012-08-20</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2001-09-15</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2013-06-11</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2008-03-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2008-02-16</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2016-06-04</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2020-05-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2015-08-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2002-01-19</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2015-11-01</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
       <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:cityName>Manchester</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-12-18</f:preferedDates>
-      <f:preferedDates>2022-11-07</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-09-20</f:preferedDates>
+      <f:preferedDates>2022-11-05</f:preferedDates>
+      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:preferedDates>2022-09-07</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

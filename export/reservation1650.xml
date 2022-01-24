@@ -1,27 +1,19 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2015-08-22</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2014-12-24</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2009-10-18</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2003-12-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Venice</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>3</f:numberOfDays>
       <f:preferedDates>2022-12-04</f:preferedDates>
-      <f:preferedDates>2022-12-06</f:preferedDates>
-      <f:preferedDates>2022-11-08</f:preferedDates>
+      <f:preferedDates>2022-11-20</f:preferedDates>
+      <f:preferedDates>2022-12-20</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

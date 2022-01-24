@@ -1,32 +1,38 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>1986-11-09</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2020-08-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Laura</f:name>
-      <f:birthDate>1992-12-23</f:birthDate>
+      <f:birthDate>2015-07-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2019-12-11</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>1980-07-12</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2006-10-22</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2020-10-02</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Juan</f:name>
-      <f:birthDate>2004-04-22</f:birthDate>
+      <f:birthDate>2018-12-19</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Sao Paulo</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Rome</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-06</f:preferedDates>
-      <f:preferedDates>2022-10-07</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-10-19</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-14</f:preferedDates>
+      <f:preferedDates>2022-09-18</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

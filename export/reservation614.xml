@@ -1,41 +1,40 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2014-04-09</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>2009-06-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2018-11-06</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2001-01-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>1995-09-11</f:birthDate>
+      <f:name>Juan</f:name>
+      <f:birthDate>2004-01-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>1993-05-16</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2003-05-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2005-10-05</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2005-12-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Raul</f:name>
-      <f:birthDate>2015-03-07</f:birthDate>
+      <f:birthDate>2019-05-27</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>1995-11-04</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>Liverpool</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Funchal</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-20</f:preferedDates>
+      <f:preferedDates>2022-11-02</f:preferedDates>
+      <f:preferedDates>2022-12-08</f:preferedDates>
+      <f:preferedDates>2022-09-22</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

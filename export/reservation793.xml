@@ -1,37 +1,32 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2006-02-02</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>2018-03-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2018-10-08</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2013-02-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1993-08-11</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2013-09-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2018-04-09</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2001-06-06</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2011-05-02</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>1991-12-15</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Venice</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Los Angeles</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-10</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:preferedDates>2022-11-03</f:preferedDates>
+      <f:preferedDates>2022-10-05</f:preferedDates>
+      <f:preferedDates>2022-11-22</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

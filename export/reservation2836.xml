@@ -1,37 +1,38 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2017-03-03</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>1967-07-25</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>1972-08-27</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Maria</f:name>
-      <f:birthDate>1992-12-23</f:birthDate>
+      <f:birthDate>2001-09-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>2007-02-11</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2017-01-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2001-02-01</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>1967-03-22</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>John</f:name>
-      <f:birthDate>2008-02-16</f:birthDate>
+      <f:birthDate>1990-12-27</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>1999-05-25</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>New York</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-14</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-02</f:preferedDates>
+      <f:preferedDates>2022-11-13</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

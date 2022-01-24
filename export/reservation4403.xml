@@ -1,24 +1,24 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2001-02-17</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2003-09-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>1976-09-21</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2004-04-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2006-10-22</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2013-01-19</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>1991-02-23</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2005-12-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1976-09-21</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2004-04-17</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
@@ -27,7 +27,7 @@
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-17</f:preferedDates>
+      <f:preferedDates>2022-09-12</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

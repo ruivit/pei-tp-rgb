@@ -1,45 +1,26 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2010-03-16</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>1981-08-21</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Sara</f:name>
-      <f:birthDate>2014-09-19</f:birthDate>
+      <f:birthDate>2002-02-22</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2014-11-11</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1969-12-14</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1971-01-07</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1982-07-08</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2006-03-02</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2014-07-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Milan</gd:cityName>
+      <gd:countryName>United Kingdom</gd:countryName>
+      <gd:cityName>London</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-09-21</f:preferedDates>
-      <f:preferedDates>2022-11-17</f:preferedDates>
-      <f:preferedDates>2022-09-11</f:preferedDates>
-      <f:preferedDates>2022-09-08</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-01</f:preferedDates>
+      <f:preferedDates>2022-11-08</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

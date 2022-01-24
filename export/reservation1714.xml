@@ -1,31 +1,45 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>2010-05-06</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>2016-12-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>1988-12-11</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2020-09-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>2010-05-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Ramon</f:name>
-      <f:birthDate>2020-01-28</f:birthDate>
+      <f:birthDate>2015-07-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2007-11-27</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>1974-09-07</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Marta</f:name>
-      <f:birthDate>2013-05-04</f:birthDate>
+      <f:birthDate>2017-08-25</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Toronto</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Venice</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-12-06</f:preferedDates>
-      <f:preferedDates>2022-11-09</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
       <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:preferedDates>2022-11-06</f:preferedDates>
+      <f:preferedDates>2022-11-11</f:preferedDates>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+      <f:preferedDates>2022-10-04</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

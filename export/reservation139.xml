@@ -1,42 +1,25 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1970-02-24</f:birthDate>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2004-07-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pilar</f:name>
-      <f:birthDate>2019-04-18</f:birthDate>
+      <f:birthDate>2001-04-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2016-02-11</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2016-04-13</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2014-07-10</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>2007-02-05</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1969-03-03</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2013-05-13</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
       <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Sao Paulo</gd:cityName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-09-10</f:preferedDates>
-      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-05</f:preferedDates>
       <f:preferedDates>2022-10-07</f:preferedDates>
     </f:reservationDates>
   </f:family>

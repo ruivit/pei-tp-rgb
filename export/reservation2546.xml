@@ -1,43 +1,38 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2003-12-10</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1966-07-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2009-06-14</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>1990-01-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>1972-09-26</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2020-05-21</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>1971-11-26</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2002-07-16</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2017-02-16</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pedro</f:name>
-      <f:birthDate>2010-04-23</f:birthDate>
+      <f:birthDate>2008-10-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2003-01-21</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1999-05-25</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Munich</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-09-11</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:preferedDates>2022-10-20</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

@@ -1,41 +1,38 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>2013-05-04</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1986-06-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>1975-11-07</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1960-07-14</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1966-06-28</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>2020-09-18</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2019-03-11</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2005-06-18</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1993-08-11</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>1996-01-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2010-09-19</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2005-09-12</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1991-11-28</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Los Angeles</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Montreal</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-12-04</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-12-19</f:preferedDates>
+      <f:preferedDates>2022-09-20</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

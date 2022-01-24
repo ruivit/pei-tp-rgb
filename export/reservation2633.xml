@@ -1,19 +1,32 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2001-02-04</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>1982-01-01</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Laura</f:name>
+      <f:birthDate>1980-03-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2019-09-20</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2001-05-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1981-11-09</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Sao Paulo</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Marseille</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-09</f:preferedDates>
-      <f:preferedDates>2022-12-12</f:preferedDates>
-      <f:preferedDates>2022-09-01</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
       <f:preferedDates>2022-12-20</f:preferedDates>
     </f:reservationDates>
   </f:family>

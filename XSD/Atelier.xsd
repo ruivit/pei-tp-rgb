@@ -21,10 +21,8 @@
     
     <xs:complexType name="reservationsType">
         <xs:sequence>
-            <xs:element name="date" type="ct:dateType" 
-            minOccurs="1" maxOccurs="1"/>
-            <xs:element name="slots" type="slotsType"
-            minOccurs="1" maxOccurs="1"/>
+            <xs:element name="date" type="ct:dateType" maxOccurs="1"/>
+            <xs:element name="slots" type="slotsType" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 

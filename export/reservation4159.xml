@@ -1,45 +1,21 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1995-06-04</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>1995-06-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2003-07-07</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2012-06-01</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>1980-02-28</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2003-04-07</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1980-12-25</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1990-02-02</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2013-05-04</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
       <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Chicago</gd:cityName>
+      <gd:cityName>Los Angeles</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-12-09</f:preferedDates>
-      <f:preferedDates>2022-11-06</f:preferedDates>
-      <f:preferedDates>2022-10-03</f:preferedDates>
-      <f:preferedDates>2022-12-20</f:preferedDates>
-      <f:preferedDates>2022-09-18</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-09-08</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

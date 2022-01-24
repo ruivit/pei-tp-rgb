@@ -1,24 +1,45 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1984-10-11</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2014-06-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pedro</f:name>
-      <f:birthDate>2003-01-21</f:birthDate>
+      <f:birthDate>1994-12-01</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1990-08-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Marta</f:name>
+      <f:birthDate>2005-12-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2020-05-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2002-02-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2002-07-07</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Italy</gd:countryName>
-      <gd:cityName>Milan</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Lyon</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-10</f:preferedDates>
-      <f:preferedDates>2022-09-21</f:preferedDates>
-      <f:preferedDates>2022-11-22</f:preferedDates>
-      <f:preferedDates>2022-12-16</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-12-20</f:preferedDates>
+      <f:preferedDates>2022-12-05</f:preferedDates>
+      <f:preferedDates>2022-12-14</f:preferedDates>
+      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:preferedDates>2022-10-03</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

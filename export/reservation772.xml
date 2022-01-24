@@ -1,20 +1,19 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>1963-02-21</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2005-09-12</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Vancouver</gd:cityName>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-18</f:preferedDates>
-      <f:preferedDates>2022-10-08</f:preferedDates>
-      <f:preferedDates>2022-09-18</f:preferedDates>
-      <f:preferedDates>2022-10-19</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-11-16</f:preferedDates>
+      <f:preferedDates>2022-09-03</f:preferedDates>
+      <f:preferedDates>2022-09-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

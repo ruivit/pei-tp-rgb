@@ -2,7 +2,23 @@
   <f:family>
     <f:familyElement>
       <f:name>Ramon</f:name>
-      <f:birthDate>2020-09-26</f:birthDate>
+      <f:birthDate>2017-11-01</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2003-10-22</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2020-08-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>2018-05-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2018-05-03</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
@@ -10,11 +26,8 @@
       <gd:cityName>Chicago</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-10-18</f:preferedDates>
-      <f:preferedDates>2022-11-06</f:preferedDates>
-      <f:preferedDates>2022-11-04</f:preferedDates>
-      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:numberOfDays>1</f:numberOfDays>
+      <f:preferedDates>2022-10-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

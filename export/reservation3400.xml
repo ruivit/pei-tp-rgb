@@ -1,39 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2009-06-08</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2006-01-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Luis</f:name>
-      <f:birthDate>2005-07-03</f:birthDate>
+      <f:birthDate>1998-05-19</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1984-07-07</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2010-11-12</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2002-10-15</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2003-05-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2008-04-10</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2020-09-18</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2020-09-26</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2016-12-18</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2000-12-18</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Los Angeles</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Rome</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>3</f:numberOfDays>
-      <f:preferedDates>2022-11-16</f:preferedDates>
-      <f:preferedDates>2022-09-22</f:preferedDates>
-      <f:preferedDates>2022-09-16</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-15</f:preferedDates>
+      <f:preferedDates>2022-09-17</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

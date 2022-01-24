@@ -1,29 +1,36 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2005-02-15</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>1962-08-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>John</f:name>
+      <f:birthDate>1999-05-25</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2019-05-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Jose</f:name>
-      <f:birthDate>2000-06-02</f:birthDate>
+      <f:birthDate>2020-05-21</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1971-01-07</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1998-01-04</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2005-08-20</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Chicago</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Toronto</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-10-13</f:preferedDates>
+      <f:preferedDates>2022-11-04</f:preferedDates>
+      <f:preferedDates>2022-12-14</f:preferedDates>
+      <f:preferedDates>2022-11-22</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

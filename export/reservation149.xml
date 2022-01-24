@@ -1,40 +1,30 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>1996-07-07</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>1980-02-14</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2004-01-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Ramon</f:name>
-      <f:birthDate>1999-03-24</f:birthDate>
+      <f:birthDate>1965-07-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2010-04-23</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2016-12-12</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>1997-12-04</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2020-09-24</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Jose</f:name>
-      <f:birthDate>1990-03-26</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Chicago</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Porto</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-18</f:preferedDates>
-      <f:preferedDates>2022-11-20</f:preferedDates>
-      <f:preferedDates>2022-09-06</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-02</f:preferedDates>
+      <f:preferedDates>2022-10-03</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

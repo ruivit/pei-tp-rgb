@@ -1,21 +1,18 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2003-03-23</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2003-06-25</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2010-12-25</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>900900900</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
       <gd:countryName>Italy</gd:countryName>
       <gd:cityName>Venice</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-18</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-22</f:preferedDates>
+      <f:preferedDates>2022-12-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

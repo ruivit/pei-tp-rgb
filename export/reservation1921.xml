@@ -1,20 +1,18 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2009-10-18</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2017-02-16</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>France</gd:countryName>
-      <gd:cityName>Lyon</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Chicago</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-09-04</f:preferedDates>
-      <f:preferedDates>2022-09-13</f:preferedDates>
-      <f:preferedDates>2022-10-05</f:preferedDates>
-      <f:preferedDates>2022-11-18</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:preferedDates>2022-12-11</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

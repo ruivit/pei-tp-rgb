@@ -1,29 +1,39 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2000-12-18</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2008-10-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2010-12-25</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1964-08-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2012-08-20</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>1995-10-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Marta</f:name>
-      <f:birthDate>2015-08-22</f:birthDate>
+      <f:birthDate>2003-04-15</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>1990-08-27</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Ramon</f:name>
+      <f:birthDate>1971-07-03</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Berlin</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Venice</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:preferedDates>2022-11-19</f:preferedDates>
+      <f:preferedDates>2022-10-11</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

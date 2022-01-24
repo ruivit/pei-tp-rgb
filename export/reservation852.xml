@@ -1,29 +1,37 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2014-09-19</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2001-04-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1995-09-11</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2004-11-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2005-05-18</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2009-12-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1990-04-19</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2011-06-27</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Luis</f:name>
+      <f:birthDate>2008-03-26</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Jorge</f:name>
+      <f:birthDate>1993-01-27</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-02</f:preferedDates>
+      <f:preferedDates>2022-11-23</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

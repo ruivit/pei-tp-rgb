@@ -1,43 +1,19 @@
 {
     "id": "4",
-    "date": "2022-10-20",
-    "state": "Active",
+    "date": "2022-09-15",
+    "state": "Canceled",
     "family": {
-        "numberElements": "7",
+        "numberElements": "1",
         "familyElement": [
             {
-                "name": "Carla",
-                "birthDate": "2020-09-24"
-            },
-            {
-                "name": "Ramon",
-                "birthDate": "1967-12-03"
-            },
-            {
-                "name": "Pablo",
-                "birthDate": "2000-08-06"
-            },
-            {
-                "name": "Raul",
-                "birthDate": "1999-07-14"
-            },
-            {
-                "name": "Sofia",
-                "birthDate": "2011-04-01"
-            },
-            {
-                "name": "Jorge",
-                "birthDate": "1993-08-11"
-            },
-            {
-                "name": "Pedro",
-                "birthDate": "2020-09-24"
+                "name": "Martina",
+                "birthDate": "2017-01-04"
             }
         ],
         "origin": {
-            "countryName": "France",
-            "cityName": "Marseille"
+            "countryName": "Italy",
+            "cityName": "Venice"
         },
-        "emergencyContact": "944955966"
+        "emergencyContact": "256123456"
     }
 }

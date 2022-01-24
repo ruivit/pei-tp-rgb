@@ -2,20 +2,20 @@
   <f:family>
     <f:familyElement>
       <f:name>Maria</f:name>
-      <f:birthDate>1982-03-21</f:birthDate>
+      <f:birthDate>1978-04-17</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
       <gd:countryName>Germany</gd:countryName>
       <gd:cityName>Berlin</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-09-13</f:preferedDates>
-      <f:preferedDates>2022-11-15</f:preferedDates>
-      <f:preferedDates>2022-09-20</f:preferedDates>
-      <f:preferedDates>2022-09-16</f:preferedDates>
-      <f:preferedDates>2022-12-09</f:preferedDates>
+      <f:preferedDates>2022-12-04</f:preferedDates>
+      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:preferedDates>2022-09-19</f:preferedDates>
+      <f:preferedDates>2022-10-01</f:preferedDates>
+      <f:preferedDates>2022-09-06</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

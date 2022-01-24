@@ -1,36 +1,30 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2016-01-18</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2014-08-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Carmen</f:name>
-      <f:birthDate>1993-05-16</f:birthDate>
+      <f:birthDate>2020-08-24</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>1997-08-21</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2010-02-02</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2004-09-04</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2001-07-10</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2014-07-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Brazil</gd:countryName>
-      <gd:cityName>Rio de Janeiro</gd:cityName>
+      <gd:countryName>Canada</gd:countryName>
+      <gd:cityName>Vancouver</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-12-22</f:preferedDates>
       <f:preferedDates>2022-12-17</f:preferedDates>
-      <f:preferedDates>2022-11-23</f:preferedDates>
-      <f:preferedDates>2022-11-02</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

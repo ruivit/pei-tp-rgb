@@ -1,41 +1,29 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Ana</f:name>
+      <f:birthDate>2019-08-06</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Carla</f:name>
+      <f:birthDate>2019-12-25</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Juan</f:name>
-      <f:birthDate>1990-05-23</f:birthDate>
+      <f:birthDate>2012-11-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Carmen</f:name>
-      <f:birthDate>1995-10-25</f:birthDate>
+      <f:birthDate>2018-12-19</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2003-11-04</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2002-02-21</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1985-12-11</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1965-05-05</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2008-01-01</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>900900900</f:emergencyContact>
     <f:origin>
-      <gd:countryName>France</gd:countryName>
-      <gd:cityName>Marseille</gd:cityName>
+      <gd:countryName>Germany</gd:countryName>
+      <gd:cityName>Berlin</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-11</f:preferedDates>
+      <f:preferedDates>2022-11-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

@@ -2,21 +2,28 @@
   <f:family>
     <f:familyElement>
       <f:name>Sofia</f:name>
-      <f:birthDate>1963-02-21</f:birthDate>
+      <f:birthDate>1997-12-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Maria</f:name>
+      <f:birthDate>1993-04-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Carla</f:name>
-      <f:birthDate>2008-04-10</f:birthDate>
+      <f:birthDate>2017-05-06</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>912341234</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>Manchester</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Funchal</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>2</f:numberOfDays>
-      <f:preferedDates>2022-10-22</f:preferedDates>
-      <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:numberOfDays>5</f:numberOfDays>
+      <f:preferedDates>2022-09-22</f:preferedDates>
+      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:preferedDates>2022-09-11</f:preferedDates>
+      <f:preferedDates>2022-12-23</f:preferedDates>
+      <f:preferedDates>2022-11-14</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

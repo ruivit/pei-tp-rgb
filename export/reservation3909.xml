@@ -1,41 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>1989-02-08</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>2006-05-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2019-10-10</f:birthDate>
+      <f:name>Ana</f:name>
+      <f:birthDate>1988-12-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Maria</f:name>
-      <f:birthDate>2006-04-21</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>1983-03-16</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2013-06-28</f:birthDate>
+      <f:name>Carla</f:name>
+      <f:birthDate>2015-03-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2011-07-03</f:birthDate>
+      <f:name>Carlos</f:name>
+      <f:birthDate>2011-01-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>1971-11-26</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2015-03-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Pilar</f:name>
-      <f:birthDate>2008-08-03</f:birthDate>
+      <f:birthDate>1971-10-08</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>France</gd:countryName>
-      <gd:cityName>Lyon</gd:cityName>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Sao Paulo</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-12-09</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:preferedDates>2022-12-22</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

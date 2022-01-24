@@ -2,27 +2,35 @@
   <f:family>
     <f:familyElement>
       <f:name>Sara</f:name>
-      <f:birthDate>2020-09-26</f:birthDate>
+      <f:birthDate>2016-01-18</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2014-07-10</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>1971-07-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>1998-01-04</f:birthDate>
+      <f:name>Martina</f:name>
+      <f:birthDate>2009-08-28</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>944955966</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>1996-01-08</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2017-05-08</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>351234567</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>Manchester</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Lisbon</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>4</f:numberOfDays>
-      <f:preferedDates>2022-12-17</f:preferedDates>
-      <f:preferedDates>2022-10-05</f:preferedDates>
-      <f:preferedDates>2022-09-17</f:preferedDates>
       <f:preferedDates>2022-09-04</f:preferedDates>
+      <f:preferedDates>2022-12-04</f:preferedDates>
+      <f:preferedDates>2022-12-13</f:preferedDates>
+      <f:preferedDates>2022-12-19</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

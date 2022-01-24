@@ -1,41 +1,40 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>1994-03-19</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>2010-05-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1990-10-16</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2015-03-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2005-08-20</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2004-11-04</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2003-01-21</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>1980-12-25</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>2003-06-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>Sofia</f:name>
-      <f:birthDate>2006-02-02</f:birthDate>
+      <f:birthDate>2017-02-16</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carlos</f:name>
-      <f:birthDate>2013-05-13</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>1996-07-10</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
       <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Toronto</gd:cityName>
+      <gd:cityName>Montreal</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-12</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:preferedDates>2022-09-05</f:preferedDates>
+      <f:preferedDates>2022-09-11</f:preferedDates>
+      <f:preferedDates>2022-10-13</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

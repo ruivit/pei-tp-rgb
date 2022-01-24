@@ -4,6 +4,8 @@ db.atelier.aggregate(
     date: 1,
     slots: 1,
     active_reservations: 1,
-    canceled_reservations: 1
-    }}, {$out: 'atelier'}]
+    canceled_reservations: 1,
+    people_in_active_reservations: 1,
+    people_in_canceled_reservations: 1
+    }}, {$out: 'atelierdotxml'}]
 ).pretty()

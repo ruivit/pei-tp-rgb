@@ -1,41 +1,39 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>1999-03-21</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2000-08-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2005-09-22</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>1994-11-20</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sofia</f:name>
-      <f:birthDate>2006-02-02</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2002-10-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>1993-03-07</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1999-12-07</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2003-04-07</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2010-05-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>2008-05-05</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2020-01-08</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2008-04-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>912341234</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Canada</gd:countryName>
-      <gd:cityName>Montreal</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Milan</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-02</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:preferedDates>2022-11-17</f:preferedDates>
+      <f:preferedDates>2022-10-08</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

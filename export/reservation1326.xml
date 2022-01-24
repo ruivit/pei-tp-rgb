@@ -1,33 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2020-10-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Raul</f:name>
+      <f:birthDate>2020-10-02</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Martina</f:name>
-      <f:birthDate>2014-09-19</f:birthDate>
+      <f:birthDate>1975-10-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>2000-01-22</f:birthDate>
+      <f:name>John</f:name>
+      <f:birthDate>1990-05-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>1998-01-04</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2008-03-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2018-01-06</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2001-06-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2003-10-27</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2003-06-25</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>256123456</f:emergencyContact>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Los Angeles</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Rome</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-12-05</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-11-19</f:preferedDates>
+      <f:preferedDates>2022-09-11</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

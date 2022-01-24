@@ -1,41 +1,40 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>1981-05-06</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>1990-05-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Sara</f:name>
-      <f:birthDate>2013-05-22</f:birthDate>
+      <f:name>Ramon</f:name>
+      <f:birthDate>2002-02-22</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Marta</f:name>
-      <f:birthDate>2006-04-13</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2015-07-27</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1991-02-23</f:birthDate>
+      <f:name>Pilar</f:name>
+      <f:birthDate>2018-03-17</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carmen</f:name>
-      <f:birthDate>2017-11-17</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2020-05-21</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1999-07-14</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2019-12-11</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2011-09-05</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>France</gd:countryName>
+      <gd:cityName>Paris</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-10-19</f:preferedDates>
+      <f:numberOfDays>4</f:numberOfDays>
+      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:preferedDates>2022-10-15</f:preferedDates>
+      <f:preferedDates>2022-12-06</f:preferedDates>
+      <f:preferedDates>2022-11-23</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

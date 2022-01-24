@@ -1,25 +1,41 @@
 <reservation>
   <f:family>
     <f:familyElement>
+      <f:name>Jose</f:name>
+      <f:birthDate>2014-08-09</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
       <f:name>Carla</f:name>
-      <f:birthDate>2007-02-11</f:birthDate>
+      <f:birthDate>2011-03-24</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2001-02-13</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2008-04-25</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2000-06-02</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2017-07-23</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Martina</f:name>
+      <f:birthDate>2007-08-17</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2005-09-12</f:birthDate>
+    </f:familyElement>
+    <f:familyElement>
+      <f:name>Pedro</f:name>
+      <f:birthDate>2007-08-17</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>911922933</f:emergencyContact>
     <f:origin>
-      <gd:countryName>France</gd:countryName>
-      <gd:cityName>Lyon</gd:cityName>
+      <gd:countryName>United States of America</gd:countryName>
+      <gd:cityName>Los Angeles</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:preferedDates>2022-11-17</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

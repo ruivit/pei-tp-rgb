@@ -1,35 +1,23 @@
 {
     "id": "6",
-    "date": "2022-10-20",
+    "date": "2022-10-05",
     "state": "Active",
     "family": {
-        "numberElements": "5",
+        "numberElements": "2",
         "familyElement": [
             {
-                "name": "Pablo",
-                "birthDate": "2013-02-02"
+                "name": "Martina",
+                "birthDate": "2014-08-09"
             },
             {
-                "name": "Raul",
-                "birthDate": "2014-07-10"
-            },
-            {
-                "name": "Jorge",
-                "birthDate": "2002-11-21"
-            },
-            {
-                "name": "Laura",
-                "birthDate": "2007-11-09"
-            },
-            {
-                "name": "Marta",
-                "birthDate": "2013-05-13"
+                "name": "Ana",
+                "birthDate": "2020-08-17"
             }
         ],
         "origin": {
-            "countryName": "United States of America",
-            "cityName": "Chicago"
+            "countryName": "United Kingdom",
+            "cityName": "London"
         },
-        "emergencyContact": "351234567"
+        "emergencyContact": "123123123"
     }
 }

@@ -2,32 +2,24 @@
   <f:family>
     <f:familyElement>
       <f:name>Pedro</f:name>
-      <f:birthDate>1985-02-16</f:birthDate>
+      <f:birthDate>2006-08-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>1994-03-19</f:birthDate>
+      <f:name>Laura</f:name>
+      <f:birthDate>2006-08-13</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2003-03-13</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2013-09-08</f:birthDate>
     </f:familyElement>
-    <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1960-01-14</f:birthDate>
-    </f:familyElement>
-    <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>2003-12-10</f:birthDate>
-    </f:familyElement>
-    <f:emergencyContact>123123123</f:emergencyContact>
+    <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
       <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Frankfurt</gd:cityName>
+      <gd:cityName>Munich</gd:cityName>
     </f:origin>
     <f:reservationDates>
       <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-15</f:preferedDates>
+      <f:preferedDates>2022-11-15</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

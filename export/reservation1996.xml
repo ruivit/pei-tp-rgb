@@ -1,37 +1,43 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>1993-05-16</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2015-04-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2015-03-07</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>1970-05-19</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2011-07-03</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>1998-09-12</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Juan</f:name>
-      <f:birthDate>2019-05-04</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>1980-01-11</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>1968-03-05</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2006-07-08</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ana</f:name>
-      <f:birthDate>1992-02-05</f:birthDate>
+      <f:name>Sara</f:name>
+      <f:birthDate>2010-02-02</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>351234567</f:emergencyContact>
+    <f:familyElement>
+      <f:name>Sara</f:name>
+      <f:birthDate>2020-10-19</f:birthDate>
+    </f:familyElement>
+    <f:emergencyContact>123123123</f:emergencyContact>
     <f:origin>
-      <gd:countryName>Germany</gd:countryName>
-      <gd:cityName>Munich</gd:cityName>
+      <gd:countryName>Italy</gd:countryName>
+      <gd:cityName>Venice</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-09-17</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-11-01</f:preferedDates>
+      <f:preferedDates>2022-10-17</f:preferedDates>
+      <f:preferedDates>2022-12-07</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

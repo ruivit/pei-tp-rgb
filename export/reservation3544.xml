@@ -1,41 +1,39 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Laura</f:name>
-      <f:birthDate>2003-02-22</f:birthDate>
+      <f:name>Juan</f:name>
+      <f:birthDate>2009-08-28</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pablo</f:name>
-      <f:birthDate>2002-10-11</f:birthDate>
+      <f:name>Sofia</f:name>
+      <f:birthDate>2001-04-10</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Carla</f:name>
-      <f:birthDate>1993-02-27</f:birthDate>
+      <f:name>Raul</f:name>
+      <f:birthDate>2013-11-26</f:birthDate>
     </f:familyElement>
     <f:familyElement>
       <f:name>John</f:name>
-      <f:birthDate>2015-12-09</f:birthDate>
+      <f:birthDate>2002-05-06</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pilar</f:name>
-      <f:birthDate>2017-11-14</f:birthDate>
+      <f:name>Pedro</f:name>
+      <f:birthDate>1999-07-24</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Luis</f:name>
-      <f:birthDate>2005-02-20</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>1971-05-18</f:birthDate>
     </f:familyElement>
     <f:emergencyContact>256123456</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United States of America</gd:countryName>
-      <gd:cityName>Chicago</gd:cityName>
+      <gd:countryName>Portugal</gd:countryName>
+      <gd:cityName>Porto</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>5</f:numberOfDays>
-      <f:preferedDates>2022-12-13</f:preferedDates>
-      <f:preferedDates>2022-09-14</f:preferedDates>
-      <f:preferedDates>2022-09-18</f:preferedDates>
-      <f:preferedDates>2022-11-08</f:preferedDates>
-      <f:preferedDates>2022-10-03</f:preferedDates>
+      <f:numberOfDays>3</f:numberOfDays>
+      <f:preferedDates>2022-12-17</f:preferedDates>
+      <f:preferedDates>2022-09-09</f:preferedDates>
+      <f:preferedDates>2022-10-14</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>

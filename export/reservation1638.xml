@@ -1,41 +1,42 @@
 <reservation>
   <f:family>
     <f:familyElement>
-      <f:name>Raul</f:name>
-      <f:birthDate>1999-03-24</f:birthDate>
+      <f:name>Luis</f:name>
+      <f:birthDate>2012-06-01</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>John</f:name>
-      <f:birthDate>2008-02-14</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2007-02-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Martina</f:name>
-      <f:birthDate>2000-04-28</f:birthDate>
+      <f:name>Pablo</f:name>
+      <f:birthDate>2012-05-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Jorge</f:name>
-      <f:birthDate>2004-05-01</f:birthDate>
+      <f:name>Marta</f:name>
+      <f:birthDate>2001-09-03</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>2003-01-21</f:birthDate>
+      <f:name>Jose</f:name>
+      <f:birthDate>2010-05-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Ramon</f:name>
-      <f:birthDate>2010-04-23</f:birthDate>
+      <f:name>Carmen</f:name>
+      <f:birthDate>2003-09-23</f:birthDate>
     </f:familyElement>
     <f:familyElement>
-      <f:name>Pedro</f:name>
-      <f:birthDate>1991-12-15</f:birthDate>
+      <f:name>Maria</f:name>
+      <f:birthDate>2011-09-05</f:birthDate>
     </f:familyElement>
-    <f:emergencyContact>911922933</f:emergencyContact>
+    <f:emergencyContact>944955966</f:emergencyContact>
     <f:origin>
-      <gd:countryName>United Kingdom</gd:countryName>
-      <gd:cityName>London</gd:cityName>
+      <gd:countryName>Brazil</gd:countryName>
+      <gd:cityName>Rio de Janeiro</gd:cityName>
     </f:origin>
     <f:reservationDates>
-      <f:numberOfDays>1</f:numberOfDays>
-      <f:preferedDates>2022-11-07</f:preferedDates>
+      <f:numberOfDays>2</f:numberOfDays>
+      <f:preferedDates>2022-09-01</f:preferedDates>
+      <f:preferedDates>2022-11-14</f:preferedDates>
     </f:reservationDates>
   </f:family>
 </reservation>
